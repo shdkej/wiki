@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="spring에서 테스트하기 왜 하는가 테스트를 위한 간단한 세팅 작업환경 openjdk 1.8.0_282
+ant 1.10.11 ant를 쓰는 상태에서 자동화 가능한지 확인 maven, gradle 아니고 ant로?
+자동 리빌드 되게 할 수 있나?
+docker로 띄워서 vscode…"/><meta data-react-helmet="true" property="og:title"/><meta data-react-helmet="true" property="og:description" content="spring에서 테스트하기 왜 하는가 테스트를 위한 간단한 세팅 작업환경 openjdk 1.8.0_282
+ant 1.10.11 ant를 쓰는 상태에서 자동화 가능한지 확인 maven, gradle 아니고 ant로?
+자동 리빌드 되게 할 수 있나?
+docker로 띄워서 vscode…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1></h1><p></p><small style="width:50%">Created: <!-- -->2021, 09 05<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Blog/spring_Testcode.md">Updated: <!-- -->2021, 09 05</a><p>parent: <a href="/Blogging/">Blogging</a></p></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#spring%EC%97%90%EC%84%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EA%B8%B0">spring에서 테스트하기</a></p>
+<ul>
+<li>
+<p><a href="#%EC%99%9C-%ED%95%98%EB%8A%94%EA%B0%80">왜 하는가</a></p>
+</li>
+<li>
+<p><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%9C-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%84%B8%ED%8C%85">테스트를 위한 간단한 세팅</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%9E%91%EC%97%85%ED%99%98%EA%B2%BD">작업환경</a></li>
+<li><a href="#ant%EB%A5%BC-%EC%93%B0%EB%8A%94-%EC%83%81%ED%83%9C%EC%97%90%EC%84%9C-%EC%9E%90%EB%8F%99%ED%99%94-%EA%B0%80%EB%8A%A5%ED%95%9C%EC%A7%80-%ED%99%95%EC%9D%B8">ant를 쓰는 상태에서 자동화 가능한지 확인</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9C%A0%ED%8B%B8%EA%B3%BC-%EB%B2%84%EC%A0%84">테스트 유틸과 버전</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#junit">junit</a></li>
+<li><a href="#mockito">mockito</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4">테스트 시나리오</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%97%AC%EB%9F%AC-%EB%B6%84%EA%B8%B0%EB%93%A4-%EC%A4%91-%ED%8A%B9%EC%A0%95-%EC%9E%85%EB%A0%A5%EA%B0%92%EC%9D%BC-%EB%95%8C-%EA%B7%B8-%EB%B6%84%EA%B8%B0%EB%8C%80%EB%A1%9C-%EC%9E%98-%EA%B0%80%EB%8A%94%EC%A7%80-%ED%99%95%EC%9D%B8">여러 분기들 중 특정 입력값일 때 그 분기대로 잘 가는지 확인</a></li>
+<li><a href="#dao---service---facade---controller%EA%B9%8C%EC%A7%80-%ED%9D%90%EB%A6%84-%ED%99%95%EC%9D%B8%ED%95%98%EB%8A%94-%ED%85%8C%EC%8A%A4%ED%8A%B8">DAO - Service - Facade - Controller까지 흐름 확인하는 테스트</a></li>
+<li><a href="#javascript%EC%99%80-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EB%8B%AC-%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B0%80-%EA%B0%80%EB%8A%A5%ED%95%9C%EC%A7%80">javascript와 데이터 전달 테스트가 가능한지?</a></li>
+<li><a href="#spring-security-%ED%85%8C%EC%8A%A4%ED%8A%B8">spring security 테스트!?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EA%B2%B0%EB%A1%A0">결론</a></p>
+</li>
+</ul>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h1 id="spring에서-테스트하기" style="position:relative;"><a href="#spring%EC%97%90%EC%84%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EA%B8%B0" aria-label="spring에서 테스트하기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>spring에서 테스트하기</h1>
+<h2 id="왜-하는가" style="position:relative;"><a href="#%EC%99%9C-%ED%95%98%EB%8A%94%EA%B0%80" aria-label="왜 하는가 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>왜 하는가</h2>
+<h2 id="테스트를-위한-간단한-세팅" style="position:relative;"><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%9C-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%84%B8%ED%8C%85" aria-label="테스트를 위한 간단한 세팅 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>테스트를 위한 간단한 세팅</h2>
+<h4 id="작업환경" style="position:relative;"><a href="#%EC%9E%91%EC%97%85%ED%99%98%EA%B2%BD" aria-label="작업환경 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>작업환경</h4>
+<p>openjdk 1.8.0_282
+ant 1.10.11</p>
+<h4 id="ant를-쓰는-상태에서-자동화-가능한지-확인" style="position:relative;"><a href="#ant%EB%A5%BC-%EC%93%B0%EB%8A%94-%EC%83%81%ED%83%9C%EC%97%90%EC%84%9C-%EC%9E%90%EB%8F%99%ED%99%94-%EA%B0%80%EB%8A%A5%ED%95%9C%EC%A7%80-%ED%99%95%EC%9D%B8" aria-label="ant를 쓰는 상태에서 자동화 가능한지 확인 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ant를 쓰는 상태에서 자동화 가능한지 확인</h4>
+<p>maven, gradle 아니고 ant로?
+자동 리빌드 되게 할 수 있나?
+docker로 띄워서 vscode에서 수정할 수 있나?
+그 환경을 만들어서 할까, spring boot로 빠르게 올리고 maven도 그냥 쓸까</p>
+<h2 id="테스트-유틸과-버전" style="position:relative;"><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9C%A0%ED%8B%B8%EA%B3%BC-%EB%B2%84%EC%A0%84" aria-label="테스트 유틸과 버전 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>테스트 유틸과 버전</h2>
+<h4 id="junit" style="position:relative;"><a href="#junit" aria-label="junit permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>junit</h4>
+<p>junit4와 5 중에 5가 구버전도 지원해주는지 확인</p>
+<p>junit5는 java8 이상</p>
+<p>@Before -> @BeforeEach
+@BeforeClass -> @BeforeAll
+@After -> @AfterEach</p>
+<h4 id="mockito" style="position:relative;"><a href="#mockito" aria-label="mockito permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>mockito</h4>
+<p>@ExtendWith(MockitoExtension.class) 로 junit에서 mockito를 인식시켜줘야 함</p>
+<h2 id="테스트-시나리오" style="position:relative;"><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4" aria-label="테스트 시나리오 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>테스트 시나리오</h2>
+<p>지금 하고 있는 업무에 바로 적용시킬 수 있는 케이스 위주로 탐색</p>
+<h4 id="여러-분기들-중-특정-입력값일-때-그-분기대로-잘-가는지-확인" style="position:relative;"><a href="#%EC%97%AC%EB%9F%AC-%EB%B6%84%EA%B8%B0%EB%93%A4-%EC%A4%91-%ED%8A%B9%EC%A0%95-%EC%9E%85%EB%A0%A5%EA%B0%92%EC%9D%BC-%EB%95%8C-%EA%B7%B8-%EB%B6%84%EA%B8%B0%EB%8C%80%EB%A1%9C-%EC%9E%98-%EA%B0%80%EB%8A%94%EC%A7%80-%ED%99%95%EC%9D%B8" aria-label="여러 분기들 중 특정 입력값일 때 그 분기대로 잘 가는지 확인 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>여러 분기들 중 특정 입력값일 때 그 분기대로 잘 가는지 확인</h4>
+<h4 id="dao---service---facade---controller까지-흐름-확인하는-테스트" style="position:relative;"><a href="#dao---service---facade---controller%EA%B9%8C%EC%A7%80-%ED%9D%90%EB%A6%84-%ED%99%95%EC%9D%B8%ED%95%98%EB%8A%94-%ED%85%8C%EC%8A%A4%ED%8A%B8" aria-label="dao   service   facade   controller까지 흐름 확인하는 테스트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DAO - Service - Facade - Controller까지 흐름 확인하는 테스트</h4>
+<p>즉, mock db에서 데이터를 호출해서 url로 호출되는지 확인</p>
+<h4 id="javascript와-데이터-전달-테스트가-가능한지" style="position:relative;"><a href="#javascript%EC%99%80-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EB%8B%AC-%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B0%80-%EA%B0%80%EB%8A%A5%ED%95%9C%EC%A7%80" aria-label="javascript와 데이터 전달 테스트가 가능한지 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>javascript와 데이터 전달 테스트가 가능한지?</h4>
+<h4 id="spring-security-테스트" style="position:relative;"><a href="#spring-security-%ED%85%8C%EC%8A%A4%ED%8A%B8" aria-label="spring security 테스트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>spring security 테스트!?</h4>
+<h2 id="결론" style="position:relative;"><a href="#%EA%B2%B0%EB%A1%A0" aria-label="결론 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>결론</h2>
+<p>(레거시 업그레이드는 힘들다..)</p></section><hr/></article><nav><div style="max-width:90%"><span><a href="/coding/">/coding/</a>,</span><span><a href="/container/">/container/</a>,</span><span><a href="/linux/">/linux/</a>,</span><span><a href="/tool/">/tool/</a>,</span><span><a href="/troubleshooting/">/troubleshooting/</a>,</span></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blog/eks_with_terraform/">← <!-- -->EKS 맛보기</a></li><li><a rel="next" href="/people/"> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/spring_testcode/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

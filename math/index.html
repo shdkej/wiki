@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="statistics 합의 법칙 - 분류하는 것(동시에 할 수 없는 것. 빠짐없이)
+곱의 법칙 - 동시에(1을 하고, 2도 하는 것) 발생하는 일 순열
+7P3 - 7부터 3개의 숫자를 하나씩 빼면서 곱한다. log 상용로그에서 로그의 밑이 생략되있으면 1…"/><meta data-react-helmet="true" property="og:title" content="Math"/><meta data-react-helmet="true" property="og:description" content="statistics 합의 법칙 - 분류하는 것(동시에 할 수 없는 것. 빠짐없이)
+곱의 법칙 - 동시에(1을 하고, 2도 하는 것) 발생하는 일 순열
+7P3 - 7부터 3개의 숫자를 하나씩 빼면서 곱한다. log 상용로그에서 로그의 밑이 생략되있으면 1…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">Math | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>Math</h1><p>Math, Physics, Electronics</p><small style="width:50%">Created: <!-- -->2020, 05 07<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Math.md">Updated: <!-- -->2021, 09 16</a></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#statistics">statistics</a></p>
+</li>
+<li>
+<p><a href="#log">log</a></p>
+</li>
+<li>
+<p><a href="#tangent">tangent</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EB%9D%BC%ED%94%8C%EB%9D%BC%EC%8A%A4-%EB%B3%80%ED%99%98">라플라스 변환</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#physics">Physics</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%9D%B4%EC%98%A8--%EC%A0%84%EA%B8%B0%EC%A0%81-%EC%84%B1%EC%A7%88%EC%9D%84-%EB%9D%84%EA%B3%A0%EC%9E%88%EB%8A%94-%EC%9B%90%EC%9E%90">이온 : 전기적 성질을 띄고있는 원자</a></li>
+<li><a href="#force">Force</a></li>
+<li><a href="#energy">Energy</a></li>
+<li><a href="#velocity">Velocity</a></li>
+<li><a href="#%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC-%EC%97%90%EB%84%88%EC%A7%80-%EC%97%B4%EC%97%AD%ED%95%99-1-2-%EB%B2%95%EC%B9%99">엔트로피, 에너지, 열역학 1, 2 법칙</a></li>
+<li><a href="#%EC%99%BC%EC%86%90-%EC%98%A4%EB%A5%B8%EC%86%90-%EB%B2%95%EC%B9%99">왼손 오른손 법칙</a></li>
+<li><a href="#%EA%B8%B0%EC%A0%84%EB%A0%A5">기전력</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EB%AC%B4%EC%84%A0%ED%86%B5%EC%8B%A0">무선통신</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EA%B3%A0%EC%A3%BC%ED%8C%8C%EC%9D%BC%EC%88%98%EB%A1%9D-%EC%88%98%EC%8B%A0%EA%B8%B0%EA%B0%80-%EC%9E%91%EC%95%84%EC%A7%84%EB%8B%A4">고주파일수록 수신기가 작아진다?</a></li>
+<li><a href="#radio-communication-radio-frequency">Radio Communication (Radio Frequency)</a></li>
+<li><a href="#%EC%A0%84%EC%9E%90%ED%8C%8C%EC%9D%98-%EC%84%B8%EA%B8%B0">전자파의 세기?</a></li>
+<li><a href="#%EC%A0%84%EC%9E%90%EA%B8%B0%ED%8C%8C">전자기파</a></li>
+<li><a href="#%ED%9C%B4%EB%8C%80%ED%8F%B0-%EC%B6%A9%EC%A0%84%EC%9D%80-dc-%EC%A0%84%EC%9B%90%EC%9D%80-ac">휴대폰 충전은 DC, 전원은 AC</a></li>
+<li><a href="#wifi-lte-lan-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EC%86%8D%EB%8F%84">wifi, lte, LAN 다운로드 속도</a></li>
+<li><a href="#%EB%B9%84%EC%99%80-%EC%A0%84%ED%8C%8C%EC%9D%98-%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84">비와 전파의 상관관계</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h2 id="statistics" style="position:relative;"><a href="#statistics" aria-label="statistics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>statistics</h2>
+<p>합의 법칙 - 분류하는 것(동시에 할 수 없는 것. 빠짐없이)
+곱의 법칙 - 동시에(1을 하고, 2도 하는 것) 발생하는 일</p>
+<p>순열
+7P3 - 7부터 3개의 숫자를 하나씩 빼면서 곱한다.</p>
+<h2 id="log" style="position:relative;"><a href="#log" aria-label="log permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>log</h2>
+<p>상용로그에서 로그의 밑이 생략되있으면 10이 생략된 것인데 알고리즘 풀이 때 로그는 밑을 2로 한다
+자연로그라고 밑은 e로 하는 방식도 있어서 사용처마다 밑이 없는 것이 다르다</p>
+<h2 id="tangent" style="position:relative;"><a href="#tangent" aria-label="tangent permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tangent</h2>
+<p>어떤 원의 오른쪽에 가상의 수직선이 찰싹 붙어 있다고 가정합니다. (가상의 수직선은,
+원의 오른쪽에만 딱 1개 있습니다. 왼쪽에는 없습니다.) 그리고 각도를 나타내는 파란
+직선이, 원의 둘레를 뚥고 나와서는, 그 오른쪽의 가상의 수직선과 만나는 점이
+있습니다. 그 점과 x축을 수직으로 이어준 것이 탄젠트입니다. 각도를 나타내는
+파란 직선의 방향이 어떻게 되든, 무조건 오른쪽에 있는 가상의 선과 만납니다.
+왼쪽에는 선이 없기에 무조건 오른쪽입니다.</p>
+<p>[출처] <a href="http://blog.naver.com/baek2187/150029878863">[펌] 탄젠트 함수 개념 설명 그림; 삼각함수에서 Tan Tangent Diagram 그래프</a>
+출처: <a href="http://blog.naver.com/PostView.nhn?blogId=baek2187&#x26;logNo=150029878863&#x26;parentCategoryNo=&#x26;categoryNo=&#x26;viewDate=&#x26;isShowPopularPosts=false&#x26;from=postView">http://blog.naver.com/PostView.nhn?blogId=baek2187&#x26;logNo=150029878863&#x26;parentCategoryNo=&#x26;categoryNo=&#x26;viewDate=&#x26;isShowPopularPosts=false&#x26;from=postView</a></p>
+<h4 id="라플라스-변환" style="position:relative;"><a href="#%EB%9D%BC%ED%94%8C%EB%9D%BC%EC%8A%A4-%EB%B3%80%ED%99%98" aria-label="라플라스 변환 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>라플라스 변환</h4>
+<ul>
+<li>인간의 변화 기준인 시간을 기계가 인식하는 변화의 기준인 주파수로 변환</li>
+</ul>
+<hr>
+<h2 id="physics" style="position:relative;"><a href="#physics" aria-label="physics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Physics</h2>
+<h4 id="이온--전기적-성질을-띄고있는-원자" style="position:relative;"><a href="#%EC%9D%B4%EC%98%A8--%EC%A0%84%EA%B8%B0%EC%A0%81-%EC%84%B1%EC%A7%88%EC%9D%84-%EB%9D%84%EA%B3%A0%EC%9E%88%EB%8A%94-%EC%9B%90%EC%9E%90" aria-label="이온  전기적 성질을 띄고있는 원자 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>이온 : 전기적 성질을 띄고있는 원자</h4>
+<h4 id="force" style="position:relative;"><a href="#force" aria-label="force permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Force</h4>
+<h4 id="energy" style="position:relative;"><a href="#energy" aria-label="energy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Energy</h4>
+<h4 id="velocity" style="position:relative;"><a href="#velocity" aria-label="velocity permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Velocity</h4>
+<h4 id="엔트로피-에너지-열역학-1-2-법칙" style="position:relative;"><a href="#%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC-%EC%97%90%EB%84%88%EC%A7%80-%EC%97%B4%EC%97%AD%ED%95%99-1-2-%EB%B2%95%EC%B9%99" aria-label="엔트로피 에너지 열역학 1 2 법칙 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>엔트로피, 에너지, 열역학 1, 2 법칙</h4>
+<p>지구는 둥글다
+태양도 둥글다
+달도 둥글다
+일정질량 이상의 물체는 둥글게 된다고 한다</p>
+<p>speed = distance / time
+a = v-u/t
+acceleration = Final velocity - Initial velocity / time
+d = m/V
+density = mass / Volume
+F = ma
+Force = mass * acceleration
+P = W/t
+Power = Work / time
+Weight = mass * gravity</p>
+<h4 id="왼손-오른손-법칙" style="position:relative;"><a href="#%EC%99%BC%EC%86%90-%EC%98%A4%EB%A5%B8%EC%86%90-%EB%B2%95%EC%B9%99" aria-label="왼손 오른손 법칙 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>왼손 오른손 법칙</h4>
+<p>플레밍</p>
+<p>왼손 - 전동기(전기로 힘을 만든다)</p>
+<p>자기장(자속밀도) - 전류(기전력) - 힘</p>
+<p>오른손 - 발전기(힘으로 전기를 만든다)</p>
+<p>자기장 - 힘 - 전류</p>
+<p>어떤 상황에서 왼손, 오른손으로 하는지?</p>
+<p>전동기인지 발전기인지 알 수 있는 상황에서 힘이나 전류의 방향을 알기 위해?</p>
+<p>암페어의 오른 나사 법칙 - 자기장 - 전류</p>
+<p>전류의 방향과 자기장의 방향을 확인할 수 있다</p>
+<p>엄지손가락이 전류</p>
+<h4 id="기전력" style="position:relative;"><a href="#%EA%B8%B0%EC%A0%84%EB%A0%A5" aria-label="기전력 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>기전력</h4>
+<p>도체 양 끝에서 일정한 전위를 유지시킬 수 있는 능력</p>
+<p>회로에 전류를 계속 흐르게 유지시키는 능력</p>
+<p>전위가 다른 2점 간에는 전위가 높은 곳에서 낮은 곳으로 전류를 이동시키려는 힘이 작용하는데 이것이 기전력</p>
+<p>힘이 아니라 단위 전하당 한 일의 양이라고 한다.</p>
+<p><a href="https://www.scienceall.com/%EA%B8%B0%EC%A0%84%EB%A0%A5cell-potential-electromotive-force-2/">https://www.scienceall.com/%EA%B8%B0%EC%A0%84%EB%A0%A5cell-potential-electromotive-force-2/</a></p>
+<h2 id="무선통신" style="position:relative;"><a href="#%EB%AC%B4%EC%84%A0%ED%86%B5%EC%8B%A0" aria-label="무선통신 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>무선통신</h2>
+<ul>
+<li>주파수는 발생 가능하다</li>
+<li>대기중에 있는 전자기를 진동시켜서 발생시킨다</li>
+<li>진동시키는 방법은?</li>
+<li>교류발전을 통해. RLC 회로</li>
+<li>주파수 대역은 인간이 설정한 약속된 신호인가?</li>
+<li>맞다</li>
+<li>IEEE 대역, ITU대역 등이 있다</li>
+<li>주파수를 잡는 장비만 있으면 인터넷 사용이 가능한가?</li>
+</ul>
+<h4 id="고주파일수록-수신기가-작아진다" style="position:relative;"><a href="#%EA%B3%A0%EC%A3%BC%ED%8C%8C%EC%9D%BC%EC%88%98%EB%A1%9D-%EC%88%98%EC%8B%A0%EA%B8%B0%EA%B0%80-%EC%9E%91%EC%95%84%EC%A7%84%EB%8B%A4" aria-label="고주파일수록 수신기가 작아진다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>고주파일수록 수신기가 작아진다?</h4>
+<p>음파 전파
+음파는 거리가 멀면 감쇠됨 그래서 마이크로폰으로 전파로 변환</p>
+<p>송수신 안테나의 길이는 파장의 길이의 1/4 정도로 한다
+저주파 20Hz라면(음성의 파장)
+빛의 속도 = 주파수 * 파장
+위 식에 의해 주파수가 낮으면 파장이 커져야 함
+파장이 커지면 송수신 기기가 커져야 함</p>
+<h4 id="radio-communication-radio-frequency" style="position:relative;"><a href="#radio-communication-radio-frequency" aria-label="radio communication radio frequency permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Radio Communication (Radio Frequency)</h4>
+<p>mose -> radio -> -> 0, 1 transform -> 3G -> 4G -> 5G
+frequency, bandwidth
+sender, receiver</p>
+<p>데이터를 변환해서 전파로 만든다
+대역폭이 정해져 있다면 특정 대역폭을 기준으로 데이터를 추가하는 방식인가?</p>
+<p>대역폭이 높은(3GHz) 곳은 데이터도 더 많이 실을 수 있나?</p>
+<p></section><div role="link" tabindex="0"><a href="/network/">network</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p>
+<h4 id="전자파의-세기" style="position:relative;"><a href="#%EC%A0%84%EC%9E%90%ED%8C%8C%EC%9D%98-%EC%84%B8%EA%B8%B0" aria-label="전자파의 세기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>전자파의 세기?</h4>
+<p>주파수의 파장과는 상관 없다
+멀리 보내려면 출력이 세야 한다
+무선통신용 4G의 경우는 파장은 크지만 출력은 약하다?</p>
+<h4 id="전자기파" style="position:relative;"><a href="#%EC%A0%84%EC%9E%90%EA%B8%B0%ED%8C%8C" aria-label="전자기파 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>전자기파</h4>
+<p>파장
+세기
+주파수
+진폭(세기)
+대역폭
+전자파 위험 기준은?</p>
+<p>전자기파
+전파(마이크로파 등) -- 광선(가시광선 등) -- 방사선(X선 등)
+파장이 길다 -- 짧다
+진폭은 파형의 높이(세로), 파장은 길이(가로),</p>
+<p>이동통신에는 전파 중 마이크로파 사용 중. 파장이 길고 주파수가 높다
+5G는 28Ghz를 쓰고 있고 3G보다 파장이 짧아서 기지국을 가까이 여러개 만들어야 한다
+파장이 커지면 송수신 기기가 커져야 한다고 함
+고주파일수록 수신기의 크기는 작아진다고 함
+수신기의 크기가 크면 멀리서도 받을 수 있다?</p>
+<p>주파수 = 1 / 주기</p>
+<p>주기는 높은 부분에서 다음 높은 부분까지의 거리(파장)</p>
+<p>파장이 길어지면 주파수가 짧아진다</p>
+<p>파장 = 전송속도 * 주기</p>
+<p>송신, 수신.
+송신부에서는 특정 주파수만 생성하는 회로
+수신부에서는 특정 주파수만 받아들이는 회로
+RLC 회로가 직류와 교류에서의 특성이 다르다
+직류는 +에서 -, 교류는 발전기에서 나오는 불규칙한 방향
+교류의 특성인 전류가 흐르는 방식이 영향을 받는다
+RLC가 같이 있게되면 서로 교차하여 공명하는 진동 수(공진 주파수)가 발생하여 특정
+주파수만 받아들일 수 있게 된다</p>
+<p>전자레인지는 2Ghz 정도. 근데 전력을 많이 받아 진폭(세기)이 세다고 함</p>
+<p>태양 - 빛 - 전자기파
+페러데이 - 맥스웰 - 전자기파 - 가시광선=빛
+전자기파 = 전기 > 빛</p>
+<p>빛 = 원자 = 핵 + 전자
+핵 = 양전하, 전자 = 음전하 (전하 = 전기적 성질)
+전기 = 양전하 + 음전하. 그러므로 전기 = 빛
+전기로 빛을 만든다 - 형광등</p>
+<p>태양 핵분열 - 전자기력 생성</p>
+<h4 id="휴대폰-충전은-dc-전원은-ac" style="position:relative;"><a href="#%ED%9C%B4%EB%8C%80%ED%8F%B0-%EC%B6%A9%EC%A0%84%EC%9D%80-dc-%EC%A0%84%EC%9B%90%EC%9D%80-ac" aria-label="휴대폰 충전은 dc 전원은 ac permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>휴대폰 충전은 DC, 전원은 AC</h4>
+<h4 id="wifi-lte-lan-다운로드-속도" style="position:relative;"><a href="#wifi-lte-lan-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EC%86%8D%EB%8F%84" aria-label="wifi lte lan 다운로드 속도 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wifi, lte, LAN 다운로드 속도</h4>
+<p>3G          - 21Mbps
+LTE         - 150Mbps
+5G          - 250Mbps
+공공 WIFI   - 350Mbps
+기가랜 WIFI - 500Mbps 초당 62MB를 다운 받는다
+기가랜 유선 - 700Mbps
+LTE는 정지상태에서 1Gbps 가 나온다고 한다. 이동 시 100Mbps
+공유기 5GHz 200Mbps, 2.4GHz 100Mbps 정도 나온다고 한다</p>
+<p>기가랜 필요사항: 인터넷, 하드웨어(랜카드), 케이블, 공유기 성능</p>
+<p>1000bps = 1.25B/s
+100Mbps = 12.5MB/s 초당 12.5MB 다운</p>
+<p>이더넷으로 연결 후 확인해야 제대로 나온다
+벤치비나 통신사 제공 프로그램 이용
+와이파이는 20메가도 잘 안나온다고 한다</p>
+<h4 id="비와-전파의-상관관계" style="position:relative;"><a href="#%EB%B9%84%EC%99%80-%EC%A0%84%ED%8C%8C%EC%9D%98-%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84" aria-label="비와 전파의 상관관계 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>비와 전파의 상관관계</h4>
+<p>지난 2012년 국립전파연구원이 발표한 보고서 '국내 전파전달 및 전파기반 특성 연구'에 따르면 10GHz 이상의 전파는 대기 중을 통과할 때 대기를 구성하는 여러 인자들에 의해 감쇠를 겪게 됩니다. 전파 손실이 발생하는 건데요.</p>
+<p>전파 손실은 우리가 일상에서 사용하는 2.4GHz 또는 5GHz 주파수 대역에도 마찬가지로 적용되죠.</p>
+<p>전파가 물을 통과할 경우, 전파의 크기가 절반으로 줄어드는데요. 그렇기에 와이파이가 끊기는 현상이 있을 수 있죠.</p></section><hr/></article><nav><div style="max-width:90%"><span><a href="/collection/">/collection/</a>,</span><span><a href="/software/">/software/</a>,</span></div>Tag: <a href="/tags/">strong_base</a><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/architecture/">← <!-- -->🚀 아키텍처</a></li><li><a rel="next" href="/design/">Design<!-- --> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/math/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="Architecture Odoo(python, jQuery) -- postgresql -- nginx -- nagios with docker-compose Why choose this tool? Odoo - python, include orm, well documentation…"/><meta data-react-helmet="true" property="og:title" content="How I build an ERP server"/><meta data-react-helmet="true" property="og:description" content="Architecture Odoo(python, jQuery) -- postgresql -- nginx -- nagios with docker-compose Why choose this tool? Odoo - python, include orm, well documentation…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">How I build an ERP server | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>How I build an ERP server</h1><p>docker is love</p><small style="width:50%">Created: <!-- -->2020, 03 23<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/En/deploy_Erp_Server_Story.md">Updated: <!-- -->2020, 11 28</a></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#architecture">Architecture</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#why-choose-this-tool">Why choose this tool?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#quick-guide">Quick Guide</a></p>
+</li>
+<li>
+<p><a href="#experience">Experience</a></p>
+</li>
+<li>
+<p><a href="#question">Question</a></p>
+</li>
+<li>
+<p><a href="#trouble-shooting">Trouble Shooting</a></p>
+</li>
+<li>
+<p><a href="#missed-items">missed items</a></p>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h2 id="architecture" style="position:relative;"><a href="#architecture" aria-label="architecture permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Architecture</h2>
+<ul>
+<li>Odoo(python, jQuery) -- postgresql -- nginx -- nagios</li>
+<li>with docker-compose</li>
+</ul>
+<h4 id="why-choose-this-tool" style="position:relative;"><a href="#why-choose-this-tool" aria-label="why choose this tool permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why choose this tool?</h4>
+<ul>
+<li>Odoo - python, include orm, well documentation, open source</li>
+<li>Postgresql - data save to file. that's good with docker migration</li>
+<li>Nginx - https, reverse proxy</li>
+<li>Nagios - light weight, lots of modules, well documentation</li>
+<li>Docker</li>
+</ul>
+<h2 id="quick-guide" style="position:relative;"><a href="#quick-guide" aria-label="quick guide permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quick Guide</h2>
+<p>odoo
+docker -> docker-compose.yml</p>
+<h2 id="experience" style="position:relative;"><a href="#experience" aria-label="experience permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Experience</h2>
+<ul>
+<li>요구사항을 협의하는 능력</li>
+<li>기능알림</li>
+<li>Designer team send a draft to purchase team</li>
+<li>engineer need to show project progress</li>
+<li>manager need to show project cost</li>
+</ul>
+<ol>
+<li>What did you do</li>
+</ol>
+<p>I have build erp server using python based open source called odoo for 40 users
+I build alone. I need easy build and management, so docker-compose is fit for me.</p>
+<ul>
+<li>problem
+<ul>
+<li>it's hard to communication with python and javascript
+<ul>
+<li>odoo has rpc. it solved this problem</li>
+</ul>
+</li>
+<li>data backup</li>
+<li>manage data</li>
+</ul>
+</li>
+</ul>
+<p>Odoo라고 하는 Python 기반 오픈소스 ERP 웹 서비스를 이용하여 장비제조업체에서 ERP system을 구축 및 운영하였습니다.
+40명의 직원이 사용하는 환경이고 혼자서 구축하는 상황이라 쉬운 구축과 관리에 적합한 방법을 원했고, Docker compose로 구축하였습니다.</p>
+<p>구축 이후 회사 상황에 맞게 프로젝트 관리, 자재 관리, 전자결재 부분을 주로 개발하였습니다.</p>
+<ul>
+<li>After the build, I was developed and migrated part that project managing, purchase managing, approval system.</li>
+</ul>
+<ol start="2">
+<li>What kind of tool used?</li>
+</ol>
+<p>mainly server used python open source server called odoo. It has many
+module and well documentation. So i can easily and quickly migration for
+company, And build with docker
+DB는 postgresql을 사용하였는데, 기존에 mysql을 사용하려 했으나,
+docker에서 DB 자체를 쉽게 이전하는 것은 파일형태로 데이터를 보관하고 있는 postgresql이 더 낫다는 블로그글을 참고하여 postgresql을 사용해보았고,
+서버를 이동하고, 복구하는 경우가 많았는데, container는 새로 만들고 volume만 붙일 때 바로 데이터가 적용되어 따로 sqldump를 안해도 되어서 좋았습니다.</p>
+<ul>
+<li>I used to postgresql. I used before mysql, but docker is fit to postgresql,</li>
+</ul>
+<p>about server
+모니터링을 위해 nagios를 사용했고, 그래서 가볍게 돌릴 수 있고, 여러 모듈들을 지원하여 host, docker, alarm 등을 잘 지원하여 적은 리소스로 많은 기능을 사용할 수 있었습니다.</p>
+<ul>
+<li>monitoring used to nagios, it's lightweight, lots of module. I can checked host, docker, alarm with small resource.</li>
+</ul>
+<ol start="3">
+<li>Talk about odoo</li>
+</ol>
+<p>It doesn’t use django and flask. Using wsgi directly.
+odoo에는 자체 ORM과 뷰 전용 템플릿이 있고, MVC 모델의 형태로 제작되어 초기에 빠른 파악에도 도움이 되었고, 역할이 분리되어 있어 수정, 관리하는데도 용이하여 쉽게 사용 가능했습니다.</p>
+<ul>
+<li>odoo has own orm, view template, design to MVC model, so It helps me to</li>
+</ul>
+<p>understand the structure and easily updated and managed cause it has separated roles.</p>
+<ul>
+<li>Why choose odoo
+<ul>
+<li>what is odoo
+<ul>
+<li>based on werkzeug wsgi</li>
+<li>wsgi werkzeug?
+<ul>
+<li>wsgi(Web server gateway interface)</li>
+<li>wsgi is communicate a web server between application</li>
+<li>wsgi take environ(HTTP object) and start_response(callback function)</li>
+<li>flask is implement wsgi to web framework using werkzeug</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>how to serve web server to web browser?</li>
+<li>web server? was? wsgi?
+<ul>
+<li>web server handled http requests and responses only.</li>
+</ul>
+</li>
+<li>what is different between nginx, golang http server</li>
+<li>how it works?</li>
+<li>what is good?</li>
+<li>what kind of different candidate there?
+<ul>
+<li>OrangeHRM, ERPNext, xTuple, Openbravo</li>
+</ul>
+</li>
+<li>python http backend?
+I want some option.
+<ul>
+<li>many module</li>
+<li>easy configuration</li>
+<li>look clear</li>
+<li>least editing</li>
+<li>open source</li>
+<li>mobile friendly</li>
+<li>at least once I used language (c,c++,java,python)</li>
+</ul>
+<ul>
+<li>is it doesn't fast?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>Did you have a build strategy?</li>
+</ol>
+<p>Honestly no. I didn’t make CI/CD pipeline
+I’m used test server and production server but I need test each one.
+It was not friendly Test code. So this was my bad point
+I should have make test code but I didn’t.</p>
+<p>In these days. I know the test code and TDD is so great. I trying use TDD</p>
+<ol start="5">
+<li>How to manage your code?</li>
+</ol>
+<p>I’ve build alone. So I didn’t have any annoying integration with using git.
+No use other branch each task. But I wondered how to manage if
+other person come. I founded Gitflow, but every company has
+different strategy. I wanna use company’s rule</p>
+<ol start="6">
+<li>How do you think About TDD?</li>
+</ol>
+<p>I love it. It was good to maintain concrete code. I wanna keep
+using TDD my code.
+It has problem about make test first, Need every unit
+test, No good to beautiful architecture. But I loved point
+is if i want change something. That is no dependency other
+code. If i first looked. That ok if passed test. Don’t
+need think about at once.
+And program is keep running well.</p>
+<ol start="7">
+<li>How to communication with other team?</li>
+</ol>
+<p>I think conversation makes better anything.
+I wanna understand other opinion and composing my opinion with.
+I know it is vey hard. But I try</p>
+<h2 id="question" style="position:relative;"><a href="#question" aria-label="question permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Question</h2>
+<ul>
+<li>server infra</li>
+<li>Deploy
+<ul>
+<li>why didn't make CI/CD pipeline?</li>
+<li>so, how to make CI/CD pipeline?</li>
+</ul>
+</li>
+<li>develop option
+<ul>
+<li>how to make project management system?</li>
+<li>It can issue tracking</li>
+<li>see what projects are progressing</li>
+<li>what works in project</li>
+</ul>
+</li>
+<li>docker
+<ul>
+<li>what is docker
+<ul>
+<li>container management tool</li>
+<li>container: os level virtualization process</li>
+</ul>
+</li>
+<li>how it works</li>
+<li>how to use docker in company
+<ul>
+<li>set up web server, db, monitoring, l/b server in one file</li>
+<li>when need change something, you can see only this file</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>nginx
+<ul>
+<li>Load Balancing?</li>
+<li>how to make efficient load balancing strategy</li>
+</ul>
+</li>
+<li>postgresql
+<ul>
+<li>RDBMS optimization</li>
+<li>scalability</li>
+<li>ORM</li>
+</ul>
+</li>
+<li>nagios
+<ul>
+<li>why choose nagios
+<ul>
+<li>other option</li>
+</ul>
+<ul>
+<li>TICK</li>
+<li>Grafana</li>
+<li>munin</li>
+<li>zabbix</li>
+</ul>
+<ul>
+<li>module</li>
+<li>there's a client program</li>
+</ul>
+</li>
+<li>what kind of item you monitored
+<ul>
+<li></section><div role="link" tabindex="0"><a href="/architecture/#monitoring-component">monitoring component</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>backup
+<ul>
+<li>how to do backup</li>
+<li>make backup list
+<ul>
+<li>odoo web server file(upload file, configure file)</li>
+<li>db dump file</li>
+<li>service file(nagios, nginx log)</li>
+<li>server snapshot</li>
+</ul>
+</li>
+<li>save local and nas(using sftp)</li>
+</ul>
+</li>
+</ul>
+<h2 id="trouble-shooting" style="position:relative;"><a href="#trouble-shooting" aria-label="trouble shooting permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trouble Shooting</h2>
+<ul>
+<li>17/10</li>
+</ul>
+<p>setting start
+, compony environment is c/c++
+i had found erp in c/c++, but there wasn't
+and i found a few of python base erp open source
+odoo is one of them</p>
+<p>that's have a lot of module and there was a community
+and i want speedy use this</p>
+<p>odoo support docker, and i can easy configure</p>
+<p>database using postgres</p>
+<p>i considered scalable, using nginx and prepare postgres ha(high available)
+but it was no need. firstly check 1 machine, it is enough</p>
+<p>monitoring system has a few item, TIC(telegraf, influxdb Grafana), ELK, nagios
+first i using TIC, but server spec is too low. then i want light app
+nagios is very simple monitoring app, that can check server status,
+notification. that's it. that's enough</p>
+<ul>
+<li>
+<p>multiple file upload</p>
+</li>
+<li>
+<p>ajax, python response, html drag and drop</p>
+</li>
+<li>
+<p>18</p>
+</li>
+</ul>
+<p>update some module
+and i wondering how will be do that when drive dead
+then i need backup process</p>
+<p>and when server break, use to nginx proxy</p>
+<p>vagrant, kubernetes, jenkins,</p>
+<ul>
+<li>19</li>
+</ul>
+<h2 id="missed-items" style="position:relative;"><a href="#missed-items" aria-label="missed items permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>missed items</h2>
+<ul>
+<li>CI/CD</li>
+<li>Test Code</li>
+<li>HAproxy</li>
+<li>ip setting automatic to vagrant</li>
+<li>repository split</li>
+<li>docker build to image</li>
+</ul></section><hr/></article><nav><div style="max-width:90%"></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blogging/">← <!-- -->Blogging</a></li><li><a rel="next" href="/blog/deploy_erp_server_story/">ERP 서버 개발 스텝 바이 스텝 &amp; 회고<!-- --> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/en/deploy_erp_server_story/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

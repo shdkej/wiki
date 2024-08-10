@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="오픈소스 기여하기 오픈소스의 배경지식을 알아두는게 좋다 작은 부분에서 시작 먼저 흐름을 파악한다 디버그, 브레이크 포인트를 사용하여 호출 스택 확인 필요한 부분을 먼저 본다 구조를 그리면서 파악한다 나라면 어떻게 할지 생각한다 작성자의 습관, 방식을 파악한다 ( if…"/><meta data-react-helmet="true" property="og:title" content="Open Source"/><meta data-react-helmet="true" property="og:description" content="오픈소스 기여하기 오픈소스의 배경지식을 알아두는게 좋다 작은 부분에서 시작 먼저 흐름을 파악한다 디버그, 브레이크 포인트를 사용하여 호출 스택 확인 필요한 부분을 먼저 본다 구조를 그리면서 파악한다 나라면 어떻게 할지 생각한다 작성자의 습관, 방식을 파악한다 ( if…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">Open Source | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>Open Source</h1><p>Open is powerful</p><small style="width:50%">Created: <!-- -->2020, 07 26<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Open_Source.md">Updated: <!-- -->2021, 07 14</a></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EA%B8%B0%EC%97%AC%ED%95%98%EA%B8%B0">오픈소스 기여하기</a></p>
+</li>
+<li>
+<p><a href="#open-source---contributed-all-people">Open-source - Contributed all people</a></p>
+</li>
+<li>
+<p><a href="#license">License</a></p>
+</li>
+<li>
+<p><a href="#%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%A9%EC%9D%98-%EB%8B%A8%EC%A0%90">소프트웨어 개방의 단점</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%9E%A5%EC%A0%90">장점</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EB%B2%84%EC%A0%80%EB%8B%9D">버저닝</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%B6%94%EC%B2%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8">오픈소스 추천 사이트</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#reference">Reference</a></p>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h2 id="오픈소스-기여하기" style="position:relative;"><a href="#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EA%B8%B0%EC%97%AC%ED%95%98%EA%B8%B0" aria-label="오픈소스 기여하기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>오픈소스 기여하기</h2>
+<ul>
+<li>오픈소스의 배경지식을 알아두는게 좋다</li>
+<li>작은 부분에서 시작</li>
+<li>먼저 흐름을 파악한다</li>
+<li>디버그, 브레이크 포인트를 사용하여 호출 스택 확인</li>
+<li>필요한 부분을 먼저 본다</li>
+<li>구조를 그리면서 파악한다</li>
+<li>나라면 어떻게 할지 생각한다</li>
+<li>작성자의 습관, 방식을 파악한다</li>
+<li>( if문을 어떻게 사용하는지, 함수를 어떻게 사용하는지, 호출을 어떤식으로 하는지, 테스트를 어떻게 하는지)</li>
+<li>비슷한 내용의 다른 것들을 찾아본다.</li>
+<li>(레퍼런스 확인)</li>
+</ul>
+<h2 id="open-source---contributed-all-people" style="position:relative;"><a href="#open-source---contributed-all-people" aria-label="open source   contributed all people permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Open-source - Contributed all people</h2>
+<p>there's license
+almost free, but no everything is free.</p>
+<h2 id="license" style="position:relative;"><a href="#license" aria-label="license permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>License</h2>
+<ul>
+<li>MIT</li>
+<li>Apache</li>
+<li>GPL 사용한 프로그램을 모두 공개해달라는 적극적 오픈소스 요구의 목적</li>
+<li>LGPL 개선한 소스에 대해 공유해달라는 요청</li>
+<li>AGPL 서버에서 사용하더라도 공유해달라는 것</li>
+<li>그 외 오픈소스를 쓴 것에 대해 명시하도록 요청</li>
+</ul>
+<h2 id="소프트웨어-개방의-단점" style="position:relative;"><a href="#%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%A9%EC%9D%98-%EB%8B%A8%EC%A0%90" aria-label="소프트웨어 개방의 단점 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>소프트웨어 개방의 단점</h2>
+<ul>
+<li>자신들만의 기술이 공개되어 다른 기업에서 이용하면 자신의 기업이 메리트가 없어짐
+<ul>
+<li>핵심기술은 비공개로 하고 API만 개방하면 괜찮을까</li>
+</ul>
+</li>
+<li>허점을 들킬 수 있음</li>
+</ul>
+<h4 id="장점" style="position:relative;"><a href="#%EC%9E%A5%EC%A0%90" aria-label="장점 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>장점</h4>
+<ul>
+<li>사용자 증가</li>
+<li>생각지 못했던 기술이 더해져서 외연 확장
+<ul>
+<li>직접 개발하지 않은 것들이 사용자 필요에 의해 개발될 수 있다</li>
+</ul>
+</li>
+</ul>
+<p>B2B, B2C 에 따라서 가치가 달라질까? B2B에서는 개방화를 할 필요가 없을까?</p>
+<h2 id="버저닝" style="position:relative;"><a href="#%EB%B2%84%EC%A0%80%EB%8B%9D" aria-label="버저닝 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>버저닝</h2>
+<p>versioning 할 때 1.2.x 로 해서 x부분은 오류 수정용으로 해서 하위호환성을 무조건 유지하도록 하면
+버그 픽스도 되고, 업그레이드도 안해도 되도록 할 수 있지 않을까</p>
+<p>사용할때는 1.2.x로 해놓으면 1.2.x 는 다 받을 수 있게 설정해놔야 한다.</p>
+<ul>
+<li>시맨틱버저닝이 내가 생각하던대로 구성된 것이었다</li>
+</ul>
+<p>하나의 기능에 버전이 하나 오르는 것까지는 납득된다
+근데 하나의 기능이 많은 코드로 이루어지면 여러 커밋으로 이루어질텐데
+그러면 커밋하고 PR한다고 버저닝이 되는게 아니라
+실제 기능이 동작해야 버전이 올랐으면 좋겠다</p>
+<h4 id="오픈소스-추천-사이트" style="position:relative;"><a href="#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%B6%94%EC%B2%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8" aria-label="오픈소스 추천 사이트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>오픈소스 추천 사이트</h4>
+<ul>
+<li><a href="https://opensourcestash.com/">https://opensourcestash.com/</a></li>
+<li><a href="https://free-for.dev/#/">https://free-for.dev/#/</a></li>
+</ul>
+<p></section><div role="link" tabindex="0"><a href="/cleaning/#used-tool">used tool</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p>
+<h2 id="reference" style="position:relative;"><a href="#reference" aria-label="reference permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h2>
+<ul>
+<li><a href="https://blog.outsider.ne.kr/1533">AWS와 Elastic 라이센스 분쟁 - by outsider</a></li>
+<li><a href="https://blog.opsnow.com/35">AWS와 Elastic 라이센스 분쟁 - by opsnow</a></li>
+<li><a href="https://spoqa.github.io/2017/09/28/foss-release-tips.html">오픈소스 릴리즈 팁</a></li>
+<li><a href="https://kdydesign.github.io/2020/10/19/open-source-flow/">오픈소스 구조와 모듈 파악하기</a></li>
+<li><a href="https://www.sosconhistory.net/soscon2019/content/data/session/Day%201_1630_1.pdf">오픈소스 컨트리뷰터 찾기</a></li>
+<li><a href="https://deview.kr/data/deview/session/attach/1500_T1_%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%A2%E1%84%89%E1%85%A5%E1%86%BC_%E1%84%80%E1%85%B5%E1%86%BA%E1%84%92%E1%85%A5%E1%86%B8%204.4K%20%E1%84%89%E1%85%B3%E1%84%90%E1%85%A1%20billboard.js%20%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5%E1%84%80%E1%85%A1%20%E1%84%83%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A7%E1%84%8C%E1%85%AE%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%8B%E1%85%A9%E1%84%91%E1%85%B3%E1%86%AB%E1%84%89%E1%85%A9%E1%84%89%E1%85%B3%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5.pdf">오픈소스 개발기</a></li>
+</ul>
+<p>인기 있는 오픈소스 프로젝트 만드는 팁 | GeekNews
+<a href="https://news.hada.io/topic?id=5379">https://news.hada.io/topic?id=5379</a></p></section><hr/></article><nav><div style="max-width:90%"></div>Tag: <a href="/tags/">communication</a><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/logical_thinking/">← <!-- -->Logical</a></li><li><a rel="next" href="/document/">Document<!-- --> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/open_source/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

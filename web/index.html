@@ -1,0 +1,415 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="Web 통신 시스템의 데이터 보관 및 전송 필요성 대두 하이퍼링크 구현 (문서간 이동) 웹 구현 (문서 뿐 아니라 더 많은 데이터 이동) 플래시, 액티브엑스 대두 (웹의 기능 외의 것들 구현하는 플러그인) 무거움과 보안 문제 대두 자바스크립트 대두 액티브엑스는 C…"/><meta data-react-helmet="true" property="og:title" content="WEB"/><meta data-react-helmet="true" property="og:description" content="Web 통신 시스템의 데이터 보관 및 전송 필요성 대두 하이퍼링크 구현 (문서간 이동) 웹 구현 (문서 뿐 아니라 더 많은 데이터 이동) 플래시, 액티브엑스 대두 (웹의 기능 외의 것들 구현하는 플러그인) 무거움과 보안 문제 대두 자바스크립트 대두 액티브엑스는 C…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">WEB | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>WEB</h1><p></p><small style="width:50%">Created: <!-- -->2021, 03 22<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Web.md">Updated: <!-- -->2021, 12 04</a></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#web">Web</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%9B%B9%EC%9C%BC%EB%A1%9C-%ED%95%A0-%EC%88%98-%EC%97%86%EB%8A%94-%EA%B2%83">웹으로 할 수 없는 것</a></li>
+<li><a href="#web-should-support-this">web should support this</a></li>
+<li><a href="#%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80%EC%97%90%EC%84%9C-%EC%9E%88%EC%9C%BC%EB%A9%B4-%EC%A2%8B%EC%9D%80-%ED%8E%B8%EC%9D%98%EC%84%B1-ui">웹페이지에서 있으면 좋은 편의성 UI</a></li>
+<li><a href="#%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%83%91-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%9D%BC%EA%B4%80%EB%90%9C-ui-vs-%ED%95%9C-%ED%99%98%EA%B2%BD%EC%97%90-%EC%A7%91%EC%A4%91">데스크탑, 모바일 일관된 UI vs 한 환경에 집중</a></li>
+<li><a href="#%EC%83%88%EB%A1%9C-%EA%B3%A0%EC%B9%A8-%EC%8B%9C%EC%97%90-%EC%96%B4%EB%96%A4-%EB%8F%99%EC%9E%91%EC%9D%84-%ED%95%98%EA%B2%8C-%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C">새로 고침 시에 어떤 동작을 하게 해야 할까</a></li>
+<li><a href="#mobile-view-web-view">mobile view, web view</a></li>
+<li><a href="#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80">브라우저</a></li>
+<li><a href="#%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%97%94%EC%A7%84">렌더링 엔진</a></li>
+<li><a href="#browser">browser</a></li>
+<li><a href="#nodejs">nodejs</a></li>
+<li><a href="#%EB%85%B8%EB%93%9C-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9B%90%EB%A6%AC-%ED%99%95%EC%9D%B8">노드 비동기 원리 확인</a></li>
+<li><a href="#html5-article-%ED%83%9C%EA%B7%B8%EB%8A%94-%EB%8F%85%EC%9E%90%EC%A0%81%EC%9D%B8-%EB%82%B4%EC%9A%A9%EC%9D%84-%EB%8B%B4%EA%B3%A0-%EC%9E%88%EC%9D%84-%EB%95%8C-%EC%82%AC%EC%9A%A9%ED%95%9C%EB%8B%A4%EA%B3%A0-%ED%95%9C%EB%8B%A4">html5 article 태그는 독자적인 내용을 담고 있을 때 사용한다고 한다</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#static-site-generator">static site generator</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#speed">speed</a></li>
+<li><a href="#ssr-csr">SSR CSR</a></li>
+<li><a href="#ssr-csr-1">SSR, CSR</a></li>
+<li><a href="#csr-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%8B%A8%EC%A0%90">csr 사이트 단점</a></li>
+<li><a href="#%EC%9B%B9-%EC%84%B1%EB%8A%A5">웹 성능</a></li>
+<li><a href="#%EC%9B%B9-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C%EC%84%9C">웹 개발자로서</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%95%B1%EC%9D%98-%EC%9E%A5%EC%A0%90%EC%9D%84-%EC%9B%B9%EC%97%90%EC%84%9C-%ED%91%9C%ED%98%84%ED%95%98%EA%B8%B0">앱의 장점을 웹에서 표현하기</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%99%9C-%EC%95%B1%EC%97%90%EC%84%9C%EB%A7%8C-%EB%90%98%EB%8A%94-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%ED%95%B4%EC%84%9C-%EC%95%B1-%EC%84%A4%EC%B9%98%EB%A5%BC-%EC%9C%A0%EB%8F%84%ED%95%98%EB%8A%94%EA%B1%B8%EA%B9%8C">왜 앱에서만 되는 이벤트를 해서 앱 설치를 유도하는걸까?</a></li>
+<li><a href="#%EB%85%B8%EB%85%84%EC%9D%98-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%A0%91%EA%B7%BC%EC%9D%84-%EC%89%BD%EA%B2%8C-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EC%9D%80">노년의 웹사이트 접근을 쉽게 하는 방법은?</a></li>
+<li><a href="#%EC%9B%B9%EC%97%90%EC%84%9C-%EC%95%88%EC%A2%8B%EC%9D%80-%EA%B2%BD%ED%97%98">웹에서 안좋은 경험</a></li>
+<li><a href="#reference">reference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#cloud">Cloud</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#route53">Route53</a></li>
+<li><a href="#cloudfront">CloudFront</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h2 id="web" style="position:relative;"><a href="#web" aria-label="web permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Web</h2>
+<ul>
+<li>통신 시스템의 데이터 보관 및 전송 필요성 대두</li>
+<li>하이퍼링크 구현 (문서간 이동)</li>
+<li>웹 구현 (문서 뿐 아니라 더 많은 데이터 이동)</li>
+<li>플래시, 액티브엑스 대두 (웹의 기능 외의 것들 구현하는 플러그인)</li>
+<li>무거움과 보안 문제 대두</li>
+<li>자바스크립트 대두</li>
+</ul>
+<p>액티브엑스는 C++로 만들어졌고
+플래시는 액션스크립트로 만들어졌다고 한다
+그 후 위에 둘은 없어지고 자바스크립트로 그것들의 구현을 대체하게 되었다.
+그리고 지금 웹 어셈블리라는 프로그래밍 언어 활용이 가능한 방식이 대두되고 있다.
+웹 어셈블리는 대세가 될 수 있을까? 대세가 되지 않더라도 역할을 구축할 수 있을까?</p>
+<h4 id="웹으로-할-수-없는-것" style="position:relative;"><a href="#%EC%9B%B9%EC%9C%BC%EB%A1%9C-%ED%95%A0-%EC%88%98-%EC%97%86%EB%8A%94-%EA%B2%83" aria-label="웹으로 할 수 없는 것 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>웹으로 할 수 없는 것</h4>
+<p>백그라운드에서 실시간 데이터 입력받아 적용하기
+예) 집에 들어오면 바깥 조명 확인해서 불켜주는 것</p>
+<ul>
+<li>PWA(progressive web app) makes it possible.</li>
+</ul>
+<h4 id="web-should-support-this" style="position:relative;"><a href="#web-should-support-this" aria-label="web should support this permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>web should support this</h4>
+<ul>
+<li>dark mode</li>
+<li>accessibility</li>
+<li>i18n</li>
+<li>link to new tab</li>
+<li>session manage</li>
+<li>history back button (undo button)</li>
+<li>'컨텐츠로 건너뛰기'를 만들어서 접근성을 높여야 한다</li>
+<li>웹에서 센서를 추가해서 감지한다</li>
+</ul>
+<p></section><div role="link" tabindex="0"><a href="/design/">design</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p>
+<p><a href="%5Bhttps://m.cafe.naver.com/ca-fe/web/cafes/29646865/articles/243917?fromList=true#:~:text=%EB%B0%A9%EC%9E%A5%EB%8B%98%EC%9D%B4%20%EA%B8%80%EC%93%B8%EB%95%8C%EB%A7%88%EB%8B%A4%20%ED%95%B8%EB%93%9C%ED%8F%B0%EC%97%90%20%ED%91%B8%EC%8B%9C%EC%95%8C%EB%A6%BC%5D(https://m.cafe.naver.com/ca-fe/web/cafes/29646865/articles/243917?fromList=true#:~:text=%EB%B0%A9%EC%9E%A5%EB%8B%98%EC%9D%B4%20%EA%B8%80%EC%93%B8%EB%95%8C%EB%A7%88%EB%8B%A4%20%ED%95%B8%EB%93%9C%ED%8F%B0%EC%97%90%20%ED%91%B8%EC%8B%9C%EC%95%8C%EB%A6%BC)">침하하로 옮기면 침착맨님 글썼는지 상시 체크해야되겠네요..? : 네이버 카페</a></p>
+<ul>
+<li>"방장님이 글쓸때마다 핸드폰에 푸시알림"</li>
+</ul>
+<h4 id="웹페이지에서-있으면-좋은-편의성-ui" style="position:relative;"><a href="#%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80%EC%97%90%EC%84%9C-%EC%9E%88%EC%9C%BC%EB%A9%B4-%EC%A2%8B%EC%9D%80-%ED%8E%B8%EC%9D%98%EC%84%B1-ui" aria-label="웹페이지에서 있으면 좋은 편의성 ui permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>웹페이지에서 있으면 좋은 편의성 UI</h4>
+<ul>
+<li>위 아래, 댓글로 가는 네비게이션</li>
+<li>사이드 바</li>
+</ul>
+<h4 id="데스크탑-모바일-일관된-ui-vs-한-환경에-집중" style="position:relative;"><a href="#%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%83%91-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%9D%BC%EA%B4%80%EB%90%9C-ui-vs-%ED%95%9C-%ED%99%98%EA%B2%BD%EC%97%90-%EC%A7%91%EC%A4%91" aria-label="데스크탑 모바일 일관된 ui vs 한 환경에 집중 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>데스크탑, 모바일 일관된 UI vs 한 환경에 집중</h4>
+<ul>
+<li>보여주는 컨텐츠 개수를 많이해서 일관되게 (유튜브)</li>
+<li>모바일에 특화 (무신사)</li>
+</ul>
+<h4 id="새로-고침-시에-어떤-동작을-하게-해야-할까" style="position:relative;"><a href="#%EC%83%88%EB%A1%9C-%EA%B3%A0%EC%B9%A8-%EC%8B%9C%EC%97%90-%EC%96%B4%EB%96%A4-%EB%8F%99%EC%9E%91%EC%9D%84-%ED%95%98%EA%B2%8C-%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C" aria-label="새로 고침 시에 어떤 동작을 하게 해야 할까 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>새로 고침 시에 어떤 동작을 하게 해야 할까</h4>
+<p>뭔가를 추가하는 동작을 한다면 새로 고침 시에 그 동작을 다시 하게 하면 안된다</p>
+<p>뒤로가기를 할때는 작업하던 상황이 그대로 유지되야 한다</p>
+<h4 id="mobile-view-web-view" style="position:relative;"><a href="#mobile-view-web-view" aria-label="mobile view web view permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>mobile view, web view</h4>
+<p>노트북에서 반쪽으로 브라우저를 띄우면 보기 불편한 웹페이지들이 많다
+모바일 친화적인 곳은 보여지는 것이 웹보다 적은 경우도 있고
+웹 친화적인 곳은 모바일 사이즈를 고려하지 않아 짤려 보여서 좌우로 계속 스크롤
+해야하는 경우가 생긴다.</p>
+<h4 id="브라우저" style="position:relative;"><a href="#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80" aria-label="브라우저 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>브라우저</h4>
+<ul>
+<li>사용자 인터페이스(ui)</li>
+<li>브라우저 엔진(chrome v8)</li>
+<li>렌더링 엔진(webkit, gecko, blink)</li>
+<li>네트워킹, 자바스크립트 해석기, 데이터 저장소</li>
+</ul>
+<h4 id="렌더링-엔진" style="position:relative;"><a href="#%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%97%94%EC%A7%84" aria-label="렌더링 엔진 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>렌더링 엔진</h4>
+<p>통상 8KB 조각 단위로 렌더링 수행
+HTML 파싱 - 렌더 트리 구성 - 트리 배치 - 트리 그리기</p>
+<h4 id="browser" style="position:relative;"><a href="#browser" aria-label="browser permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>browser</h4>
+<p>웹브라우저 엔진은 js용 쓰레드가 1개만 도는데 대신 web api라는게 따로 구현되어 있고 비동기작업을 처리하고 태스크큐에 보내 다시 js 쓰레드로 보내는 방식으로 비동기를 구현했다</p>
+<p>Web api는 쓰레드를 여러개 쓴다. File, timer, ajax 등을 컨트롤한다.
+Js thread
+Web api - task queue - js thread?</p>
+<h4 id="nodejs" style="position:relative;"><a href="#nodejs" aria-label="nodejs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nodejs</h4>
+<p>싱글 스레드로 동작하는 방식이라 PM2라는 라이브러리를 이용해 멀티 코어를 쓰도록
+할 수 있다.</p>
+<p>싱글 스레드로 비동기 동작을 한다. 말이 안되는 것 같지만 이벤트 루프 등의
+알고리즘을 이용해서 효율적인 성능을 보이고 있다.</p>
+<h4 id="노드-비동기-원리-확인" style="position:relative;"><a href="#%EB%85%B8%EB%93%9C-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9B%90%EB%A6%AC-%ED%99%95%EC%9D%B8" aria-label="노드 비동기 원리 확인 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>노드 비동기 원리 확인</h4>
+<ul>
+<li>싱글 스레드</li>
+<li>이벤트루프</li>
+<li>프로세스 큐</li>
+<li>브라우저 API</li>
+</ul>
+<p>비동기는 이벤트루프가 큐에다가 넣어서 실행하도록 한다.</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 그래서 큐 안에서 순차적으로 실행? ㅇㅇ</li>
+<li>게다가 큐는 스택이 모두 비워진 후에 스택에 넣어서 실행된다고 한다.</li>
+<li>스택이 비어있어야 큐에 있던 게 실행된다면 비동기가 어떻게 효율적으로 동작될 수 있지?</li>
+</ul>
+<h4 id="html5-article-태그는-독자적인-내용을-담고-있을-때-사용한다고-한다" style="position:relative;"><a href="#html5-article-%ED%83%9C%EA%B7%B8%EB%8A%94-%EB%8F%85%EC%9E%90%EC%A0%81%EC%9D%B8-%EB%82%B4%EC%9A%A9%EC%9D%84-%EB%8B%B4%EA%B3%A0-%EC%9E%88%EC%9D%84-%EB%95%8C-%EC%82%AC%EC%9A%A9%ED%95%9C%EB%8B%A4%EA%B3%A0-%ED%95%9C%EB%8B%A4" aria-label="html5 article 태그는 독자적인 내용을 담고 있을 때 사용한다고 한다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>html5 article 태그는 독자적인 내용을 담고 있을 때 사용한다고 한다</h4>
+<p>다른 곳에서 참조할 때 article 안에 있는 내용을 가져다 써도 그 내용만으로도 말이
+되는 내용이 들어간다는 것이다
+예를 들어 애플 읽기모드로 들어가면 article 안에 있는 내용만 읽어들여 읽기에
+집중하게 해준다.</p>
+<p>이와 비슷하게 section이라는 태그가 있는데 이는 영역을 구분할 때 쓰면 좋다. 예를
+들어 목차 영역 만드는 곳에 써서 접근성(스크린 모드) 사용 시 본문에만 집중하게
+안내해줄 수 있다.
+비슷한 것들로
+aside, nav, header, footer 등이 있다
+이를 semantic(의미론적인) 태그라고 한다</p>
+<h2 id="static-site-generator" style="position:relative;"><a href="#static-site-generator" aria-label="static site generator permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>static site generator</h2>
+<p>React 등으로 개발 후 html 정적 페이지로 만들어서 가볍게 서버를 돌릴 수 있도록
+해준다.</p>
+<ul>
+<li>gatsby
+<ul>
+<li>I'm choice this</li>
+<li>it is graphql friendly</li>
+</ul>
+</li>
+<li>jekyll</li>
+<li>nextjs</li>
+</ul>
+<h4 id="speed" style="position:relative;"><a href="#speed" aria-label="speed permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>speed</h4>
+<ul>
+<li>server side rendering</li>
+<li>client side rendering</li>
+<li>seo</li>
+<li>speed with first access or second access</li>
+<li>client side is good to second access(moving page to page)</li>
+<li>server side is good to first access(find webpage, and access webpage)</li>
+</ul>
+<h4 id="ssr-csr" style="position:relative;"><a href="#ssr-csr" aria-label="ssr csr permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSR CSR</h4>
+<p>둘 다 html로 만들어놓을 수는 있다.
+서버에서 만들어진 html을 전달하고 javascript를 나중에 불러온다
+SSR은 매 호출마다 새로 요청하고, CSR은 한번 로딩하면 다시 호출 안한다.</p>
+<ul>
+<li>요청이 생기면 데이터는 다시 호출할 수도 있다.</li>
+</ul>
+<p>구글에서 검색 후 빠르게 페이지 확인하고 다른 블로그로 넘어갈 때 CSR 페이지는
+느리다.</p>
+<p>커뮤니티 사이트에 CSR을 적용하면 페이지당 이동속도가 빠를까? 글쎄 아닐 것 같다.</p>
+<ul>
+<li>새로운 글이 계속 생겨 서버에서 계속 데이터를 받아와야 한다.</li>
+<li>클라이언트에서 모두 로딩해야 하는데, 그러면 처음 속도가 미친듯이 느릴 것이다.</li>
+</ul>
+<p>useEffect는 브라우저에서 로딩해서 동작할텐데</p>
+<p>nextjs는 처음엔 SSR, 로딩 후에는 CSR로 동작해서 두 장점을 모두 가져온다.</p>
+<h4 id="ssr-csr-1" style="position:relative;"><a href="#ssr-csr-1" aria-label="ssr csr 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSR, CSR</h4>
+<p>SSR의 장점이 SEO인 이유는?
+서버에서 렌더링 된 값을 크롤러가 읽을 수 있기 때문에?
+그러면 csr은 어떻게 크롤러가 데이터를 가져갈 수 있게 하지?
+react에서 ssr 설정하는 방법은? 어렵다는데? ssr 설정하면 검색이 잘되나? 왜?</p>
+<p>크롤러 개발할 때 생각해보면 자바스크립트를 따로 읽지 않고 그려져있는 html 태그를 읽는게 기본이다. 그래서 페이지에 진입해서 자바스크립트가 안돌아가면 그 내용을 읽을 수 없다. 그래서 CSR이 SEO에 안좋다는 이야기가 있었던 것 같다.</p>
+<p>gatsby, nextjs는 ssr, csr을 모두 지원하는데, ssr을 적용하는건 어떤 과정이지?
+gatsby는 ssg, nextjs는 ssr을 메인으로 개발되었다.</p>
+<h4 id="csr-사이트-단점" style="position:relative;"><a href="#csr-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%8B%A8%EC%A0%90" aria-label="csr 사이트 단점 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>csr 사이트 단점</h4>
+<p>뒤로가기 인식 잘 못한다.</p>
+<ul>
+<li>github, disquiet</li>
+</ul>
+<h4 id="웹-성능" style="position:relative;"><a href="#%EC%9B%B9-%EC%84%B1%EB%8A%A5" aria-label="웹 성능 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>웹 성능</h4>
+<p>컨텐츠 타입에 따른 속도 차이가 있나? 가장 빠른 것은?
+base64로 하면 더 빨라지려나?</p>
+<h4 id="웹-개발자로서" style="position:relative;"><a href="#%EC%9B%B9-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C%EC%84%9C" aria-label="웹 개발자로서 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>웹 개발자로서</h4>
+<p>browserstack 처럼 브라우저 대응에 관심가져야겠다
+리액트의 아쉬운부분을 개선하고싶다
+go로 웹
+브라우저 디펜던시가 낮은 것으로 구성하고 싶다</p>
+<h2 id="앱의-장점을-웹에서-표현하기" style="position:relative;"><a href="#%EC%95%B1%EC%9D%98-%EC%9E%A5%EC%A0%90%EC%9D%84-%EC%9B%B9%EC%97%90%EC%84%9C-%ED%91%9C%ED%98%84%ED%95%98%EA%B8%B0" aria-label="앱의 장점을 웹에서 표현하기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>앱의 장점을 웹에서 표현하기</h2>
+<h4 id="왜-앱에서만-되는-이벤트를-해서-앱-설치를-유도하는걸까" style="position:relative;"><a href="#%EC%99%9C-%EC%95%B1%EC%97%90%EC%84%9C%EB%A7%8C-%EB%90%98%EB%8A%94-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%ED%95%B4%EC%84%9C-%EC%95%B1-%EC%84%A4%EC%B9%98%EB%A5%BC-%EC%9C%A0%EB%8F%84%ED%95%98%EB%8A%94%EA%B1%B8%EA%B9%8C" aria-label="왜 앱에서만 되는 이벤트를 해서 앱 설치를 유도하는걸까 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>왜 앱에서만 되는 이벤트를 해서 앱 설치를 유도하는걸까?</h4>
+<p>앱에 기능을 많이 준비해놨으니까?
+사용자가 앱에서 돈을 많이 써서?
+앱에 있으면 사용시간이 늘어난다는 통계데이터가 있나?</p>
+<ul>
+<li><a href="https://brunch.co.kr/@growthlead/6">https://brunch.co.kr/@growthlead/6</a></li>
+</ul>
+<p>+사용자 행동을 바탕으로 알림 발송 가능
++젊은 사용자의 경우 앱에 접근하여 소비하는 것이 활성화되어있고 소비도 많음</p>
+<p>앱 유도 -> 웹에서 클릭하면 앱으로 연결해주는 서비스들이 있다.</p>
+<h4 id="노년의-웹사이트-접근을-쉽게-하는-방법은" style="position:relative;"><a href="#%EB%85%B8%EB%85%84%EC%9D%98-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%A0%91%EA%B7%BC%EC%9D%84-%EC%89%BD%EA%B2%8C-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EC%9D%80" aria-label="노년의 웹사이트 접근을 쉽게 하는 방법은 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>노년의 웹사이트 접근을 쉽게 하는 방법은?</h4>
+<p>회원가입하고 비밀번호 찾는게 귀찮아서 하기 힘들어 한다<br>
+공인인증서는 거의 못한다고 봐야 되나<br>
+웹사이트 여기 저기를 왔다갔다 하는 부분이 힘들 것 같다. (은행사이트 갔다가 다시 돌아와서 쓰는거)<br>
+원하는 페이지로 접근을 하기 어려울 것 같다<br>
+예전의 시스템에서는 원하는 것을 얻기 위해 어떻게 했나<br>
+그렇다고 음성인식을 넣는다고 그걸 잘 이용할지 의문이다. 인터렉션을 못 느낄 것 같은데</p>
+<p>dagger 는 로컬에서 테스트하고 사용할 수 있다?</p>
+<h4 id="웹에서-안좋은-경험" style="position:relative;"><a href="#%EC%9B%B9%EC%97%90%EC%84%9C-%EC%95%88%EC%A2%8B%EC%9D%80-%EA%B2%BD%ED%97%98" aria-label="웹에서 안좋은 경험 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>웹에서 안좋은 경험</h4>
+<p>로그인을 하고 뒤로가기하면 나타날 화면은?</p>
+<ul>
+<li>로그인 되었습니다라고 알림 띄워줘서 다시 뒤로가기 하지 않도록 넛지하기?</li>
+</ul>
+<p>뒤로가기 했을 때 팝업 이전 화면으로 가는 것
+팝업은 x를 눌러야 하게 되어있는 것
+팝업인지 페이지 이동인지 사용자가 알 수 없을 수 있다</p>
+<h4 id="reference" style="position:relative;"><a href="#reference" aria-label="reference permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reference</h4>
+<p>유튜브 댓글 버튼 이펙트 잘 만든듯 - 다크모드에서 마우스 갖다 댔을 때 느낌이 좋음</p>
+<h2 id="cloud" style="position:relative;"><a href="#cloud" aria-label="cloud permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cloud</h2>
+<h4 id="route53" style="position:relative;"><a href="#route53" aria-label="route53 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Route53</h4>
+<p>DNS</p>
+<ul>
+<li>Domain Name System</li>
+<li>호스트 이름을 IP로 번역해주는 것 (google.com => 172.217.18.36)</li>
+<li>Domain Registrar - Route53, GoDaddy</li>
+<li>DNS Records - A(ipv4), AAAA(ipv6), CNAME(다른 호스트네임), NS(DNS 주소)</li>
+<li>Zone File</li>
+<li>Name Server -</li>
+<li>Top Level Domain : .com, .us, .in</li>
+<li>Second Level Domain - amazon.com, google.com, ...</li>
+<li>Sub Domain - www</li>
+<li>웹브라우저 -> 웹서버 -> 로컬 DNS -> .com DNS -> example.com DNS</li>
+</ul>
+<p>개요</p>
+<ul>
+<li>퍼블릭 호스팅 존, 프라이빗 호스팅 존 설정 가능</li>
+<li>프라이빗 호스팅 존도 퍼블릭 처럼 같은 가격</li>
+</ul>
+<p>TTL
+CNAME vs Alias</p>
+<ul>
+<li>CNAME은 다른 서브도메인을 매핑 가능</li>
+<li>Alias는 aws 의 주소를 매핑 가능 (EC2의 DNS name에는 매핑 안됨)</li>
+</ul>
+<p>라우팅 정책</p>
+<ul>
+<li>심플</li>
+<li>가중치</li>
+<li>지연 시간 기반 (route53에서 미리 측정한 값?)</li>
+</ul>
+<h4 id="cloudfront" style="position:relative;"><a href="#cloudfront" aria-label="cloudfront permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CloudFront</h4>
+<p>개요</p>
+<ul>
+<li>CDN</li>
+<li>엣지에 콘텐츠가 캐시된다</li>
+<li>aws의 216개의 엣지로케이션 모두를 사용한다</li>
+<li>DDoS를 막아준다</li>
+<li>Origins (연결 가능한 리소스)
+<ul>
+<li>S3 bucket</li>
+<li>Custom Origin (HTTP)</li>
+</ul>
+</li>
+<li>프라이빗 VPC에 접속할 수 없음 (ALB를 통해 우회 가능)</li>
+</ul>
+<p>캐싱 및 캐싱 정책</p>
+<ul>
+<li>header</li>
+<li>query string</li>
+<li>cookies</li>
+<li>none, whitelist, include all-except, all</li>
+</ul>
+<p>캐시 무효화</p>
+<ul>
+<li>백엔드가 변경되도 cloudfront는 알 수 없음</li>
+<li>TTL이 끝나야 백엔드를 다시 치기 때문</li>
+<li>그래서 캐시 무효화가 필요함</li>
+<li>근데 무효화를 언제 실행할 것인가 -> 백엔드가 배포되면 수동으로?</li>
+</ul>
+<p>오리진으로서의 ALB</p>
+<ul>
+<li>프라이빗 VPC에는 Edge Location이 접근할 수 없고 Edge Location의 보안그룹도 열어줘야 함</li>
+<li>그래서 ALB를 이용해서 EC2는 프라이빗으로 두고 ALB를 연결하게 할 수 있다</li>
+</ul>
+<p>지리적 제한</p>
+<ul>
+<li>접속 허용 국가, 제한 국가 설정 가능</li>
+</ul>
+<p>Signed URL/쿠키
+고급개념</p>
+<ul>
+<li>가격
+<ul>
+<li>price class all 모든 리전을 사용하고 가장 퍼포먼스가 좋지만 비싸다</li>
+<li>price class 200 200개만 쓰는데 조금 싸다</li>
+<li>price class 100 100개만 쓰는데 조금 싸다</li>
+</ul>
+</li>
+<li>멀티 오리진</li>
+<li>field level encryption</li>
+</ul>
+<p>Real Time Logs</p>
+<ul>
+<li>kinesis datastream을 통해 실시간 로깅을 할 수 있음</li>
+<li>api 요청에 대해 몇%만 로그를 남길지 설정할 수 있음</li>
+</ul></section><hr/></article><nav><div style="max-width:90%"><span><a href="/design/">/design/</a>,</span></div>Tag: <a href="/tags/">deep_knowledge</a><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/ci_cd/">← <!-- -->CI/CD 구성 연습</a></li><li><a rel="next" href="/blog/streaming_server/"> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/web/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

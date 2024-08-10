@@ -1,0 +1,552 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="How to choice Data Structure how to access memory space ordered concurrency duplicates mutable read, write frequency size 데이터 분포, 입출력빈도 Base search, add, remove…"/><meta data-react-helmet="true" property="og:title" content="Data Structure"/><meta data-react-helmet="true" property="og:description" content="How to choice Data Structure how to access memory space ordered concurrency duplicates mutable read, write frequency size 데이터 분포, 입출력빈도 Base search, add, remove…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">Data Structure | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>Data Structure</h1><p></p><small style="width:50%">Created: <!-- -->2020, 03 25<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Data_Structure.md">Updated: <!-- -->2021, 09 16</a></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#how-to-choice-data-structure">How to choice Data Structure</a></p>
+</li>
+<li>
+<p><a href="#base">Base</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#search-add-remove-sort">search, add, remove, sort</a></li>
+<li><a href="#data-type">Data Type</a></li>
+<li><a href="#arrays">Arrays</a></li>
+<li><a href="#linked-lists">Linked lists</a></li>
+<li><a href="#hash-table">Hash Table</a></li>
+<li><a href="#graphs">Graphs</a></li>
+<li><a href="#binary-trees">Binary trees</a></li>
+<li><a href="#maps">Maps</a></li>
+<li><a href="#stack-queue-heap">Stack, Queue, Heap</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#algorithm">Algorithm</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#dfs">DFS</a></li>
+<li><a href="#bfs">BFS</a></li>
+<li><a href="#using-hash-tables">Using Hash Tables</a></li>
+<li><a href="#variablespointers-manipulation">Variables/Pointers manipulation</a></li>
+<li><a href="#reverse-linked-list-duplicates-removing-duplicates">reverse linked list (duplicates, removing duplicates)</a></li>
+<li><a href="#binary-search">Binary search</a></li>
+<li><a href="#sorting-fundamentals">sorting fundamentals</a></li>
+<li><a href="#greedy-algorithms">Greedy algorithms</a></li>
+<li><a href="#recursion">Recursion</a></li>
+<li><a href="#divide-and-conquer">Divide and conquer</a></li>
+<li><a href="#dynamic-programming-and-memoization">Dynamic Programming and memoization</a></li>
+<li><a href="#graph-traversal">Graph traversal</a></li>
+<li><a href="#%EC%88%9C%EC%97%B4-%EC%A1%B0%ED%95%A9">순열, 조합</a></li>
+<li><a href="#binary">Binary</a></li>
+<li><a href="#%EC%BF%BC%EB%93%9C-%ED%8A%B8%EB%A6%AC-%EB%92%A4%EC%A7%91%EA%B8%B0">쿼드 트리 뒤집기</a></li>
+<li><a href="#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98">알고리즘</a></li>
+<li><a href="#%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84-%ED%81%90">우선순위 큐</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#others">Others</a></p>
+<ul>
+<li>
+<ul>
+<li>
+<p><a href="#golang">Golang</a></p>
+</li>
+<li>
+<p><a href="#python">Python</a></p>
+</li>
+<li>
+<p><a href="#redis">Redis</a></p>
+</li>
+<li>
+<p><a href="#%EC%A0%95%EB%A0%AC">정렬</a></p>
+</li>
+<li>
+<p><a href="#%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5">분할정복</a></p>
+</li>
+<li>
+<p><a href="#%EC%9E%AC%EA%B7%80-vs-%EB%B6%84%ED%95%A0-%EC%A0%95%EB%B3%B5-vs-%EB%8F%99%EC%A0%81-%EA%B3%84%ED%9A%8D%EB%B2%95">재귀 vs 분할 정복 vs 동적 계획법</a></p>
+</li>
+<li>
+<p><a href="#algorithm-1">algorithm</a></p>
+</li>
+<li>
+<p><a href="#linked-list">linked list</a></p>
+</li>
+<li>
+<p><a href="#%EC%9D%B8%EB%8D%B1%EC%8A%A4">인덱스</a></p>
+<ul>
+<li><a href="#%ED%95%B4%EC%8B%9C-%ED%85%8C%EC%9D%B4%EB%B8%94">해시 테이블</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84">검색 엔진</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#reference">reference</a></p>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h2 id="how-to-choice-data-structure" style="position:relative;"><a href="#how-to-choice-data-structure" aria-label="how to choice data structure permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to choice Data Structure</h2>
+<ul>
+<li>how to access</li>
+<li>memory space</li>
+<li>ordered</li>
+<li>concurrency</li>
+<li>duplicates</li>
+<li>mutable</li>
+<li>read, write frequency</li>
+<li>size</li>
+<li>데이터 분포, 입출력빈도</li>
+</ul>
+<h2 id="base" style="position:relative;"><a href="#base" aria-label="base permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Base</h2>
+<h4 id="search-add-remove-sort" style="position:relative;"><a href="#search-add-remove-sort" aria-label="search add remove sort permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>search, add, remove, sort</h4>
+<h4 id="data-type" style="position:relative;"><a href="#data-type" aria-label="data type permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Type</h4>
+<ul>
+<li>int, char, long</li>
+<li>memory assign to fix size</li>
+</ul>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token comment">// C</span>
+<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token comment">// a address = 0x0000</span>
+<span class="token comment">// b address = 0x0004</span></code></pre></div>
+<h4 id="arrays" style="position:relative;"><a href="#arrays" aria-label="arrays permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Arrays</h4>
+<ul>
+<li>memory address sequentially called by fixed size</li>
+<li>in Python, but flexible list</li>
+<li>add or remove element then other element need shift. it is slow.</li>
+<li>search O(1), add, remove O(n)</li>
+<li>also called by List</li>
+<li>von neumann used array in 1945, for merge sort</li>
+</ul>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token comment">// C</span>
+<span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token keyword">int</span> b<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token comment">// a address = 0x0000</span>
+<span class="token comment">// b address = 0x0008</span></code></pre></div>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token comment"># python</span>
+a <span class="token operator">=</span> <span class="token number">1</span>
+b <span class="token operator">=</span> <span class="token number">2</span>
+c <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+d <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token comment"># a address = 0x000080</span>
+<span class="token comment"># b address = 0x000080 a == b</span>
+<span class="token comment"># c address = 0x000000000040</span>
+<span class="token comment"># d address = 0x0000000000c0 c size is 80</span></code></pre></div>
+<h4 id="linked-lists" style="position:relative;"><a href="#linked-lists" aria-label="linked lists permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Linked lists</h4>
+<ul>
+<li>So linked list is for solve this problem. -> reduce ADD, REMOVE time.
+<ul>
+<li>but linked list need time to find behavior.</li>
+<li>add, remove O(1)</li>
+<li>but search O(n) -> search O(n) means it is add to be O(n) as well</li>
+<li>linked list is based on Trees</li>
+</ul>
+</li>
+<li>list has limit extend size (delete, insert)</li>
+<li>benefit: insert time</li>
+<li>disadvantages: finding. n(th) node takes time to n[O(n)]</li>
+</ul>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">class</span> <span class="token class-name">Node</span><span class="token punctuation">:</span>
+ <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  self<span class="token punctuation">.</span>data <span class="token operator">=</span> data
+  self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token boolean">None</span>
+
+<span class="token keyword">class</span> <span class="token class-name">LinkedList</span><span class="token punctuation">:</span>
+ <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  node <span class="token operator">=</span></code></pre></div>
+<div class="gatsby-highlight" data-language="go"><pre class="language-go"><code class="language-go"><span class="token keyword">type</span> Node <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+ data <span class="token builtin">int</span>
+ next Node
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">a1 = new Node(5)
+a1.insertAfter(10)
+insertAfter(int item) {
+  next = new Node(item, next)
+}
+//a1 => item 5, next (item 10, next)</code></pre></div>
+<h4 id="hash-table" style="position:relative;"><a href="#hash-table" aria-label="hash table permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hash Table</h4>
+<ul>
+<li>Hash by Hash function</li>
+<li>Collision management is key issue</li>
+<li>If hash function is good, then search speed is O(1), most quick</li>
+</ul>
+<h4 id="graphs" style="position:relative;"><a href="#graphs" aria-label="graphs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Graphs</h4>
+<ul>
+<li>edge, vertex(point)</li>
+</ul>
+<h4 id="binary-trees" style="position:relative;"><a href="#binary-trees" aria-label="binary trees permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Binary trees</h4>
+<h4 id="maps" style="position:relative;"><a href="#maps" aria-label="maps permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Maps</h4>
+<ul>
+<li>why need map type?</li>
+</ul>
+<h4 id="stack-queue-heap" style="position:relative;"><a href="#stack-queue-heap" aria-label="stack queue heap permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stack, Queue, Heap</h4>
+<p></section><div role="link" tabindex="0"><a href="/computer_architecture/#memory">memory</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section>
+메모리에서의 용어, 자료구조에서의 용어가 각각 있다.</p>
+<ul>
+<li>스택</li>
+<li>동적</li>
+<li>스택은 프로그램이 자동으로 사용하는 임시 메모리 영역</li>
+<li>지역변수는 스택에 저장</li>
+<li>버퍼메모리 사용시 스택은 후입선출</li>
+<li>함수를 호출한 후에 원래 자리로 돌아오려면 원래 자리를 저장해 둬야 되는데 그곳이 스택</li>
+<li>힙</li>
+<li>정적</li>
+<li>전역변수와 static 변수 등은 메모리의 데이터 영역에 저장됨</li>
+<li>힙은 프로그래머가 스스로 할당한 메모리 영역</li>
+<li>버퍼메모리 사용시 힙은 선입선출</li>
+</ul>
+<p>자료구조에서의 스택,큐</p>
+<ul>
+<li>스택 : 후입선출하는 구조, 깊이 우선 탐색</li>
+<li>큐 : 선입 선출, 너비 우선 탐색
+<ul>
+<li>list isn't good make queue. delete need moving every node. it is slow O(n)</li>
+</ul>
+</li>
+<li>힙 : 완전 이진 트리</li>
+</ul>
+<h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
+<ul>
+<li>sort, search</li>
+<li>무결성,복잡도 분석, 그래프 알고리즘, np-완비</li>
+</ul>
+<h4 id="dfs" style="position:relative;"><a href="#dfs" aria-label="dfs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DFS</h4>
+<h4 id="bfs" style="position:relative;"><a href="#bfs" aria-label="bfs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>BFS</h4>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">bfs</span><span class="token punctuation">(</span>graph<span class="token punctuation">,</span> root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    visited <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    queue <span class="token operator">=</span> deque<span class="token punctuation">(</span><span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> queue<span class="token punctuation">:</span>
+        child <span class="token operator">=</span> queue<span class="token punctuation">.</span>popleft<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> neighbour <span class="token keyword">in</span> graph<span class="token punctuation">[</span>child<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> neighbour <span class="token keyword">not</span> <span class="token keyword">in</span> visited<span class="token punctuation">:</span>
+                visited<span class="token punctuation">.</span>add<span class="token punctuation">(</span>neighbour<span class="token punctuation">)</span>
+                queue<span class="token punctuation">.</span>append<span class="token punctuation">(</span>neighbour<span class="token punctuation">)</span></code></pre></div>
+<h4 id="using-hash-tables" style="position:relative;"><a href="#using-hash-tables" aria-label="using hash tables permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Hash Tables</h4>
+<h4 id="variablespointers-manipulation" style="position:relative;"><a href="#variablespointers-manipulation" aria-label="variablespointers manipulation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables/Pointers manipulation</h4>
+<h4 id="reverse-linked-list-duplicates-removing-duplicates" style="position:relative;"><a href="#reverse-linked-list-duplicates-removing-duplicates" aria-label="reverse linked list duplicates removing duplicates permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reverse linked list (duplicates, removing duplicates)</h4>
+<h4 id="binary-search" style="position:relative;"><a href="#binary-search" aria-label="binary search permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Binary search</h4>
+<h4 id="sorting-fundamentals" style="position:relative;"><a href="#sorting-fundamentals" aria-label="sorting fundamentals permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sorting fundamentals</h4>
+<ul>
+<li>quicksort (1959 by tony hoare)</li>
+<li>mergesort (1945 by von neumann)
+<ul>
+<li>나누고 합치는 정렬</li>
+<li>가장 작게 나누고 정렬 후 한 단위씩 합치면서 재정렬한다. O(n log n)</li>
+</ul>
+</li>
+<li>bubblesort
+<ul>
+<li>맨 앞부터 인접한 두 원소 비교 후 큰 숫자를 뒤로 옮기면서 맨 뒤에 제일
+큰 숫자가 가게 된다. 맨 앞까지 전체 순회 반복.
+간단하지만 성능상 별로 좋지 않다 O(n^2)</li>
+</ul>
+</li>
+</ul>
+<h4 id="greedy-algorithms" style="position:relative;"><a href="#greedy-algorithms" aria-label="greedy algorithms permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Greedy algorithms</h4>
+<h4 id="recursion" style="position:relative;"><a href="#recursion" aria-label="recursion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recursion</h4>
+<h4 id="divide-and-conquer" style="position:relative;"><a href="#divide-and-conquer" aria-label="divide and conquer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Divide and conquer</h4>
+<ul>
+<li>quick, merge sort</li>
+</ul>
+<h4 id="dynamic-programming-and-memoization" style="position:relative;"><a href="#dynamic-programming-and-memoization" aria-label="dynamic programming and memoization permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dynamic Programming and memoization</h4>
+<ul>
+<li>save previous result, O(n)</li>
+<li>solving to make problem to subproblem, it's like a Divide and Conquer, but
+difference is DP use result many time, but DaC use one time.
+DP for memoization, DaC for problem divide(n/2).</li>
+<li>DP can use in overlapping subproblem(fibonacci)</li>
+<li>memoization need lots of space complexiety, sliding window can make better.</li>
+</ul>
+<h4 id="graph-traversal" style="position:relative;"><a href="#graph-traversal" aria-label="graph traversal permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Graph traversal</h4>
+<ul>
+<li>Dijkstra algorithm : find shortest way in graph (if negative exist, can't use)
+checked-way queue, distance array, remain-way queue</li>
+</ul>
+<p>다익스트라 (음수 있으면 안됨)
+벨먼 포드 (음수 확인은 가능)
+a*(에이스타) - 다익스트라 개선버전</p>
+<h4 id="순열-조합" style="position:relative;"><a href="#%EC%88%9C%EC%97%B4-%EC%A1%B0%ED%95%A9" aria-label="순열 조합 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>순열, 조합</h4>
+<h4 id="binary" style="position:relative;"><a href="#binary" aria-label="binary permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Binary</h4>
+<p>이진수 활용법</p>
+<ul>
+<li>정해진 크기가 있는 배열의 유무 감별
+<ul>
+<li>0010000</li>
+</ul>
+</li>
+<li>보수</li>
+<li>xor</li>
+<li>피자 토핑처럼 특정한 요소를 선택할지에 사용</li>
+</ul>
+<h4 id="쿼드-트리-뒤집기" style="position:relative;"><a href="#%EC%BF%BC%EB%93%9C-%ED%8A%B8%EB%A6%AC-%EB%92%A4%EC%A7%91%EA%B8%B0" aria-label="쿼드 트리 뒤집기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쿼드 트리 뒤집기</h4>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># xxwww bxwxw bbbww xxxww bbbww wwbb
+# w -> w
+# xbwwb -> xwbbw
+
+# 한 글자씩 계산해서 뒤집어서 더한다
+func reverse(character *char) string {
+  char head = *character
+  ++character
+  if (head == 'b' || head == 'w') {
+    return head
+  }
+
+  upperLeft = reverse(character)
+  upperRight = reverse(character)
+  lowerLeft = reverse(character)
+  lowerRight = reverse(character)
+
+  return "x" + lowerLeft + lowerRight + upperLeft + upperRight
+}
+</code></pre></div>
+<h4 id="알고리즘" style="position:relative;"><a href="#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" aria-label="알고리즘 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>알고리즘</h4>
+<p>수행 시간 - 입력의 크기 등이 영향을 미친다</p>
+<p>인덱스로 로직을 처리하는 작업에서 배열의 길이가 1개인 것을 놓치면 안되겠다
+끝에 있는 것도 체크를 잘 해야겠다
+범위를 검사하는 것은 2가지만 체크하면 된다</p>
+<p>a에서 b를 모두 감싸던지, a에서 b 안에 들어와 있던지</p>
+<p>1/10 * 3 과 3/10을 비교하면 실수부분 계산이 정확하지 않아서 다르다고 나온다
+10^20/x *x == 10^20을 하면 약분부터 하지 않기 때문에 계산 값이 큰 것부터 계산된다</p>
+<h4 id="우선순위-큐" style="position:relative;"><a href="#%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84-%ED%81%90" aria-label="우선순위 큐 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>우선순위 큐</h4>
+<p>힙은 완전이진트리의 형태를 말함
+힙의 구현이 우선순위 큐의 구현이 될 수 있다</p>
+<p>우선순위 큐를 왜 쓰는지 이해가 안됐는데
+우선순위가 있는 값을 삽입할 때 그 위치를 파악하려면 전체 리스트를 순회하는 것이
+불합리해서
+차라리 우선순위를 바로 계산하는 형태로 만들어서 삽입 시간을 빠르게 하기
+위해서라고 한다</p>
+<p>일리가 있다</p>
+<p>근데 이게 데이터를 미리 다 받아둔 다음 한번에 정렬하는 것과 비교하면 어떤 상황에
+써야할지 감이 안온다
+우선순위 큐가 가장 효율적인 상황은?
+애초에 우선순위 큐를 리스트로 구현가능하다
+근데 삽입시간을 줄이는 목적을 위해 힙을 이용해서 우선순위 큐를 구현하는 것이
+좋을 것 같다</p>
+<p>데이터의 크기가 너무 클 경우</p>
+<p>우선순위 큐는 사실 기본 자료구조를 이용한 집합판인 것 같다
+탐색에 트리가 효율적이고, 일반적으로 괜찮은 속도를 보여주는 이진검색을 이용해
+이진 트리를 이용하기로 생각한 형태이다
+자료구조의 정리판 같은 느낌이다</p>
+<p>힙이 어차피 배열로 구현된다</p>
+<h2 id="others" style="position:relative;"><a href="#others" aria-label="others permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Others</h2>
+<h4 id="golang" style="position:relative;"><a href="#golang" aria-label="golang permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Golang</h4>
+<p></section><div role="link" tabindex="0"><a href="/golang/">golang</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p>
+<ul>
+<li>array
+<ul>
+<li>length is static, only one type</li>
+</ul>
+</li>
+<li>slice
+<ul>
+<li>length is dynamic</li>
+</ul>
+</li>
+<li>map</li>
+</ul>
+<h4 id="python" style="position:relative;"><a href="#python" aria-label="python permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Python</h4>
+<p></section><div role="link" tabindex="0"><a href="/python/">python</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p>
+<ul>
+<li>list []
+<ul>
+<li>mutable, ordered, can add duplicates, any types</li>
+</ul>
+</li>
+<li>dictionary {}
+<ul>
+<li>cannot nested, key set immutable value to hash, key is unique</li>
+</ul>
+</li>
+<li>tuple ()
+<ul>
+<li>immutable</li>
+</ul>
+</li>
+<li>set
+<ul>
+<li>unordered, unique,</li>
+</ul>
+</li>
+</ul>
+<h4 id="redis" style="position:relative;"><a href="#redis" aria-label="redis permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Redis</h4>
+<ul>
+<li>string</li>
+<li>list</li>
+<li>set</li>
+<li>hash</li>
+<li>sorted set</li>
+<li>bitmap</li>
+</ul>
+<h4 id="정렬" style="position:relative;"><a href="#%EC%A0%95%EB%A0%AC" aria-label="정렬 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>정렬</h4>
+<p>삽입정렬은 랜덤배치에 약하다</p>
+<p>퀵 정렬에서 피봇 값을 어떻게 설정하느냐에 따라 분할하는 횟수가 달라지기 때문에
+최대한 절반에 가까운 분할이 되도록 하면 좋다</p>
+<ul>
+<li>분할하는 횟수가 많아지면 그만큼 작업시간이 길어진다. 각 부분의 크기가 한
+원소씩만 줄어들게 되면 n 만큼 정렬을 수행해야 되서 분할의 의미가 퇴색된다.</li>
+</ul>
+<h4 id="분할정복" style="position:relative;"><a href="#%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5" aria-label="분할정복 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>분할정복</h4>
+<p>언제 분할 정복 사용이 가능한가?</p>
+<p>완전 탐색이 필요한 경우 동적계획법을 사용한다</p>
+<h4 id="재귀-vs-분할-정복-vs-동적-계획법" style="position:relative;"><a href="#%EC%9E%AC%EA%B7%80-vs-%EB%B6%84%ED%95%A0-%EC%A0%95%EB%B3%B5-vs-%EB%8F%99%EC%A0%81-%EA%B3%84%ED%9A%8D%EB%B2%95" aria-label="재귀 vs 분할 정복 vs 동적 계획법 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>재귀 vs 분할 정복 vs 동적 계획법</h4>
+<p>재귀는 10가지에서 1가지 씩 적게 하면서 더해가면서 풀이</p>
+<p>분할 정복은 반씩 나눠서 풀이 후 결과만 합치기</p>
+<ul>
+<li>분할 정복에서 분할을 어떻게 하느냐에 따라 중복으로 계산하면서 시간 소모하는
+경우가 있다
+<ul>
+<li>그래서 중복되지 않도록 분할한다</li>
+</ul>
+</li>
+<li>quick sort, merge sort가 대표적인 분할 정복 패러다임 이용 방식</li>
+</ul>
+<p>동적 계획법은 분할 정복과 비슷하게 문제를 분할하지만 중복되는 것을 허용하고 이를
+저장해두고 사용한다(메모이제이션).</p>
+<h4 id="algorithm-1" style="position:relative;"><a href="#algorithm-1" aria-label="algorithm 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>algorithm</h4>
+<p>B+ tree, Red-Black tree
+trie
+문자열 알고리즘
+priority queue</p>
+<h4 id="linked-list" style="position:relative;"><a href="#linked-list" aria-label="linked list permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>linked list</h4>
+<p>데이터의 변화가 많을 때는 링크드 리스트가 좋다?
+딕셔너리와 비교해보면?
+순서가 있으면 링크드 리스트가 낫겠다
+모든 자료구조는 리스트와 링크드리스트로 구현된다
+딕셔너리도 내부는 리스트로 구현되어 있나?
+ordered list와 링크드리스트로 구현된다고 한다</p>
+<p>해시테이블은 같은 해시값이 있으면 그 안에 리스트로 내용이 들어가고 한 해시값에 여러 내용이 있으면 리스트연산과 똑같은 검색속도를 가지게된다
+왜 굳이 해시화해서 넣는거지? 그냥 딕셔너리로 하면 안되나?</p>
+<p>아 해시테이블은 공간을 절약하는 것도 신경 쓴 것이다
+딕셔너리로 한다면 공간이 무한정 늘어나게 되고
+해시테이블은 한정된 공간 안에 효율적으로 골고루 넣어서 찾을 수 있도록 하기 위함이다</p>
+<h4 id="인덱스" style="position:relative;"><a href="#%EC%9D%B8%EB%8D%B1%EC%8A%A4" aria-label="인덱스 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>인덱스</h4>
+<p>인덱스는 where절에서 특정 키워드를 검색하려고 할 때 그 키워드를 찾는걸 빠르게
+해줘서 사용한다
+딕셔너리, 해시테이블 같다</p>
+<p>select name from student where number=1
+이렇게 검색하면 인덱스가 없으면 student에서 선형으로 number가 1인 것을 찾는데
+인덱스를 쓰면 number가 1인 것을 바로 찾을 수 있다</p>
+<p>db 인덱스 탐색용으로 B트리가 주로 이용된다
+B트리는 바이너리 트리와 다르게
+노드의 수를 2개로 제한하지 않고 특정한 m 값을 정해서 만든다
+그리고 이 m값을 페이지 캐시의 크기로 한다</p>
+<p>일반 검색 시 선형시간이 걸리지만 인덱스를 만들면 로그시간으로 줄어들어 인덱스가
+빠른 것이다</p>
+<p>B트리를 개선해 B+트리를 이용한다</p>
+<p>DB 인덱스를 효과적으로 설정하는 방법 - 고려해야 할 4가지
+<a href="https://yurimkoo.github.io/db/2020/03/14/db-index.html">https://yurimkoo.github.io/db/2020/03/14/db-index.html</a>
+[mysql] 인덱스 정리 및 팁
+<a href="https://jojoldu.tistory.com/243">https://jojoldu.tistory.com/243</a></p>
+<h5 id="해시-테이블" style="position:relative;"><a href="#%ED%95%B4%EC%8B%9C-%ED%85%8C%EC%9D%B4%EB%B8%94" aria-label="해시 테이블 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>해시 테이블</h5>
+<p>해시 테이블이 검색 속도가 O(1)인 이유가 명확하게 설명하기 힘들다.
+어레이에서도 인덱스번호로 접근하면 O(1)이 되나?
+키값을 찾으면 거기에 바로 접근할 수 있다는 것이라면 맞아야 할 것이다.</p>
+<p>메모리에 저장되는건 어차피 똑같은 주소크기를 차지할텐데</p>
+<p>맞는 것 같다
+대신 어레이의 사이즈를 좀 넉넉하게 하는 것 같다.
+그리고 키에 해당하는 값을 아무대나 집어넣으면 공간적으로 비효율적이라서 해시함수를 이용해 특정 공간 안에 모은다. 검색하려면 해시함수를 거쳐서 메모리에 도달한다.
+키값이 해시를 통해 인덱스로 변환되는 것인가.
+어레이[1] 속도가 더 빠르겠네?</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 실험 필요</li>
+</ul>
+<h4 id="검색-엔진" style="position:relative;"><a href="#%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84" aria-label="검색 엔진 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>검색 엔진</h4>
+<p>인덱스로 각 단어를 분리 -> 연결된 단어 검색 불가
+구문 쿼리로 단어 간 연결성 검사 -> 동음이의어 등 원하는 것을 정확히 찾았는지 확인 불가
+적합성 검사 -> 이를 고도화해야 함</p>
+<p>구문쿼리에서 여러 문장을 하나의 키로 하는게 아니라 키는 각 단어로 해놓고 값에다가 위치를 추가해서 계산한다
+적합성 검사는 랭킹을 매기는게 아니라 단어 사이의 거리를 구해서 가까운지 확인하는 것이다</p>
+<p>랭킹 메기는 방법은
+그 페이지가 링크된 횟수를 구해서 점수를 메긴다
+단순히 링크된 횟수만 구하면 좋고 나쁘고를 구분 없이 구하게 되어, 링크한 사이트의 링크횟수를 다시 구해서 그 사이트의 신뢰성도 체크한다
+구글은 이 방식의 장점을 포함한 무작위 서퍼 알고리즘이라는 것을 기반으로 발전했다</p>
+<h2 id="reference" style="position:relative;"><a href="#reference" aria-label="reference permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reference</h2>
+<ul>
+<li><a href="https://docs.python.org/3/tutorial/datastructures.html">https://docs.python.org/3/tutorial/datastructures.html</a></li>
+</ul></section><hr/></article><nav><div style="max-width:90%"><span><a aria-current="page" class="" href="/data_structure/">/data_structure/</a>,</span></div>Tag: <a href="/tags/">strong_base</a><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blog/deploy_erp_server_story/">← <!-- -->ERP 서버 개발 스텝 바이 스텝 &amp; 회고</a></li><li><a rel="next" href="/journal/">Journal<!-- --> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/data_structure/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

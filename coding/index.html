@@ -1,0 +1,1209 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="요약 코딩을 어떻게 하면 좋은 코드가 나올까? SOLID, DRY, YAGNI 등 많은 코딩, 디자인 가이드가 있다. SOLID Abstraction, One Behavior class, Encapsulation S…"/><meta data-react-helmet="true" property="og:title" content="코딩"/><meta data-react-helmet="true" property="og:description" content="요약 코딩을 어떻게 하면 좋은 코드가 나올까? SOLID, DRY, YAGNI 등 많은 코딩, 디자인 가이드가 있다. SOLID Abstraction, One Behavior class, Encapsulation S…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">코딩 | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>코딩</h1><p>Coding Convention, Design Principle</p><small style="width:50%">Created: <!-- -->2020, 03 16<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Coding.md">Updated: <!-- -->2023, 02 04</a></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<ul>
+<li>
+<p><a href="#%EC%9A%94%EC%95%BD">요약</a></p>
+</li>
+<li>
+<p><a href="#solid">SOLID</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#single-reason">Single reason</a></li>
+<li><a href="#dip%EB%A5%BC-%ED%86%B5%ED%95%B4-%EC%99%B8%EB%B6%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EB%8C%80%EC%8B%A0-%EC%9E%84%EC%9D%98%EC%9D%98-%EA%B0%9D%EC%B2%B4%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EA%B8%B0-%EC%9A%A9%EC%9D%B4%ED%95%B4%EC%A7%84%EB%8B%A4">DIP를 통해 외부 라이브러리 대신 임의의 객체를 만들어 테스트하기 용이해진다.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#oop">OOP</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%ED%8F%B4%EB%A6%AC%EB%AA%A8%ED%94%BC%EC%A6%98">폴리모피즘</a></li>
+<li><a href="#%EC%83%81%EC%86%8D-%EC%9C%84%EC%9E%84composition">상속, 위임(Composition)</a></li>
+<li><a href="#coupling-vs-cohesion">coupling vs cohesion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#functional-programming">Functional Programming</a></p>
+</li>
+<li>
+<p><a href="#coding-convention">Coding Convention</a></p>
+</li>
+<li>
+<p><a href="#clean-code">Clean Code</a></p>
+</li>
+<li>
+<p><a href="#tdd">TDD</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#why-test">Why Test?</a></li>
+<li><a href="#test">test</a></li>
+<li><a href="#bdd-ddd">BDD, DDD</a></li>
+<li><a href="#unit-testing-system-testing">unit testing, system testing</a></li>
+<li><a href="#refactoring">Refactoring</a></li>
+<li><a href="#%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8">유닛 테스트</a></li>
+<li><a href="#%EA%B8%B0%EB%8A%A5%EC%9D%B4-%EC%A0%84%EB%B0%98%EC%A0%81%EC%9C%BC%EB%A1%9C-%EB%B0%94%EB%80%8C%EB%8A%94-%EA%B2%BD%EC%9A%B0-ab-%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%A5%BC-%ED%95%B4%EC%95%BC%ED%95%9C%EB%8B%A4">기능이 전반적으로 바뀌는 경우 a/b 테스트를 해야한다</a></li>
+<li><a href="#load-vs-performance-vs-stress-test">Load vs Performance vs Stress test</a></li>
+<li><a href="#stage-test">stage test</a></li>
+<li><a href="#e2e-test">E2E test</a></li>
+<li><a href="#acceptance-test">Acceptance test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#error-handling">Error Handling</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%97%90%EB%9F%AC-%EC%B2%98%EB%A6%AC">에러 처리</a></li>
+<li><a href="#%EB%B9%A0%EB%A5%B8-%EB%A6%AC%ED%84%B4-vs-%EB%A6%AC%ED%84%B4%EC%9D%80-%ED%95%9C-%EA%B3%B3%EC%97%90%EC%84%9C%EB%A7%8C">빠른 리턴 vs 리턴은 한 곳에서만</a></li>
+<li><a href="#%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81">에러 핸들링</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#dash--vs-underscore_">dash(-) vs underscore(_)</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#space-vs-tab">space vs tab</a></li>
+<li><a href="#%EC%BD%94%EB%93%9C%EC%97%90%EC%84%9C-%EC%A3%BC%EB%A0%81%EC%A3%BC%EB%A0%81-%EB%8B%AC%EB%A6%AC%EB%8A%94-%EA%B2%83">코드에서 주렁주렁 달리는 것</a></li>
+<li><a href="#%ED%81%B4%EB%9E%98%EC%8A%A4-%EA%B8%B0%EB%B0%98-%EC%96%B8%EC%96%B4%EC%99%80-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EA%B8%B0%EB%B0%98-%EC%96%B8%EC%96%B4">클래스 기반 언어와 프로토타입 기반 언어</a></li>
+<li><a href="#language-design-principle">Language Design Principle</a></li>
+<li><a href="#internal-link">Internal Link</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#reference">Reference</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#python">Python</a></p>
+<ul>
+<li>
+<p><a href="#the-zen-of-python">The Zen of Python</a></p>
+</li>
+<li>
+<p><a href="#key-point">Key Point</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#compiler">compiler</a></li>
+<li><a href="#%ED%8C%8C%EC%9D%B4%EC%8D%AC-self">파이썬 self</a></li>
+<li><a href="#python-concept-with-id-function">Python concept with id() function.</a></li>
+<li><a href="#shallow-copy-deep-copy">shallow copy, deep copy</a></li>
+<li><a href="#built-in-functions">Built-in functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#miscellaneous">Miscellaneous</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%ED%95%9C%EA%B8%80-%EC%82%AC%EC%9A%A9">한글 사용</a></li>
+<li><a href="#requests">requests</a></li>
+<li><a href="#%ED%8C%8C%EC%9D%BC-%EC%9E%85%EC%B6%9C%EB%A0%A5">파일 입출력</a></li>
+<li><a href="#%EC%A0%95%EA%B7%9C%EC%8B%9D">정규식</a></li>
+<li><a href="#lambda-python-pandas-parsing-csv">lambda python pandas parsing csv</a></li>
+<li><a href="#reminder-recommend-python">reminder recommend python</a></li>
+<li><a href="#%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D">비동기 프로그래밍</a></li>
+<li><a href="#python-classmethod-staticmethod">python @classmethod @staticmethod</a></li>
+<li><a href="#args-kwargs">*args, **kwargs</a></li>
+<li><a href="#%ED%91%9C%EC%A4%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC">표준 라이브러리</a></li>
+<li><a href="#numpy">numpy</a></li>
+<li><a href="#singleton-in-python">singleton in python</a></li>
+<li><a href="#if-need-initial-python-dependency-using-this">if need initial python dependency using this</a></li>
+<li><a href="#pickling-and-unpickling">pickling and unpickling?</a></li>
+<li><a href="#json-dumps-loads">json dumps, loads</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#defects">Defects</a></p>
+</li>
+<li>
+<p><a href="#wtf">WTF</a></p>
+</li>
+<li>
+<p><a href="#reference-1">Reference</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#golang">Golang</a></p>
+<ul>
+<li>
+<p><a href="#philosophy">Philosophy</a></p>
+</li>
+<li>
+<p><a href="#key-point-1">Key point</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#golang-has-no-class">golang has no class</a></li>
+<li><a href="#specification">Specification</a></li>
+<li><a href="#auto-rebuild">Auto Rebuild</a></li>
+<li><a href="#go-folder-management">go folder management</a></li>
+<li><a href="#goroutine">goroutine</a></li>
+<li><a href="#go-http">go http</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#library">Library</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#graphql-go">graphql-go</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#measure-execution-time-in-go">measure execution time in go</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#golang-1">golang</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#wasm">wasm</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#defer">defer</a></li>
+<li><a href="#golang-context">golang context</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#defects-1">Defects</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EA%B3%A0-%EB%AA%A8%EB%93%88%EC%97%90%EC%84%9C-%EB%B2%84%EC%A0%84%EA%B4%80%EB%A6%AC%EA%B0%80-%EB%B3%84%EB%A1%9C%EB%8B%A4">고 모듈에서 버전관리가 별로다</a></li>
+<li><a href="#%ED%8C%A8%ED%82%A4%EC%A7%80-%EA%B4%80%EB%A6%AC">패키지 관리</a></li>
+<li><a href="#go-library">go library</a></li>
+<li><a href="#vs-rust">vs rust</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#reference-2">Reference</a></p>
+</li>
+</ul>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h2 id="요약" style="position:relative;"><a href="#%EC%9A%94%EC%95%BD" aria-label="요약 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>요약</h2>
+<p>코딩을 어떻게 하면 좋은 코드가 나올까? SOLID, DRY, YAGNI 등 많은 코딩, 디자인 가이드가 있다.</p>
+<hr>
+<h2 id="solid" style="position:relative;"><a href="#solid" aria-label="solid permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SOLID</h2>
+<p><strong>Abstraction, One Behavior class, Encapsulation</strong></p>
+<ul>
+<li>S 하나의 클래스는 한 가지 일만, 변경하기 위한 이유는 하나만 갖고 있어야 한다.</li>
+<li>O 확장에는 열려있고, 변화에는 닫혀 있어야 한다</li>
+<li>L 하위 클래스는 기존 클래스와 치환되어도 동작 해야 한다</li>
+<li>I 인터페이스를 작게 하고, 클라이언트가 사용 안하는 함수는 공급도 안하게 한다.</li>
+<li>D 추상화에 의존해라. 구체적인 것 말고.</li>
+</ul>
+<h4 id="single-reason" style="position:relative;"><a href="#single-reason" aria-label="single reason permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Single reason</h4>
+<p>변경하기 위한 이유는 버그 수정이나 리팩토링일 때가 아니라 디자인 설계 시의 얘기</p>
+<h4 id="dip를-통해-외부-라이브러리-대신-임의의-객체를-만들어-테스트하기-용이해진다" style="position:relative;"><a href="#dip%EB%A5%BC-%ED%86%B5%ED%95%B4-%EC%99%B8%EB%B6%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EB%8C%80%EC%8B%A0-%EC%9E%84%EC%9D%98%EC%9D%98-%EA%B0%9D%EC%B2%B4%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EA%B8%B0-%EC%9A%A9%EC%9D%B4%ED%95%B4%EC%A7%84%EB%8B%A4" aria-label="dip를 통해 외부 라이브러리 대신 임의의 객체를 만들어 테스트하기 용이해진다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DIP를 통해 외부 라이브러리 대신 임의의 객체를 만들어 테스트하기 용이해진다.</h4>
+<p>테스트 시에 외부 API의 기능을 테스트하는게 아니라 내 구현을 테스트한다.</p>
+<h2 id="oop" style="position:relative;"><a href="#oop" aria-label="oop permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OOP</h2>
+<ul>
+<li><strong>Encapsulation, Composition, Inheritance, Delegation, Polymorphism, Open recursion</strong></li>
+<li>same Input, should same output</li>
+<li>Encapsulation = Module?
+<ul>
+<li>Encapsulation is hide the value</li>
+</ul>
+</li>
+</ul>
+<h4 id="폴리모피즘" style="position:relative;"><a href="#%ED%8F%B4%EB%A6%AC%EB%AA%A8%ED%94%BC%EC%A6%98" aria-label="폴리모피즘 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>폴리모피즘</h4>
+<p>객체 생성 시 고정된 객체를 만드는 것이 아니라 기준만 만들고 실제 구현은 각
+상황에 맞게 수정할 수 있게 하는 것</p>
+<p>인터페이스나 추상클래스를 이용하여 상속해 여러 객체를 하나의 기준으로 만드는 것
+그리고 이를 이용하여 오버라이딩 하여 각 객체에 맞게 재구현할 수 있는 것</p>
+<p>하나의 객체를 다양한 방법으로 사용할 수 있게 하는 것</p>
+<h4 id="상속-위임composition" style="position:relative;"><a href="#%EC%83%81%EC%86%8D-%EC%9C%84%EC%9E%84composition" aria-label="상속 위임composition permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>상속, 위임(Composition)</h4>
+<p>상속</p>
+<ul>
+<li>물건에서 인터넷용과 아닌 것을 구현할 때 물건의 속성은 공통으로 가지게 해서
+수정을 한 곳에서 하게 할 수 있다.</li>
+<li>상속 받는 객체가 많아지면 그 중에 몇개만 같은 속성을 원할 때 상속이 깨지던가,
+중복된 구현을 각자 하던가 해야하는 상황이 오게 된다.</li>
+<li>아키텍처에서 정책과 세부사항을 분리해야 한다고 하는 것처럼 상속도 이 부분을
+고민해야 한다.</li>
+</ul>
+<p>상속 대신 위임을 이용하라고 하는데, Go에서 interface는 구성의 방식인가?</p>
+<ul>
+<li>덕 타이핑이 위임인가?
+<ul>
+<li>맞다고 할 수 있다.</li>
+<li><a href="https://mingrammer.com/translation-go-and-oop/#3-%EC%BB%B4%ED%8F%AC%EC%A7%80%EC%85%98-composition">https://mingrammer.com/translation-go-and-oop/#3-컴포지션-composition</a></li>
+</ul>
+</li>
+</ul>
+<p>위임으로 상속의 장점을 취하고 단점을 완화할 수 있는 것인가?</p>
+<ul>
+<li>상속이 더 간단하게 구현되지만 구성으로도 똑같은 느낌을 낼 수 있다.</li>
+<li>구성 방식으로 하면 처음부터 어떤 것을 고정하고 어떤 것은 변하게 할지 고민하지
+않아도 된다. 그래서 웬만하면 구성을 쓰라고 하는 것 같다.</li>
+</ul>
+<h4 id="coupling-vs-cohesion" style="position:relative;"><a href="#coupling-vs-cohesion" aria-label="coupling vs cohesion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>coupling vs cohesion</h4>
+<p>내부에서의 변수들의 활용이 잘되면 응집도가 높다고 한다
+클래스의 변수를 메소드가 여러개 잘 사용하면 응집도가 높다고 볼 수 있다
+각 객체 간 연결이 느슨하게 되있으면 결합도가 낮다고 한다</p>
+<h2 id="functional-programming" style="position:relative;"><a href="#functional-programming" aria-label="functional programming permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functional Programming</h2>
+<p>불변성</p>
+<h2 id="coding-convention" style="position:relative;"><a href="#coding-convention" aria-label="coding convention permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Coding Convention</h2>
+<p>회사의 컨벤션 룰을 따르자. lint도 설정하고</p>
+<ul>
+<li>python -- underscore</li>
+<li>golang -- camel</li>
+<li><code class="language-text">-</code> vs <code class="language-text">_</code></li>
+<li><code class="language-text">tab</code> vs <code class="language-text">space</code></li>
+</ul>
+<h2 id="clean-code" style="position:relative;"><a href="#clean-code" aria-label="clean code permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clean Code</h2>
+<ul>
+<li>
+<p>Robert C. Martin</p>
+</li>
+<li>
+<p><a href="https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29">https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29</a></p>
+</li>
+<li>
+<p>Meaningful naming</p>
+</li>
+</ul>
+<h2 id="tdd" style="position:relative;"><a href="#tdd" aria-label="tdd permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TDD</h2>
+<ul>
+<li>at least make test code.</li>
+<li>Test, Log(error handling), API</li>
+</ul>
+<h4 id="why-test" style="position:relative;"><a href="#why-test" aria-label="why test permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why Test?</h4>
+<ul>
+<li>code make concrete</li>
+<li><a href="https://drive.google.com/file/d/13r0fkQbcbd_2DG34l9Mm5VMRk8ewIImS/view?usp=sharing">The Art of Software Testing</a></li>
+</ul>
+<h4 id="test" style="position:relative;"><a href="#test" aria-label="test permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>test</h4>
+<ul>
+<li>boundary check</li>
+</ul>
+<h4 id="bdd-ddd" style="position:relative;"><a href="#bdd-ddd" aria-label="bdd ddd permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>BDD, DDD</h4>
+<h4 id="unit-testing-system-testing" style="position:relative;"><a href="#unit-testing-system-testing" aria-label="unit testing system testing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>unit testing, system testing</h4>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/difference-between-unit-testing-and-system-testing/">https://www.geeksforgeeks.org/difference-between-unit-testing-and-system-testing/</a></li>
+<li>unit testing</li>
+<li>single module base,</li>
+<li>system testing</li>
+<li>depends specific requirement, totally test</li>
+</ul>
+<h4 id="refactoring" style="position:relative;"><a href="#refactoring" aria-label="refactoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Refactoring</h4>
+<ul>
+<li>변화는 향상을 가져온다. 마치 책의 퇴고처럼</li>
+<li>작가가 퇴고를 거듭하며 더 좋은 글이 되는 것처럼 리팩토링을 통해 더 나은 코드를 만들 수 있다</li>
+<li>리팩토링을 두려워하지 말자</li>
+</ul>
+<h4 id="유닛-테스트" style="position:relative;"><a href="#%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8" aria-label="유닛 테스트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>유닛 테스트</h4>
+<p>유닛 테스트를 어노테이션을 만들어서 입력값만 지정해서 원하는 출력값이 나오는지
+확인하면 테스트와 실제 코드가 같이 있게 되어 좋지 않을까?
+결과의 멱등성을 유도하는 방향으로 함수를 작성하고.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">@Test(input1:'1',input2:'2')
+def add(a int, b int):
+    return a + b</code></pre></div>
+<p>복잡한 로직이 필요하거나, 함수 실행 전에 선언해야하는 것들이 있으면 처리가
+힘들겠다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Square s = Square{}
+s.SetLength(5)
+
+class Square():
+    len = ''
+    @Test(what input can in here?)
+    def SetLength(i int):
+        len = i</code></pre></div>
+<p>테스트코드를 먼저 적고 테스트 코드만 통과할 정도의 함수만 작성하고 문제가 생기면
+추가하는 방식으로 한다</p>
+<ul>
+<li>주먹구구와 점진적 개선의 차이는 뭘까</li>
+</ul>
+<h4 id="기능이-전반적으로-바뀌는-경우-ab-테스트를-해야한다" style="position:relative;"><a href="#%EA%B8%B0%EB%8A%A5%EC%9D%B4-%EC%A0%84%EB%B0%98%EC%A0%81%EC%9C%BC%EB%A1%9C-%EB%B0%94%EB%80%8C%EB%8A%94-%EA%B2%BD%EC%9A%B0-ab-%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%A5%BC-%ED%95%B4%EC%95%BC%ED%95%9C%EB%8B%A4" aria-label="기능이 전반적으로 바뀌는 경우 ab 테스트를 해야한다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>기능이 전반적으로 바뀌는 경우 a/b 테스트를 해야한다</h4>
+<p>블루 그린 배포를 하던지 해서 배포 방식을 상황에 맞게 설정해야겠다</p>
+<h4 id="load-vs-performance-vs-stress-test" style="position:relative;"><a href="#load-vs-performance-vs-stress-test" aria-label="load vs performance vs stress test permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Load vs Performance vs Stress test</h4>
+<p>Reliability, Stability, Response time, Scalability</p>
+<p>Performance Test</p>
+<ul>
+<li>it includes Load test and Stress test</li>
+<li>사용자가 원하는 조건이 있을 때 만족할 수 있는지 확인하기 위해 사용</li>
+</ul>
+<p>Load Test</p>
+<ul>
+<li>how much can handle resource of cpu, memory</li>
+<li>verifies whether the application can handle the expected load.</li>
+</ul>
+<p>Stress Test</p>
+<ul>
+<li>find the breaking point(maximum point)</li>
+</ul>
+<blockquote>
+<p><a href="https://stackify.com/load-testing-vs-performance-testing-vs-stress-testing/">https://stackify.com/load-testing-vs-performance-testing-vs-stress-testing/</a></p>
+</blockquote>
+<h4 id="stage-test" style="position:relative;"><a href="#stage-test" aria-label="stage test permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stage test</h4>
+<h4 id="e2e-test" style="position:relative;"><a href="#e2e-test" aria-label="e2e test permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>E2E test</h4>
+<ul>
+<li>End to end test</li>
+</ul>
+<h4 id="acceptance-test" style="position:relative;"><a href="#acceptance-test" aria-label="acceptance test permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Acceptance test</h4>
+<p>인수 테스트? (인수/인계할 때 그 인수?) 고객이 인수하는? 수락으로 해석해도 되겠다
+측정할 수 있는 기준을 마련한다는 것</p>
+<p>인수테스트를 기반으로 유닛테스트를 조정할 수 있겠다</p>
+<p>기획 -> 기능 -> 스토리 -> 시나리오 -> 테스트</p>
+<h2 id="error-handling" style="position:relative;"><a href="#error-handling" aria-label="error handling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Handling</h2>
+<ul>
+<li>Exception File, Network</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">#whitelist?
+def do_something:
+ if do_something:
+  return false
+
+ return true
+
+err = do_something
+if err: generateError</code></pre></div>
+<ul>
+<li>엣지 케이스를 확인한다</li>
+<li>정상적일 때가 아니라 최악의 상황을 생각한다</li>
+</ul>
+<h4 id="에러-처리" style="position:relative;"><a href="#%EC%97%90%EB%9F%AC-%EC%B2%98%EB%A6%AC" aria-label="에러 처리 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>에러 처리</h4>
+<p>예외로 볼것인가 에러로 볼것인가(회복 가능한가 아닌가)
+호출자가 에러처리를 할 것인가, 유닛에서 에러처리를 할 것인가
+유닛 함수는 리턴값을 항상 가지게 한다</p>
+<p>하마님의 블로그 참고
+<a href="https://hamait.tistory.com/1027?category=250996">https://hamait.tistory.com/1027?category=250996</a></p>
+<p>포프님의 영상 다시 참조해본다</p>
+<ul>
+<li>caller 에서는 에러가 뜬 것만 확인하고 내부를 알려고 할 필요 없다</li>
+</ul>
+<p>에러를 밑단에서 처리하면 프로그램이 뻗을지 말지를 호스트가 선택할 수 없다
+에러를 호스트가 처리하면 밑단에서 스택이 잔뜩 쌓여서 호스트에 전달되어야 한다</p>
+<p>에러 처리를 어떻게 할지 호스트가 결정해야한다?
+밑에서 처리하고 로그만 남긴다?
+문제가 생겼는데 에러만 남고 아무 이상이 없으면 문제
+문제가 별게 아닌데 정지되도 문제</p>
+<p>최대한 정지 없이 문제를 회복해서 진행시켜야 한다</p>
+<h4 id="빠른-리턴-vs-리턴은-한-곳에서만" style="position:relative;"><a href="#%EB%B9%A0%EB%A5%B8-%EB%A6%AC%ED%84%B4-vs-%EB%A6%AC%ED%84%B4%EC%9D%80-%ED%95%9C-%EA%B3%B3%EC%97%90%EC%84%9C%EB%A7%8C" aria-label="빠른 리턴 vs 리턴은 한 곳에서만 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>빠른 리턴 vs 리턴은 한 곳에서만</h4>
+<p>golang의 에러 처리 방식 vs 책 클린 코드에서 나온 리턴을 마지막에만 두자는 얘기</p>
+<h4 id="에러-핸들링" style="position:relative;"><a href="#%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81" aria-label="에러 핸들링 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>에러 핸들링</h4>
+<p>리턴을 어떻게 관리해야하나</p>
+<p>golang에서는 라이브러리들이 웬만하면 에러를 같이 리턴한다.
+Fatal은 최종 사용자가 하는거다</p>
+<p>에러의 종류</p>
+<ul>
+<li>내부적으로 처리해야하는 에러 (file)</li>
+<li>사용자가 처리할 에러 (network, temporary, null)</li>
+</ul>
+<p>golang의 일반 error는 너무 단순해서 에러가 어디서 났는지 확인하기도 쉽지 않다.
+어디서, 무슨 원인으로 났는지는 확인할 수 있어야겠다.</p>
+<p>에러 처리를 한 곳으로 모아서 처리하는 방식</p>
+<ul>
+<li>errormessage(err)로 만들어서 에러 메시지를 띄우는 설비 프로그램 방식</li>
+</ul>
+<h2 id="dash--vs-underscore_" style="position:relative;"><a href="#dash--vs-underscore_" aria-label="dash  vs underscore_ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>dash(-) vs underscore(_)</h2>
+<p>dash</p>
+<ul>
+<li>타이핑이 쉽다</li>
+<li>일반인에게 익숙하다</li>
+</ul>
+<p>underscore</p>
+<ul>
+<li>파일 시스템에서 공백 대신 종종 사용된다</li>
+<li>띄어쓰기와 비슷해보인다</li>
+</ul>
+<p>둘 다 camelCase, PascalCase 보다 직관적이다
+그럼에도 golang은 camel,Pascal을 쓰고
+파이썬은 underscore가 특별한 예약어다.</p>
+<h4 id="space-vs-tab" style="position:relative;"><a href="#space-vs-tab" aria-label="space vs tab permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>space vs tab</h4>
+<ul>
+<li>tab can line cleary</li>
+<li>space little more light</li>
+</ul>
+<h4 id="코드에서-주렁주렁-달리는-것" style="position:relative;"><a href="#%EC%BD%94%EB%93%9C%EC%97%90%EC%84%9C-%EC%A3%BC%EB%A0%81%EC%A3%BC%EB%A0%81-%EB%8B%AC%EB%A6%AC%EB%8A%94-%EA%B2%83" aria-label="코드에서 주렁주렁 달리는 것 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>코드에서 주렁주렁 달리는 것</h4>
+<p>context
+log 설정
+에러 처리</p>
+<h4 id="클래스-기반-언어와-프로토타입-기반-언어" style="position:relative;"><a href="#%ED%81%B4%EB%9E%98%EC%8A%A4-%EA%B8%B0%EB%B0%98-%EC%96%B8%EC%96%B4%EC%99%80-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EA%B8%B0%EB%B0%98-%EC%96%B8%EC%96%B4" aria-label="클래스 기반 언어와 프로토타입 기반 언어 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>클래스 기반 언어와 프로토타입 기반 언어</h4>
+<ul>
+<li>클래스 기반 언어: 객체를 정의하고 그것을 쓴다</li>
+<li>프로토타입 기반 언어: 유사성을 확인해서 가장 유사성이 많은 것을 기준으로 삼는다</li>
+<li>클래스 기반 언어: 한번 정의한 것은 그대로 사용된다</li>
+<li>프로토타입 기반 언어: 문맥에 따라 의미가 달라질 수 있다</li>
+</ul>
+<hr>
+<h4 id="language-design-principle" style="position:relative;"><a href="#language-design-principle" aria-label="language design principle permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Language Design Principle</h4>
+<p><a href="Software#History">C</a>
+</section><div role="link" tabindex="0"><a href="/python/#the-zen-of-python">the zen of python</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/golang/#philosophy">philosophy</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p>
+<h4 id="internal-link" style="position:relative;"><a href="#internal-link" aria-label="internal link permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Internal Link</h4>
+<p></section><div role="link" tabindex="0"><a href="/architecture/#goal">goal</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/project/#project-start">project start</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/think/#개발의-목표">개발의 목표</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/information/#비판-대신-진취적-개선에-에너지를-쏟는다.">비판 대신 진취적 개선에 에너지를 쏟는다.</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/think/#safety-programming">safety programming</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/think/#가려움을-해결한-방법-1">가려움을 해결한 방법 1</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/architecture/#check-point">check point</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/technology/#functional_programming">functional_programming</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p>
+<h2 id="reference" style="position:relative;"><a href="#reference" aria-label="reference permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/SOLID">https://en.wikipedia.org/wiki/SOLID</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Object-oriented_programming">https://en.wikipedia.org/wiki/Object-oriented_programming</a></li>
+<li><a href="https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/">https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/</a></li>
+<li><a href="https://chodragon9.github.io/blog/easy-code/">https://chodragon9.github.io/blog/easy-code/</a></li>
+<li><a href="https://github.com/rwaldron/idiomatic.js/blob/master/translations/ko_KR/readme.md">https://github.com/rwaldron/idiomatic.js/blob/master/translations/ko_KR/readme.md</a></li>
+</ul>
+<hr>
+<h1 id="python" style="position:relative;"><a href="#python" aria-label="python permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Python</h1>
+<p>summary : Beautiful, Explicit, Simple, Complex than complicated.</p>
+<h2 id="the-zen-of-python" style="position:relative;"><a href="#the-zen-of-python" aria-label="the zen of python permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Zen of Python</h2>
+<ul>
+<li><em>Beautiful</em> is better than ugly.</li>
+<li><em>Explicit</em> is better than implicit.</li>
+<li><em>Simple</em> is better than <em>complex</em>.</li>
+<li><em>Complex</em> is better than complicated.</li>
+<li>Special cases aren't special enough to break the rules.</li>
+<li>Although <em>practicality</em> beats purity.</li>
+</ul>
+<h2 id="key-point" style="position:relative;"><a href="#key-point" aria-label="key point permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Key Point</h2>
+<ul>
+<li>what is an object, class
+<ul>
+<li>module is not class. module can't do inheritance</li>
+<li>but module can contains class</li>
+</ul>
+</li>
+<li>generators (how to use, when is useful), yield</li>
+<li>interpreter, dynamic type</li>
+<li>floor division?</li>
+<li>[GIL](Computer_Architecture#GIL is mutex for python to prevent use object by multi thread.)</li>
+<li>debugging</li>
+<li>wrapper</li>
+<li>what is python? What are the benefits of using python?
+<ul>
+<li>object</li>
+<li>modules</li>
+<li>threads</li>
+</ul>
+</li>
+<li>How Python is interpreted</li>
+<li>How memory is managed in python
+<ul>
+<li>Python memory is managed by python private heap</li>
+</ul>
+</li>
+<li>What are Python decorators?</li>
+<li>What is the difference between list and tuple?</li>
+<li>What is Dict and List comprehensions are?</li>
+<li>Why lambda forms in python does not have statements?</li>
+<li>Runtime return?</li>
+<li>What is a pass in Python</li>
+<li>What is docstring in Python?</li>
+<li>How are arguments passed by value or by reference</li>
+<li>How can you share global variables across modules</li>
+</ul>
+<p></section><div role="link" tabindex="0"><a href="/software/#pointer-vs-reference">pointer vs reference</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/data_structure/#python">python</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p>
+<h4 id="compiler" style="position:relative;"><a href="#compiler" aria-label="compiler permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>compiler</h4>
+<p>CPython</p>
+<ul>
+<li>기본적으로 python 설치 후 실행하면 이 컴파일러로 실행된다</li>
+<li>파이썬은 C로 구현되기 때문에 C로 구현된 컴파일러로 제작되었다</li>
+<li>C언어로 작성된 컴파일러가 파이썬 코드를 읽어 바이트코드로 컴파일하여
+인터프리터로 실행한다</li>
+<li>파이썬에서 C를 이용하는 라이브러리(e.g. NumPy)들이 있는데 이것들을 실행하는데는
+CPython을 써야 했었다.</li>
+<li><a href="https://lgphone.tistory.com/m/128?category=913302">https://lgphone.tistory.com/m/128?category=913302</a></li>
+</ul>
+<p>Cython이라는 C로 변환 후 컴파일하는 컴파일러도 있다.</p>
+<p>PyPy</p>
+<ul>
+<li>python으로 구현된 컴파일러</li>
+<li>JIT (just in time)
+<ul>
+<li>인터프리터의 단점을 보완하기 위해 나온 방식</li>
+<li>인터프리터 방식으로 실행하다가 (적절한 시점에) 네이티브 코드로 변경하여
+캐싱해 직접 실행</li>
+<li>meta-tracing</li>
+<li><a href="https://j.mearie.org/post/5125952364/why-is-pypy-faster-than-cpython">https://j.mearie.org/post/5125952364/why-is-pypy-faster-than-cpython</a></li>
+</ul>
+</li>
+<li>RPython
+<ul>
+<li>static python compiler</li>
+<li>파이썬의 동적인 부분을 없애 정적인 결과물로 만들어 속도 향상을 한다</li>
+<li>인터프리터를 만드는 컴파일러</li>
+</ul>
+</li>
+<li>RPython이 만든 인터프리터를 이용해 실행함으로써 읽는 코드의 상태가 다르다.
+<ul>
+<li>인터프리팅 자체의 속도가 빨라진다</li>
+</ul>
+</li>
+<li>RPython + JIT로 속도 향상을 이루었다</li>
+</ul>
+<h4 id="파이썬-self" style="position:relative;"><a href="#%ED%8C%8C%EC%9D%B4%EC%8D%AC-self" aria-label="파이썬 self permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>파이썬 self</h4>
+<p>super, self</p>
+<ul>
+<li>
+<p>인스턴스</p>
+<ul>
+<li><code class="language-text">a = Test()</code>
+할 때 생기는 a</li>
+</ul>
+</li>
+<li>
+<p>네임스페이스</p>
+<ul>
+<li>클래스 생성 시 파이썬 기본 함수 목록에 저장된다
+이것이 네임스페이스
+클래스 내부의 인자는 네임스페이스 안에 딕셔너리 형태로 저장됨</li>
+<li>인스턴스 생성시에도 네임스페이스에 저장된다
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token builtin">dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#['Test', '__builtins__', '__doc__', '__loader__', …]</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>self 는 해당 객체의 인스턴스를 가르킨다</p>
+</li>
+<li>
+<p>주소값이 들어간다고 보면 될 것 같다</p>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+ <span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"test1"</span><span class="token punctuation">)</span>
+ <span class="token keyword">def</span> <span class="token function">test2</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"test2"</span><span class="token punctuation">)</span>
+ <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">)</span>
+ Test<span class="token punctuation">.</span>test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ a <span class="token operator">=</span> Test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>test<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token comment">#self인자가 없다고 에러 발생</span>
+ <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>test2<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token comment">#test2</span>
+ <span class="token comment">#test2의 주소값 출력</span>
+ <span class="token keyword">print</span><span class="token punctuation">(</span>Test<span class="token punctuation">.</span>test<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token comment">#a.test()와 달리 에러 발생 안함</span>
+ <span class="token comment">#test1</span></code></pre></div>
+<h4 id="python-concept-with-id-function" style="position:relative;"><a href="#python-concept-with-id-function" aria-label="python concept with id function permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Python concept with id() function.</h4>
+<p>Everything is an Object in Python</p>
+<ul>
+<li>Even function and class, id()</li>
+</ul>
+<p>variable Assignment and Aliasing</p>
+<ul>
+<li><code class="language-text">hello = 'Hello world'</code></li>
+<li><code class="language-text">world = hello</code></li>
+<li>hello's id equal with world's id</li>
+</ul>
+<p><code class="language-text">==</code> operator, <code class="language-text">is</code> operator</p>
+<ul>
+<li><code class="language-text">==</code> compares the value</li>
+<li><code class="language-text">is</code> compares the identities(i.e. memory addresses)</li>
+</ul>
+<p>integer caching</p>
+<ul>
+<li>-5 ~ 255 are caching</li>
+</ul>
+<p>shallow and deep copies</p>
+<ul>
+<li>shallow copy make new object.</li>
+<li>deep copy make new object and if layer has a nested layer, recursively copy</li>
+</ul>
+<p>a = 1000 을 해놓고 a+=1을 하면 a의 주소는 변한다
+다시 a = 1000 을 하면 1000의 주소는 할당해제 되고 가비지컬랙터가 수거해가서
+새로운 주소가 할당된다
+할당되었다는 것은 메모리를 차지하고 있다는 것.
+가비지 컬렉터가 수거해가나? 언제? del 명령어가 있다
+-5 에서 256이 기본적으로 할당되어 있어서 아이디가 고정되는 것</p>
+<h4 id="shallow-copy-deep-copy" style="position:relative;"><a href="#shallow-copy-deep-copy" aria-label="shallow copy deep copy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>shallow copy, deep copy</h4>
+<p>파이썬은 기본적으로 대입 연산 시 값이 아닌 레퍼런스를 참조한다.</p>
+<ul>
+<li>그냥 대입하면 레퍼런스를 참조해버리는데, 참조를 원하지 않을 때 copy를 쓴다</li>
+<li>배열형 객체가 아니라면 새로운 값 입력 시 객체가 변경되므로 copy를 쓸 일이 없다</li>
+</ul>
+<p>deep copy와 shallow copy의 차이는 중첩된 배열처럼 중첩된 구조에서 차이를 보인다.</p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">import</span> copy
+a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+b <span class="token operator">=</span> a
+c <span class="token operator">=</span> copy<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+d <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token builtin">id</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment"># 0x0000</span>
+<span class="token builtin">id</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token comment"># 0x0000</span>
+<span class="token builtin">id</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token comment"># 0x0600 임의의 값. a와 다르다는 의미</span>
+<span class="token builtin">id</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token comment"># 0x0800 임의의 값. a와 다르다는 의미</span>
+
+a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment"># [ [0,2,3], [4,5,6] ]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token comment"># [ [0,2,3],[4,5,6] ]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token comment"># [ [0,2,3],[4,5,6] ] 중첩 된 곳을 참조해버렸다</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token comment"># [ [1,2,3],[4,5,6] ]</span>
+
+a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment"># [ [1],[4,5,6] ]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token comment"># [ [1],[4,5,6] ]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token comment"># [ [0,2,3],[4,5,6] ]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token comment"># [ [1,2,3],[4,5,6] ]</span></code></pre></div>
+<p>copy.copy() 는 [:]와 동일하다</p>
+<p>is 는 객체를 확인하고, ==은 값을 확인한다</p>
+<h4 id="built-in-functions" style="position:relative;"><a href="#built-in-functions" aria-label="built in functions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Built-in functions</h4>
+<ul>
+<li><a href="https://docs.python.org/3/library/functions.html">https://docs.python.org/3/library/functions.html</a></li>
+<li>abs max min pow sum round divmod</li>
+<li>all any filter map sorted zip</li>
+<li>enumerate range len</li>
+<li>chr hex ord oct</li>
+<li>id input isinstance open dir eval</li>
+<li>str tuple type list int</li>
+</ul>
+<h2 id="miscellaneous" style="position:relative;"><a href="#miscellaneous" aria-label="miscellaneous permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Miscellaneous</h2>
+<h4 id="한글-사용" style="position:relative;"><a href="#%ED%95%9C%EA%B8%80-%EC%82%AC%EC%9A%A9" aria-label="한글 사용 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>한글 사용</h4>
+<p>맨 위에 <code class="language-text">#-*- coding:utf-8 -*-</code> 입력</p>
+<h4 id="requests" style="position:relative;"><a href="#requests" aria-label="requests permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>requests</h4>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">import</span> requests
+data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'id'</span><span class="token punctuation">:</span><span class="token string">'12'</span><span class="token punctuation">,</span><span class="token string">'password'</span><span class="token punctuation">:</span><span class="token string">'12'</span><span class="token punctuation">}</span>
+URL <span class="token operator">=</span> <span class="token string">'url'</span>
+res <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>URL<span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">)</span></code></pre></div>
+<h4 id="파일-입출력" style="position:relative;"><a href="#%ED%8C%8C%EC%9D%BC-%EC%9E%85%EC%B6%9C%EB%A0%A5" aria-label="파일 입출력 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>파일 입출력</h4>
+<p>F = open('C:\test.txt')
+F.read() - 전체 입력
+F.readline() - 한 줄만 입력
+F.readlines() - 반환값이 리스트
+.split()</p>
+<h4 id="정규식" style="position:relative;"><a href="#%EC%A0%95%EA%B7%9C%EC%8B%9D" aria-label="정규식 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>정규식</h4>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">import re
+.compile
+.sub(pattern,replace,string,count,flag) - 찾아바꾸기
+.search
+.match
+.findall
+.group</code></pre></div>
+<h4 id="lambda-python-pandas-parsing-csv" style="position:relative;"><a href="#lambda-python-pandas-parsing-csv" aria-label="lambda python pandas parsing csv permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>lambda python pandas parsing csv</h4>
+<ul>
+<li><a href="https://stackoverflow.com/questions/39303912/tfidfvectorizer-in-scikit-learn-valueerror-np-nan-is-an-invalid-document">https://stackoverflow.com/questions/39303912/tfidfvectorizer-in-scikit-learn-valueerror-np-nan-is-an-invalid-document</a></li>
+</ul>
+<h4 id="reminder-recommend-python" style="position:relative;"><a href="#reminder-recommend-python" aria-label="reminder recommend python permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reminder recommend python</h4>
+<ul>
+<li>Filtering method
+<ul>
+<li>Demographic Filtering</li>
+<li>Content Based Filtering</li>
+<li>Collaborative Filtering- <a href="https://www.kaggle.com/ibtesama/getting-started-with-a-movie-recommendation-system">https://www.kaggle.com/ibtesama/getting-started-with-a-movie-recommendation-system</a></li>
+</ul>
+</li>
+<li>? find visualization system about csv file for weight manage</li>
+<li>upload lambda with pandas, scikit-learn
+<ul>
+<li><a href="https://medium.com/@korniichuk/lambda-with-pandas-fd81aa2ff25e">https://medium.com/@korniichuk/lambda-with-pandas-fd81aa2ff25e</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="비동기-프로그래밍" style="position:relative;"><a href="#%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D" aria-label="비동기 프로그래밍 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>비동기 프로그래밍</h4>
+<ul>
+<li>asyncio
+<ul>
+<li>get_event_loop() - asyncio 시작</li>
+<li>loop.run_until_complete() - 이벤트 루프 시작</li>
+</ul>
+</li>
+<li>그린 스레드</li>
+<li>스케쥴링을 하드웨어가 아닌 애플리케이션 코드가 대신한다.</li>
+<li>Gevent 는 그린스레드 + eventlet 이다</li>
+<li>비동기 프로그래밍 = non-blocking i/o ?</li>
+</ul>
+<h4 id="python-classmethod-staticmethod" style="position:relative;"><a href="#python-classmethod-staticmethod" aria-label="python classmethod staticmethod permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>python @classmethod @staticmethod</h4>
+<ul>
+<li>classmethod has class argument</li>
+<li>staticmethod hasn't self. but can use statically</li>
+</ul>
+<h4 id="args-kwargs" style="position:relative;"><a href="#args-kwargs" aria-label="args kwargs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>*args, **kwargs</h4>
+<ul>
+<li>It is convention args is used to how many argument don’t you know</li>
+<li>Kwargs is used to how many argument don’t you know key:value data type as dictionary</li>
+<li>It is no need correct name it can use *man, **dkdke</li>
+</ul>
+<h4 id="표준-라이브러리" style="position:relative;"><a href="#%ED%91%9C%EC%A4%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC" aria-label="표준 라이브러리 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>표준 라이브러리</h4>
+<p>파이썬 itertools Collection Counter Dequeue</p>
+<h4 id="numpy" style="position:relative;"><a href="#numpy" aria-label="numpy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>numpy</h4>
+<ul>
+<li>array</li>
+</ul>
+<h4 id="singleton-in-python" style="position:relative;"><a href="#singleton-in-python" aria-label="singleton in python permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>singleton in python</h4>
+<p>여러 상황에서 하나의 객체를 부를 때 동일한 객체를 부르기 위해 싱글턴패턴을 사용하는데 자바에서는 스태틱으로 정적할당을 해주는데 파이썬에서는 어떻게 하지?</p>
+<ul>
+<li>@staticmethod</li>
+</ul>
+<p>싱글턴을 안쓰고 그냥 정적변수 또는 전역변수로 써도 같은 역할을 할 수 있지만 싱글턴은 더욱 확장 가능한 객체로 꾸밀 수 있다</p>
+<h4 id="if-need-initial-python-dependency-using-this" style="position:relative;"><a href="#if-need-initial-python-dependency-using-this" aria-label="if need initial python dependency using this permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>if need initial python dependency using this</h4>
+<p>RUN pip3 install --no-cache-dir pandas sklearn requests
+RUN pip3 freeze > requirments.txt</p>
+<h4 id="pickling-and-unpickling" style="position:relative;"><a href="#pickling-and-unpickling" aria-label="pickling and unpickling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pickling and unpickling?</h4>
+<p>python 객체를 직렬화해서 파일에 저장하고 이용하는 것</p>
+<ul>
+<li>serialize해서 TCP 등으로 전송하기 좋다</li>
+<li>여러 파일 간 공유하기 좋다</li>
+<li>프로그램 상태를 저장해서 쓸 수 있다</li>
+<li><a href="https://www.geeksforgeeks.org/understanding-python-pickling-example/">https://www.geeksforgeeks.org/understanding-python-pickling-example/</a></li>
+<li><a href="http://t.ly/xAQL">http://t.ly/xAQL</a></li>
+</ul>
+<h4 id="json-dumps-loads" style="position:relative;"><a href="#json-dumps-loads" aria-label="json dumps loads permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>json dumps, loads</h4>
+<p>dumps - python object -> json
+loads - json -> python object</p>
+<h2 id="defects" style="position:relative;"><a href="#defects" aria-label="defects permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defects</h2>
+<p>what is the 3 worst defects python</p>
+<ul>
+<li>interpreter(and dynamic assignment), I like interpreter, but It has limit</li>
+<li>don't use python2 with 3 하위 호환성</li>
+<li>in web browser, nodejs is better</li>
+</ul>
+<h2 id="wtf" style="position:relative;"><a href="#wtf" aria-label="wtf permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WTF</h2>
+<p><a href="https://github.com/satwikkansal/wtfpython">https://github.com/satwikkansal/wtfpython</a></p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py">a <span class="token operator">=</span> <span class="token number">1</span>
+b <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token comment"># a address = 0x94ce80</span>
+<span class="token comment"># b address = 0x94ce80</span></code></pre></div>
+<p>파이썬에서 -5 부터 256까지는 객체로서 미리 할당되어있다</p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token comment"># a address = 0x7feaaaea6540</span>
+<span class="token comment"># b address = 0x7feaaaea65c0</span>
+b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token comment"># b address = 0x7feaaaea65e0</span>
+d <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token comment"># d address = 0x7feaaaea65c0</span>
+b<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># b address over d ???</span></code></pre></div>
+<h2 id="reference-1" style="position:relative;"><a href="#reference-1" aria-label="reference 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h2>
+<ul>
+<li><a href="https://realpython.com/introduction-to-python-generators/">generator</a> -<a href="https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do/231855#231855">yield</a></li>
+<li><a href="https://redscreen.tistory.com/163">한글 인코딩</a></li>
+</ul>
+<hr>
+<h1 id="golang" style="position:relative;"><a href="#golang" aria-label="golang permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Golang</h1>
+<h2 id="philosophy" style="position:relative;"><a href="#philosophy" aria-label="philosophy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Philosophy</h2>
+<ul>
+<li>패키지는 하나의 목적만을 달성합니다</li>
+<li>에러는 명시적으로 처리합니다</li>
+<li>빨리 반환하고 깊은 들여쓰기를 피합니다</li>
+<li>동시성은 호출자에게 맡깁니다</li>
+<li>고루틴 시작 전, 언제 멈출지 알아야 합니다</li>
+<li>패키지 레벨 상태를 사용하지 않습니다</li>
+<li>단순함은 중요합니다</li>
+<li>패키지 API의 동작을 고정하기 위한 테스트를 작성합니다</li>
+<li>느리다고 생각된다면, 벤치마크하여 이를 증명합니다</li>
+<li>중용은 미덕입니다</li>
+<li>유지보수성은 가치있습니다</li>
+<li><a href="https://docs.python.org/3/library/functions.html">https://docs.python.org/3/library/functions.html</a></li>
+</ul>
+<h2 id="key-point-1" style="position:relative;"><a href="#key-point-1" aria-label="key point 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Key point</h2>
+<ul>
+<li>
+<p>golang is concurrency friendly, I like it.</p>
+</li>
+<li>
+<p>garbage collection</p>
+</li>
+<li>
+<p>pointer vs reference</p>
+</li>
+<li>
+<p>interface</p>
+</li>
+<li>
+<p>goroutine</p>
+</li>
+<li>
+<p>defer - panic - recover : check source</p>
+</li>
+<li>
+<p>garbage collection</p>
+</li>
+</ul>
+<h4 id="golang-has-no-class" style="position:relative;"><a href="#golang-has-no-class" aria-label="golang has no class permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>golang has no class</h4>
+<h4 id="specification" style="position:relative;"><a href="#specification" aria-label="specification permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Specification</h4>
+<ul>
+<li>new(File) and &#x26;File{} are equivalent</li>
+</ul>
+<h4 id="auto-rebuild" style="position:relative;"><a href="#auto-rebuild" aria-label="auto rebuild permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Auto Rebuild</h4>
+<ul>
+<li><a href="https://github.com/githubnemo/CompileDaemon">CompileDaemon</a></li>
+<li>using docker cmd, complicit port</li>
+<li><a href="https://github.com/codegangsta/gin">gin</a></li>
+<li>Good Working</li>
+</ul>
+<h4 id="go-folder-management" style="position:relative;"><a href="#go-folder-management" aria-label="go folder management permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>go folder management</h4>
+<ul>
+<li>what is the better?</li>
+<li>folder separate</li>
+<li>only one folder</li>
+</ul>
+<h4 id="goroutine" style="position:relative;"><a href="#goroutine" aria-label="goroutine permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>goroutine</h4>
+<p>if main function too short. it finish without running goroutine. so time.Sleep needed</p>
+<h4 id="go-http" style="position:relative;"><a href="#go-http" aria-label="go http permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>go http</h4>
+<p>ServeHTTP와 핸들러에 대한 이해</p>
+<p><img src="/707ed0ab889f994c270752e3ac46ed6f/http.svg" alt="http"></p>
+<p>mux = multiplexer</p>
+<ul>
+<li>멀티플렉서는 패턴 처리를 여러개 한다는 의미다</li>
+</ul>
+<p>Listen - (Handler - ServeHTTP) - Serve?</p>
+<ul>
+<li>mux = handler, 서버가 serve를 할 때 mux를 받는데, 안넣으면 디폴트 mux를 쓴다.</li>
+<li>mux는 ServeHTTP를 구현해야 한다.</li>
+<li>handler interface는 http 패키지에서 정의되있는 것을 보면 ServeHTTP를 갖는
+인터페이스다. 그래서 ServeHTTP만 가지고 있으면 핸들러로 쳐준다.</li>
+</ul>
+<p>그러면 ServeHTTP는 어떤 동작을 해야 하는가</p>
+<ul>
+<li>mux라 함은 입력값을 받아서 응답을 해주는 것이다.</li>
+<li>URL을 받아 적합한 연결통로를 찾아서 넘겨준다.</li>
+<li>ServeHTTP의 역할이 mux의 역할</li>
+<li>요청을 패턴이 일치하는 핸들러를 찾아서 전달해주는 것.</li>
+</ul>
+<p>handler, handle, handleFunc, handlerFunc 차이 확인</p>
+<ul>
+<li>handler는 ServeHTTP를 구현하는 interface, response request 활용 가능</li>
+<li>handle은 패턴과 handler를 받아서 쓰는 handler의 wrapper 느낌</li>
+<li>handleFunc는 ServeHTTP를 구현한 객체들을 일일이 생성하는 것이
+불편해서 만들어졌다고 하는데, 잘 모르겠다
+<ul>
+<li>handleFunc는 두번째 인자로 받는 func을 ServeHTTP가 실행하도록 해놓은
+것 뿐이다. (이 func는 writer와 request를 인자로 가져야 하긴 한다)</li>
+<li>ServeHTTP가 writer와 request를 가져야 하니까 헷갈렸다.</li>
+</ul>
+</li>
+<li>handle과 handleFunc는 둘다 패턴과 핸들러를 받아 처리한다.</li>
+<li>handle은 handler를 받고, handleFunc는 일반함수를 handler로 wrapping 해준다.</li>
+<li>handleFunc이 패턴과 함수를 처리한다. http에서는 디폴트 mux에
+연결해준다.</li>
+<li>handlerFunc는 일반 함수를 handler 함수로 wrapping 해준다</li>
+</ul>
+<div class="gatsby-highlight" data-language="go"><pre class="language-go"><code class="language-go">http<span class="token punctuation">.</span><span class="token function">HandleFunc</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">,</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+http<span class="token punctuation">.</span><span class="token function">ListenAndServe</span><span class="token punctuation">(</span><span class="token string">":8080"</span><span class="token punctuation">,</span> <span class="token boolean">nil</span><span class="token punctuation">)</span>
+
+http<span class="token punctuation">.</span><span class="token function">Handle</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">,</span> handler<span class="token punctuation">)</span>
+http<span class="token punctuation">.</span><span class="token function">ListenAndServe</span><span class="token punctuation">(</span><span class="token string">":8080"</span><span class="token punctuation">,</span> <span class="token boolean">nil</span><span class="token punctuation">)</span></code></pre></div>
+<p>즉 요청을 받으면 ServeHTTP가 실행되고 그 뒤에 원하는 비즈니스 로직을 돌린다.</p>
+<ul>
+<li>gin 내부를 확인해봐도 ServeHTTP가 라우팅으로 연결해주고 있다.</li>
+<li><a href="https://dejavuqa.tistory.com/314">https://dejavuqa.tistory.com/314</a></li>
+</ul>
+<h2 id="library" style="position:relative;"><a href="#library" aria-label="library permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Library</h2>
+<h4 id="graphql-go" style="position:relative;"><a href="#graphql-go" aria-label="graphql go permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>graphql-go</h4>
+<p>gqlgen</p>
+<p>Need update just 2 file</p>
+<ol>
+<li><code class="language-text">resolver.go</code> -- implement function
+or <code class="language-text">schema.resolvers.go</code></li>
+<li><code class="language-text">schema.graphqls</code> -- data structure setting</li>
+</ol>
+<p>auto generate to gqlgen</p>
+<ul>
+<li><code class="language-text">model.go</code></li>
+<li><code class="language-text">generated.go</code></li>
+</ul>
+<h2 id="measure-execution-time-in-go" style="position:relative;"><a href="#measure-execution-time-in-go" aria-label="measure execution time in go permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://coderwall.com/p/cp5fya/measuring-execution-time-in-go">measure execution time in go</a></h2>
+<h4 id="golang-1" style="position:relative;"><a href="#golang-1" aria-label="golang 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>golang</h4>
+<p>golang library, 실행파일, 서버</p>
+<p>build
+run
+install - build 시 캐시
+mod init <directory></p>
+<ul>
+<li>go test 하면 모듈 업데이트 된다</li>
+<li>
+<ul>
+<li>go mod tidy 안쓰는 모듈 정리
+클론 한 패키지 처음 세팅 시 js에서는 npm install 해서 바로 셋팅된다
+go에서는 go mod tidy 하고, test ./... 해서 셋팅한다</li>
+</ul>
+</li>
+</ul>
+<p>package 명이 main 인 것은 빌드 시 실행파일로 생성된다
+라이브러리는 폴더명과 같이 package 명을 입력해준다
+실행파일에서도 라이브러리를 가져다 쓸텐데, 같은 프로젝트에서 만든 라이브러리라면
+상대주소 말고 GOPATH/src 밑의 주소를 입력해준다</p>
+<p>main 파일을 여러 개 만들고 싶어하는 사람들이 많아서 cmd라는 폴더 안에 폴더를 또
+만들어서 여러 개의 실행파일을 만들게 레이아웃을 제안하고 있다</p>
+<hr>
+<ul>
+<li>redis
+<ul>
+<li><a href="https://medium.com/@gilcrest_65433/basic-redis-examples-with-go-a3348a12878e">https://medium.com/@gilcrest_65433/basic-redis-examples-with-go-a3348a12878e</a></li>
+</ul>
+</li>
+<li>mux handler &#x3C;-> http handler what's different</li>
+<li>update nav css</li>
+<li>html render
+<ul>
+<li>static</li>
+<li>template</li>
+<li>setting static -> using link <code class="language-text">style.css</code> -> <code class="language-text">/style.css</code></li>
+<li>! go module upgrade fail</li>
+<li>blackfriday not match path
+<ul>
+<li><code class="language-text">gopkg.in/russross</code> -> <code class="language-text">github.com/russross</code></li>
+<li><a href="https://github.com/russross/blackfriday/issues/491">https://github.com/russross/blackfriday/issues/491</a></li>
+</ul>
+</li>
+<li>path.Join("app/index.html") not found</li>
+</ul>
+</li>
+<li>! cannot access app directory in docker
+<ul>
+<li>current directory is /src/app, and execute server using ../server.go
+Then, if i want use app-folder directory is ./ or absolute directory</li>
+</ul>
+</li>
+<li>use struct in same directory other file
+<ul>
+<li><code class="language-text">go run a.go b.go</code> or <code class="language-text">go run *.go</code> or <code class="language-text">go install</code>-run binary</li>
+</ul>
+</li>
+</ul>
+<h2 id="wasm" style="position:relative;"><a href="#wasm" aria-label="wasm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wasm</h2>
+<p><code class="language-text">GOOS=js GOARCH=wasm go build -o main.wasm main.go</code></p>
+<ul>
+<li>! dial TCP: Protocol not available
+<ul>
+<li>WASM app don't allow HTTP</li>
+<li>how to access Redis - server</li>
+</ul>
+</li>
+<li>test -> upload mdfile -> show post
+<ul>
+<li>how to automation upload</li>
+</ul>
+</li>
+<li>what's different between wasm and was
+<ul>
+<li>javascript to wasm language</li>
+</ul>
+</li>
+<li>get file
+<ul>
+<li><a href="https://github.com/mattn/golang-wasm-example/blob/master/main.go">https://github.com/mattn/golang-wasm-example/blob/master/main.go</a></li>
+<li>render local path -> URL</li>
+</ul>
+</li>
+<li>use for HTTP Get
+<ul>
+<li>use goroutine</li>
+<li><a href="https://github.com/golang/go/issues/26382">https://github.com/golang/go/issues/26382</a></li>
+</ul>
+</li>
+<li>which protocol use to render post? WASM or HTTP</li>
+<li>what is strength for WASM
+<ul>
+<li>use server language in browser</li>
+<li>client-side rendering</li>
+</ul>
+</li>
+<li>how to use wasm power
+<ul>
+<li>compiler</li>
+<li>game</li>
+<li>calculator</li>
+</ul>
+</li>
+<li>tinygo</li>
+<li>! Uncaught (in promise) TypeError: WebAssembly.instantiate(): Import #0 module="wasi_unstable" error: module is not an object or function</li>
+<li>TODO</li>
+<li><a href="https://github.com/golang/go/wiki/WebAssembly">https://github.com/golang/go/wiki/WebAssembly</a></li>
+</ul>
+<h4 id="defer" style="position:relative;"><a href="#defer" aria-label="defer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>defer</h4>
+<p>defer should have know when close.
+Object return something?
+defer is so great idea
+wow...
+it can more light code
+after error
+go has good error handling method</p>
+<ul>
+<li>in python, try catch finally</li>
+</ul>
+<p>calling g
+printing g 0
+printing g 1
+printing g 2
+printing g 3
+panicking
+//4
+//defer in g 4
+defer in g 3
+defer in g 2
+defer in g 1
+defer in g 0
+recovered in f
+//returned normally from g
+returned normally from f</p>
+<h4 id="golang-context" style="position:relative;"><a href="#golang-context" aria-label="golang context permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>golang context</h4>
+<p>context는 어떨때 사용하면 좋을까
+DB풀 유지하는데는 사용 안하고
+API 쓰는데는 사용하는 것 같은데...</p>
+<ul>
+<li>보안 정보, 분석 정보, 데드라인, 취소 신호, 프로세스 경계 정보등을 가진다</li>
+<li>대부분 함수 첫번째 인자로 전달</li>
+<li>구조체에 넣지 말고 함수 인자로 전달</li>
+<li>커스텀 타입으로 만들지말고 그냥 표준을 써라</li>
+<li><a href="https://medium.com/@laeshiny/go-code-review-comments-%EC%A0%95%EB%A6%AC-47d05fdb49f6">https://medium.com/@laeshiny/go-code-review-comments-%EC%A0%95%EB%A6%AC-47d05fdb49f6</a></li>
+</ul>
+<h2 id="defects-1" style="position:relative;"><a href="#defects-1" aria-label="defects 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defects</h2>
+<h4 id="고-모듈에서-버전관리가-별로다" style="position:relative;"><a href="#%EA%B3%A0-%EB%AA%A8%EB%93%88%EC%97%90%EC%84%9C-%EB%B2%84%EC%A0%84%EA%B4%80%EB%A6%AC%EA%B0%80-%EB%B3%84%EB%A1%9C%EB%8B%A4" aria-label="고 모듈에서 버전관리가 별로다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>고 모듈에서 버전관리가 별로다</h4>
+<p>시멘틱 버저닝을 지원하지 않고 패키지에 v2처럼 버저닝을 하기를 권장한다.
+js에서는 package.json으로 자체 모듈 버저닝뿐 아니라 의존성 관리도 유연하게 할 수 있다.
+그래서 시멘틱 버저닝과 체인지로그 관리도 쉽게 할 수 있는데, go는 안된다.</p>
+<h4 id="패키지-관리" style="position:relative;"><a href="#%ED%8C%A8%ED%82%A4%EC%A7%80-%EA%B4%80%EB%A6%AC" aria-label="패키지 관리 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>패키지 관리</h4>
+<p>Golang을 예로 들면, 1.x 버전을 사용하고 있는데 2.x버전이 나오면 자동 업데이트를
+하면 안되고 그렇다고 그냥 방치하거나 수시로 들어가서 확인하는 것도 번거롭다.
+그렇다면 자신의 레파지토리에 있는 라이브러리들을 읽어서 업데이트 하라고 알림
+같은게 오면 좋겠다. 아 그러면 CI 작업 시에 알려주면 되겠다.
+npm에서는 패키지 설치할 때 알려줄 수 있다. 근데 이러면 설치랑 업데이트가 섞여서
+알아보기 힘들지 않을까</p>
+<p>Go에서 패키지 배포를 해봐야겠다
+note-server/server와
+note-server/data-store를 한 레파지토리에서 따로 임포트해서 쓸 수 있을까?
+아니면 data-store를 가져오면 딴 것도 같이 가져와질까?</p>
+<ul>
+<li>상위 레벨에서 깃 레파지토리를 가져온다. 버전도 함께.</li>
+</ul>
+<p>고의 장점이 깃에만 올라가있으면 가져올 수 있다는 것이다.</p>
+<h4 id="go-library" style="position:relative;"><a href="#go-library" aria-label="go library permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>go library</h4>
+<p>라이브러리를 각각 레포를 만들면 너무 번거롭지 않을까
+json으로 리턴을 하고, json으로 입력을 받게 하고 싶다.
+다른 형식이 필요하면 어댑터를 붙이면 될 것이고...</p>
+<h4 id="vs-rust" style="position:relative;"><a href="#vs-rust" aria-label="vs rust permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>vs rust</h4>
+<h2 id="reference-2" style="position:relative;"><a href="#reference-2" aria-label="reference 2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h2>
+<ul>
+<li><a href="https://simplear.tistory.com/24">Go에서 DIP</a></li>
+<li><a href="http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/?ref=hackernoon.com">common mistakes in go</a></li>
+<li><a href="https://novemberde.github.io/golang/2021/04/05/Golang-HACKING.html">Go Hacking.md</a></li>
+<li><a href="https://github.com/ultimate-go-korean/translation">ultimate-go</a></li>
+<li><a href="https://blog.puppyloper.com/menus/Golang/articles/Golang%EA%B3%BC%20Clean%20Architecture">Golang과 Clean Architecture</a></li>
+<li><a href="https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully">Go error handling</a>
+<ul>
+<li>(번역) <a href="http://cloudrain21.com/golang-graceful-error-handling">http://cloudrain21.com/golang-graceful-error-handling</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/golang-standards/project-layout/blob/master/README_ko.md">Go Standard Layout</a></li>
+<li><a href="http://www.dogfootlife.com/archives/452">http://www.dogfootlife.com/archives/452</a></li>
+<li><a href="https://umi0410.github.io/blog/golang/go-mutex-semaphore/">https://umi0410.github.io/blog/golang/go-mutex-semaphore/</a></li>
+</ul></section><hr/></article><nav><div style="max-width:90%"><span><a href="/about_development/">/about_development/</a>,</span><span><a href="/balance/">/balance/</a>,</span><span><a aria-current="page" class="" href="/coding/">/coding/</a>,</span><span><a href="/data/">/data/</a>,</span><span><a href="/developer/">/developer/</a>,</span><span><a href="/devops/">/devops/</a>,</span><span><a href="/document/">/document/</a>,</span><span><a href="/network/">/network/</a>,</span><span><a href="/people/">/people/</a>,</span><span><a href="/software/">/software/</a>,</span><span><a href="/reference/">/reference/</a>,</span><span><a href="/team_management/">/team_management/</a>,</span><span><a href="/technology/">/technology/</a>,</span><span><a href="/blog/note_management/">/blog/note_management/</a>,</span><span><a href="/blog/streaming_server/">/blog/streaming_server/</a>,</span></div>Tag: <a href="/tags/">strong_base</a><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/en/coding/">← <!-- -->Coding Rule?</a></li><li><a rel="next" href="/network/">Network<!-- --> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/coding/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

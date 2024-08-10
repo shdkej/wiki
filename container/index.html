@@ -1,0 +1,1230 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="Container docker strength isolation process no dependency portable light-weight Docker image vs compose image vs volume test with volume, deploy with image…"/><meta data-react-helmet="true" property="og:title" content="Container"/><meta data-react-helmet="true" property="og:description" content="Container docker strength isolation process no dependency portable light-weight Docker image vs compose image vs volume test with volume, deploy with image…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">Container | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>Container</h1><p>Docker, Kubernetes</p><small style="width:50%">Created: <!-- -->2020, 12 17<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Container.md">Updated: <!-- -->2021, 10 15</a></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#container">Container</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#docker-strength">docker strength</a></li>
+<li><a href="#docker-image-vs-compose">Docker image vs compose</a></li>
+<li><a href="#docker-logs">docker logs</a></li>
+<li><a href="#container-1">container</a></li>
+<li><a href="#docker%EC%9D%98-%EC%9C%84%EA%B8%B0">Docker의 위기?</a></li>
+<li><a href="#dockerfile">Dockerfile</a></li>
+<li><a href="#docker-compose%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C-%EB%8B%A8%EA%B3%84%EC%9D%98-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EC%93%B8-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C">docker compose에서 빌드 단계의 이미지를 쓸 수 있을까</a></li>
+<li><a href="#docker-compose%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EB%B0%94%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EB%8A%94-%EA%B2%83%EA%B3%BC-dockerfile%EC%9D%84-%EC%93%B0%EB%8A%94-%EA%B2%83">docker-compose를 이용해 이미지를 바로 배포하는 것과 Dockerfile을 쓰는 것</a></li>
+<li><a href="#%EB%B0%B0%ED%8F%AC-%EB%BC%88%EB%8C%80-%EB%A7%8C%EB%93%A4%EA%B8%B0">배포 뼈대 만들기</a></li>
+<li><a href="#docker-image">docker image</a></li>
+<li><a href="#docker-compose-execute-bash">docker compose execute bash</a></li>
+<li><a href="#docker-cmd-vs-entrypoint">docker cmd vs entrypoint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#kubernetes">Kubernetes</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#resource">resource</a></li>
+<li><a href="#api">api</a></li>
+<li><a href="#%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%8A%94-os%EC%99%80-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EB%A5%BC-%EC%B6%94%EC%83%81%ED%99%94%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98">쿠버네티스는 os와 클라우드를 추상화할 수 있나?</a></li>
+<li><a href="#kubernetes-volume">kubernetes volume</a></li>
+<li><a href="#deploy">deploy</a></li>
+<li><a href="#deployment-kill">deployment kill</a></li>
+<li><a href="#kubernetes-test">kubernetes test</a></li>
+<li><a href="#%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%A4%91%EC%97%90-%EB%A7%88%EC%8A%A4%ED%84%B0%EA%B0%80-%EC%9E%90%EC%9B%90%EC%9D%84-%EB%A7%8E%EC%9D%B4-%EC%93%B0%EB%82%98-%EB%85%B8%EB%93%9C%EA%B0%80-%EB%A7%8E%EC%9D%B4%EC%93%B0%EB%82%98">쿠버네티스 클러스터 중에 마스터가 자원을 많이 쓰나, 노드가 많이쓰나?</a></li>
+<li><a href="#docker-kubernetes-istio">docker kubernetes istio</a></li>
+<li><a href="#nginx-vs-istio">nginx vs istio</a></li>
+<li><a href="#nginx-canary">nginx canary</a></li>
+<li><a href="#kubernetes-supports-cluster">kubernetes supports cluster</a></li>
+<li><a href="#kubernetes-access-remote-cluster">kubernetes access remote cluster</a></li>
+<li><a href="#kubernetes-dns">kubernetes dns</a></li>
+<li><a href="#test">test</a></li>
+<li><a href="#helm-k3s-kubernetes-cluster-unreachable-error">helm k3s Kubernetes cluster unreachable error</a></li>
+<li><a href="#eks-vs-ec2-autoscale-and-setting-kubernetes-vs-kubernetes-hpa">eks vs ec2 autoscale and setting kubernetes vs kubernetes hpa</a></li>
+<li><a href="#container-serverless">container serverless</a></li>
+<li><a href="#k3s">k3s</a></li>
+<li><a href="#k3s-monitoring">k3s monitoring</a></li>
+<li><a href="#k3s-helm">k3s helm</a></li>
+<li><a href="#k3s-connect-remotely-to-the-cluster">k3s connect remotely to the cluster</a></li>
+<li><a href="#helm">helm</a></li>
+<li><a href="#helm-install-from-local">helm install from local</a></li>
+<li><a href="#turn-on-and-access-to-grafana-in-kubernetes-nodes">turn on and access to grafana in kubernetes nodes</a></li>
+<li><a href="#kubernetes-load-balancer">kubernetes load balancer</a></li>
+<li><a href="#kubernetes-network-service-test">kubernetes network service test</a></li>
+<li><a href="#kubernetes-tool">kubernetes tool</a></li>
+<li><a href="#deploy-1">deploy</a></li>
+<li><a href="#%EC%9D%B8%ED%94%84%EB%9D%BC-%EA%B4%80%EB%A0%A8-%ED%88%B4%EA%B3%BC-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B4%80%EB%A0%A8-%ED%88%B4%EC%9D%84-%EB%B6%84%EB%A6%AC%ED%95%98%EB%A9%B4-%EC%A2%8B%EC%9D%84-%EA%B2%83-%EA%B0%99%EB%8B%A4">인프라 관련 툴과 서비스 관련 툴을 분리하면 좋을 것 같다</a></li>
+<li><a href="#%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EB%84%A4%EC%9E%84%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%A5%BC-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%B6%84%EB%A6%AC%ED%95%A0%EA%B9%8C">쿠버네티스 네임스페이스를 어떻게 분리할까</a></li>
+<li><a href="#kubernetes-local-image-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">kubernetes local image 사용하기</a></li>
+<li><a href="#rbac">RBAC</a></li>
+<li><a href="#argocd">argocd</a></li>
+<li><a href="#kubernetes-monitoring">kubernetes monitoring</a></li>
+<li><a href="#istio">istio</a></li>
+<li><a href="#istio-%EC%84%A4%EC%B9%98">istio 설치</a></li>
+<li><a href="#istio-routing--tag-tagtag-%EA%B0%92-%EC%A0%81%EC%9A%A9%EC%8B%9C%ED%82%A4%EA%B8%B0">istio routing /, /tag, /tag/:tag 값 적용시키기</a></li>
+<li><a href="#knative-istio">knative istio</a></li>
+<li><a href="#spinnaker">spinnaker</a></li>
+<li><a href="#kubernetes%EB%A5%BC-%EC%93%B0%EB%A9%B4%EC%84%9C-%EC%89%BD%EA%B2%8C-%EC%8B%A4%EC%88%98%ED%95%98%EB%8A%94-10%EA%B0%80%EC%A7%80">kubernetes를 쓰면서 쉽게 실수하는 10가지</a></li>
+<li><a href="#kubernetes-in-vcnc">kubernetes in VCNC</a></li>
+<li><a href="#eks-%EC%B0%B8%EA%B3%A0%EC%82%AC%ED%95%AD">eks 참고사항</a></li>
+<li><a href="#%EB%B0%B0%ED%8F%AC-%ED%9B%84-%EB%A1%A4%EB%B0%B1-%ED%85%8C%EC%8A%A4%ED%8A%B8">배포 후 롤백 테스트</a></li>
+<li><a href="#helm%EC%9D%84-%EC%95%88%EC%93%B0%EA%B3%A0-kubernetes%EB%A1%9C-%EA%B0%80%EB%B3%80%EC%A0%81%EC%9D%B8-%EB%B0%B0%ED%8F%AC%EB%A5%BC-%EC%89%BD%EA%B2%8C-%ED%95%A0-%EC%88%98-%EC%97%86%EC%9D%84%EA%B9%8C">helm을 안쓰고 kubernetes로 가변적인 배포를 쉽게 할 수 없을까</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#kubernetes-basic">Kubernetes Basic</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%84%A4%EC%B9%98">설치</a></li>
+<li><a href="#helm-1">helm</a></li>
+<li><a href="#kompose">Kompose</a></li>
+<li><a href="#statefulset-pv-sc">Statefulset PV SC</a></li>
+<li><a href="#glusterfs-%EC%84%A4%EC%B9%98">glusterfs 설치</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h2 id="container" style="position:relative;"><a href="#container" aria-label="container permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Container</h2>
+<h4 id="docker-strength" style="position:relative;"><a href="#docker-strength" aria-label="docker strength permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker strength</h4>
+<ul>
+<li>isolation process</li>
+<li>no dependency</li>
+<li>portable</li>
+<li>light-weight</li>
+</ul>
+<h4 id="docker-image-vs-compose" style="position:relative;"><a href="#docker-image-vs-compose" aria-label="docker image vs compose permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker image vs compose</h4>
+<ul>
+<li>image vs volume
+<ul>
+<li>test with volume, deploy with image</li>
+</ul>
+</li>
+</ul>
+<h4 id="docker-logs" style="position:relative;"><a href="#docker-logs" aria-label="docker logs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker logs</h4>
+<ul>
+<li>make stdout
+<ul>
+<li><code class="language-text">echo "test" >> /proc/1/fd/1</code></li>
+</ul>
+</li>
+<li><code class="language-text">--log-opt</code>
+<ul>
+<li><code class="language-text">max-size</code></li>
+<li><code class="language-text">max-file</code></li>
+</ul>
+</li>
+</ul>
+<p>Fluentd와 Eleasticsearch를 이용해서 로그 수집 및 검색</p>
+<p>표준출력(stdout)으로 로그를 출력하도록 두고, 이를 수집하도록 한다.</p>
+<p>nginx는 stdout으로 출력되도록 설정이 필요하다</p>
+<ul>
+<li>1.19.8 버전을 쓰는 지금은 stdout으로 출력되도록 설정되어있다.</li>
+</ul>
+<h4 id="container-1" style="position:relative;"><a href="#container-1" aria-label="container 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>container</h4>
+<p>libcontainer 개발로 kernel에서 namespaces, cgroups 등을 직접 실행
+LXC -> runC 컨테이너 런타임 변경. OCI 준수
+그 외 rkt, cri-o 등이 있음</p>
+<p>LXC는 다른 호스트에서 실행했을 때 설정 차이로 동일하게 돌아가지 않는 경우가
+있었다고 한다.
+도커도 버전 다르면 안돌아간다.</p>
+<p>Container 구동 원리</p>
+<ul>
+<li><code class="language-text">chroot</code> - 입력받은 디렉토리를 루트로 하여 격리된 환경을 만들어준다</li>
+<li>cgroups - 시스템 리소스를 격리할 수 있다(cpu, memory, network, disk)</li>
+<li>overlayFS - 프로세스 간 파일 시스템 분리
+<ul>
+<li>image layer + container layer(컨테이너 안에서 수정되는 파일들)</li>
+</ul>
+</li>
+<li>namespace - <code class="language-text">unshare</code> 프로세스 간 시스템 자원들을 격리하는 기능
+<ul>
+<li>cgroup - <code class="language-text">-C</code></li>
+<li>user - <code class="language-text">-U</code></li>
+<li>mnt - <code class="language-text">-m</code></li>
+<li>ipc - <code class="language-text">-i</code> 프로세스 간 통신. 같은 네임스페이스 안에 있어야 통신 가능</li>
+<li>pid - <code class="language-text">-p</code> 컨테이너 안에서는 프로세스 번호를 새롭게 받는다</li>
+<li>uts - <code class="language-text">-u</code> hostname 격리</li>
+<li>net - <code class="language-text">ip netns add &lt;ns name></code> 네트워크 규칙들을 새롭게 받는다</li>
+</ul>
+</li>
+<li><a href="https://speakerdeck.com/devinjeon/containerbuteo-dasi-salpyeoboneun-kubernetes-pod-dongjag-weonri?slide=29">https://speakerdeck.com/devinjeon/containerbuteo-dasi-salpyeoboneun-kubernetes-pod-dongjag-weonri?slide=29</a></li>
+</ul>
+<p>네임스페이스와 컨테이너, 네트워크까지 잘 정리된 링크</p>
+<ul>
+<li><a href="https://www.44bits.io/ko/keyword/linux-namespace">https://www.44bits.io/ko/keyword/linux-namespace</a></li>
+</ul>
+<h4 id="docker의-위기" style="position:relative;"><a href="#docker%EC%9D%98-%EC%9C%84%EA%B8%B0" aria-label="docker의 위기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker의 위기?</h4>
+<ul>
+<li>
+<p>container is light-weight and portable more than virtual machine image</p>
+</li>
+<li>
+<p>but it can same work that PC's work</p>
+</li>
+<li>
+<p>Can exist more than light-weight task from docker?</p>
+</li>
+<li>
+<p>OCI(Open Container Initiative)</p>
+</li>
+<li>
+<p>Container Runtime</p>
+</li>
+<li>
+<p>Image Download -> Extract Image -> Execute Container</p>
+</li>
+<li>
+<p>Container has cgroups, namespace, networking</p>
+</li>
+<li>
+<p>alternative to Buildah, skopeo, podman</p>
+<ul>
+<li>docker is one big process. It can make single point of failure.</li>
+<li>divide docker position by 3.</li>
+</ul>
+</li>
+</ul>
+<h4 id="dockerfile" style="position:relative;"><a href="#dockerfile" aria-label="dockerfile permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dockerfile</h4>
+<ul>
+<li>바이너리를 도커파일에서 받을 때 체크섬을 검증하는 내용을 적으면 이미지의 신뢰성이 올라간다</li>
+<li>루트 대신 사용자 추가하는 내용을 디폴트로 한다
+<ul>
+<li><code class="language-text">RUN useradd sam</code></li>
+<li><code class="language-text">USER sam</code></li>
+<li>간단하다</li>
+</ul>
+</li>
+<li>docker.sock은 호스트의 도커 컨테이너 관리를 장악할 수 있다</li>
+<li>dockerfile에 locale, time 등 설정 해두는게 좋지 않을까</li>
+</ul>
+<h4 id="docker-compose에서-빌드-단계의-이미지를-쓸-수-있을까" style="position:relative;"><a href="#docker-compose%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C-%EB%8B%A8%EA%B3%84%EC%9D%98-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EC%93%B8-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C" aria-label="docker compose에서 빌드 단계의 이미지를 쓸 수 있을까 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker compose에서 빌드 단계의 이미지를 쓸 수 있을까</h4>
+<p>Dockerfile은 멀티 빌드로 해놓고 배포시에는 마지막 빌드 이미지를 쓰지만
+개발 시에는 빌드한 것으로 쓰고 싶은데</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">build
+  context: ./
+  target: build</code></pre></div>
+<p>build에 target으로 이름 맞춰주면 된다.</p>
+<h4 id="docker-compose를-이용해-이미지를-바로-배포하는-것과-dockerfile을-쓰는-것" style="position:relative;"><a href="#docker-compose%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EB%B0%94%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EB%8A%94-%EA%B2%83%EA%B3%BC-dockerfile%EC%9D%84-%EC%93%B0%EB%8A%94-%EA%B2%83" aria-label="docker compose를 이용해 이미지를 바로 배포하는 것과 dockerfile을 쓰는 것 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker-compose를 이용해 이미지를 바로 배포하는 것과 Dockerfile을 쓰는 것</h4>
+<p>dockerfile 없이 이미지로만 할 때의 문제점?</p>
+<ul>
+<li>어떤 것을 바꿨는지 추적하기 힘들다</li>
+<li>설치파일들 찾기 힘들다</li>
+<li>docker layer와 image size를 줄일수록 배포가 빨라지는 도커의 장점을 이용못한다.</li>
+</ul>
+<p>dockerfile로 하면 쿠버네티스 사용 시 이미지 빌드를 또 해줘야 하잖아?
+이미지로 올리는 경우는 왜 이미지로 올리는거지?</p>
+<p>볼륨을 해도 커밋 시 볼륨된 내용은 적용 안되고, 기존 이미지가 갖고 있던대로 된다</p>
+<p>dockerfile에서 copy를 한 폴더를 외부에서 수정 후 내부에 들어가면 수정되어 있나?</p>
+<ul>
+<li>No</li>
+</ul>
+<p>build - docker file to image
+docker-compose up 을 하면 이미지를 새로 부른다? volume</p>
+<p>dockerfile -> image -> pods
+build -> push -> kubernetes apply(set image)</p>
+<p>개발환경에서는 볼륨을 해서 compose로 개발하고
+배포 시에는 Dockerfile을 이미지화해서 배포한다
+개발디렉토리는 Dockerfile에도 COPY에 있어야하고, compose에도 볼륨을 한다.
+개발환경에서 쓰는 이미지는 배포 시 쓰는 이미지와 같은 것을 사용한다.
+이미지 빌드는 CD pipeline을 통해서 한다. 이미지 혼동을 막기 위해</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 이미지를 기반으로 작업을 하면 이미지가 업데이트 되었는데 이전 버전으로
+작업하던 사람들은?</li>
+<li class="task-list-item"><input type="checkbox" disabled> 최초 작업 시 이미지가 없어서 compose를 실행 못시키니, 빌드 파이프라인을 먼저 만든다?</li>
+</ul>
+<p>내가 원하는게 디렉토리 전체를 덮어쓰는게 아니라 일부만 수정하는 거라서 좀 꼬였다</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 일일이 COPY를 해야 하나? compose에서는 어떻게?</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Dockerfile
+COPY /app /app
+
+---
+
+docker-compose.yml
+volume: /app:/app</code></pre></div>
+<p>app 폴더의 내용을 수정 후 docker build나 compose up을 하면 동일한 상태가 된다.</p>
+<p>서버 설치: vagrant up (git pull -> [docker-compose up or kubectl apply])
+서버 수정: git pull -> docker-compose up -> 수정 -> 테스트 -> git push -> 서버 적용</p>
+<p>서버 개발: git pull -> docker-compose up -> 수정 -> 테스트 -> git push
+서버 업데이트: git pull -> docker-compose up</p>
+<p>실서버에서도 볼륨으로 돌릴까? 순수 이미지로만 돌릴까?
+실서버에서도 수정을 하고 싶은데 다른 회사들은 어떻게 하지? 실서버는 안건드리는게
+좋으려나?
+그러면 compose.yml을 두개를 만들어야 하나
+실서버에서도 그냥 볼륨을 하면 어떨까?</p>
+<p>실서버에서 수정을 하는게 편하지만 절대로 하면 안된다고 권고한다
+번거롭더라도 재빌드 재배포를 하라고 한다
+그렇다면 핫픽스를 최대한 빨리 배포할 수 있도록 해야 하는데
+쿠버네티스에는 명령어 하나로 되돌릴 수 있다
+깃헙 액션으로 바로 되돌릴 수 있어야 한다
+핫픽스 or 롤백</p>
+<p>배포는 ansible로 github action 하면 되겠다
+근데 ansible로 하면 서버 private key가 필요한게 번거롭다
+그렇다고 vault서버에서 가져오는 것도 private key를 관리해야되서 번거롭다
+보안은 번거롭지만 해야되긴 한다</p>
+<h4 id="배포-뼈대-만들기" style="position:relative;"><a href="#%EB%B0%B0%ED%8F%AC-%EB%BC%88%EB%8C%80-%EB%A7%8C%EB%93%A4%EA%B8%B0" aria-label="배포 뼈대 만들기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>배포 뼈대 만들기</h4>
+<p>kubernetes 버전
+docker image 버전</p>
+<p>최소 docker image로 빌드하고, 여유가 있으면 kubernetes를 이용
+CI로 간단 검증
+CD는 ansible 또는 argoCD
+핫픽스룰을 따로 만들어 둔다.
+push를 하면 검증을 한다</p>
+<ol>
+<li>commit, 2. merge, 3. hotfix</li>
+</ol>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 빌드 요청은 어떻게?</li>
+<li class="task-list-item"><input type="checkbox" disabled> 버저닝은 어떻게?</li>
+</ul>
+<h4 id="docker-image" style="position:relative;"><a href="#docker-image" aria-label="docker image permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker image</h4>
+<p>alpine, stretch, slim, buster
+buster, stretch는 debian용
+alpine은 alpine linux로 만든 것
+slim은 그 이미지를 실행하기 위한 최소한의 설치파일만 있는 것</p>
+<p>근데 slim보다 alpine이 더 이미지 크기는 작다?</p>
+<h4 id="docker-compose-execute-bash" style="position:relative;"><a href="#docker-compose-execute-bash" aria-label="docker compose execute bash permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker compose execute bash</h4>
+<ul>
+<li><code class="language-text">entrypoint: /bin/bash</code> failed</li>
+<li><code class="language-text">tty:true; stdin_open:true</code> success</li>
+<li><code class="language-text">docker-compose run app bash</code> success</li>
+</ul>
+<h4 id="docker-cmd-vs-entrypoint" style="position:relative;"><a href="#docker-cmd-vs-entrypoint" aria-label="docker cmd vs entrypoint permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker cmd vs entrypoint</h4>
+<p>커맨드 툴을 도커명령어에서 바로 실행하려고 하면
+CMD로 하면 안되고 ENTRYPOINT로 하면 된다
+<code class="language-text">docker run hanspell-cli -h</code></p>
+<p>대신 ENTRYPOINT를 쓰면 -it /bin/sh 는 인식을 못한다</p>
+<h2 id="kubernetes" style="position:relative;"><a href="#kubernetes" aria-label="kubernetes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Kubernetes</h2>
+<p>A person has a very small component, and it composes of one architecture.
+the kuberetes seem to be this.
+and I want to make software like this architecture.
+strong small component to flexible architecture.
+kubernetes makes easy to a devops works
+about deploy, scaling, update, healthcheck, orchestration
+but devops works is not clear.</p>
+<ul>
+<li><code class="language-text">kubectl run curl --image=radial/busyboxplus:curl -i --tty</code></li>
+<li>pods cluster inside curl pod</li>
+</ul>
+<p>keep focusing only bisuness logic</p>
+<ul>
+<li>
+<ol>
+<li>monitoring - feedback - update logic</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>data management</li>
+</ol>
+</li>
+<li>production deploy behavior make easy
+<ul>
+<li>update and rollback</li>
+<li>scale up and down</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/dennyzhang/cheatsheet-kubernetes-A4/blob/master/README.org">https://github.com/dennyzhang/cheatsheet-kubernetes-A4/blob/master/README.org</a></p>
+<ul>
+<li>ClusterIP vs NodePort vs Ingress</li>
+<li>service account?</li>
+<li>cluster role?</li>
+<li>cluster? - node</li>
+<li>daemon set?
+<ul>
+<li>it makes every node to make pods</li>
+<li>example: every node can have logstash</li>
+</ul>
+</li>
+</ul>
+<h4 id="resource" style="position:relative;"><a href="#resource" aria-label="resource permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>resource</h4>
+<ul>
+<li>pods</li>
+<li>replicaset</li>
+<li>deployment</li>
+<li>service</li>
+</ul>
+<p>컨테이너 리소스</p>
+<ul>
+<li>pod, deployment</li>
+</ul>
+<p>보안 리소스</p>
+<ul>
+<li>rolebinding</li>
+</ul>
+<p>설정 리소스</p>
+<ul>
+<li>configmap</li>
+</ul>
+<h4 id="api" style="position:relative;"><a href="#api" aria-label="api permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>api</h4>
+<ul>
+<li>master
+<ul>
+<li>kube-apiserver</li>
+<li>kube-scheduler</li>
+<li>kube-controller</li>
+<li>kubelet</li>
+<li>kube-proxy</li>
+<li>etcd</li>
+</ul>
+</li>
+<li>node
+<ul>
+<li>kubelet</li>
+<li>kube-proxy</li>
+</ul>
+</li>
+</ul>
+<h4 id="쿠버네티스는-os와-클라우드를-추상화할-수-있나" style="position:relative;"><a href="#%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%8A%94-os%EC%99%80-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EB%A5%BC-%EC%B6%94%EC%83%81%ED%99%94%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98" aria-label="쿠버네티스는 os와 클라우드를 추상화할 수 있나 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쿠버네티스는 os와 클라우드를 추상화할 수 있나?</h4>
+<p>서비스의 장애가 os에 영향을 미쳐도 서비스를 격리하면 문제가 해결될 수 있나?
+그렇다면 '쿠버네티스', '마이크로서비스', '데이터'가 소프트웨어의 큰 줄기가 될 수 있다
+원래는 인프라, 서비스, 데이터인 것을 쿠버네티스가 인프라를 완전 대체?</p>
+<h4 id="kubernetes-volume" style="position:relative;"><a href="#kubernetes-volume" aria-label="kubernetes volume permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes volume</h4>
+<p>특정 노드의 폴더를 사용할 때는 hostPath를 사용할 수 있다.
+근데 노드 상관 없이 폴더를 써야하는 경우가 대부분일 것이다</p>
+<h4 id="deploy" style="position:relative;"><a href="#deploy" aria-label="deploy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deploy</h4>
+<ul>
+<li>배포와 릴리즈를 분리
+쿠버네티스에 apply를 해도 실제 서버에 바로 적용되는게 아니라 서비스 메시에서
+릴리즈를 관리 -> istio를 이용</li>
+<li>서비스 키고 시간이 지나면 api 접속이 안됨</li>
+<li>istio, monitoring, argocd 켜놨는데 어디가 리소스 많이 먹는지 알고 싶다</li>
+</ul>
+<h4 id="deployment-kill" style="position:relative;"><a href="#deployment-kill" aria-label="deployment kill permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deployment kill</h4>
+<p>deployment 정지시키려면 scale --replicas=0 으로 해야되나보다</p>
+<ul>
+<li>pod을 삭제하는 건 kill로 한다</li>
+</ul>
+<h4 id="kubernetes-test" style="position:relative;"><a href="#kubernetes-test" aria-label="kubernetes test permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes test</h4>
+<ul>
+<li>local test, production build pipeline</li>
+<li>local test with only dockerfile</li>
+<li>local test with same with production</li>
+<li>In msa. need kubernetes?</li>
+<li>In msa. github repo is seperated?</li>
+<li>developer can build docker image?</li>
+<li>how to provide docker image to developer?</li>
+<li>when developer push updated source. pipeline is
+<ul>
+<li>kubernetes apply?</li>
+</ul>
+</li>
+<li>build with tags?
+<ul>
+<li>git tag 1.0.0</li>
+<li>git push origin --tags</li>
+</ul>
+</li>
+<li>hpa</li>
+<li>service</li>
+<li>minikube</li>
+</ul>
+<h4 id="쿠버네티스-클러스터-중에-마스터가-자원을-많이-쓰나-노드가-많이쓰나" style="position:relative;"><a href="#%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%A4%91%EC%97%90-%EB%A7%88%EC%8A%A4%ED%84%B0%EA%B0%80-%EC%9E%90%EC%9B%90%EC%9D%84-%EB%A7%8E%EC%9D%B4-%EC%93%B0%EB%82%98-%EB%85%B8%EB%93%9C%EA%B0%80-%EB%A7%8E%EC%9D%B4%EC%93%B0%EB%82%98" aria-label="쿠버네티스 클러스터 중에 마스터가 자원을 많이 쓰나 노드가 많이쓰나 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쿠버네티스 클러스터 중에 마스터가 자원을 많이 쓰나, 노드가 많이쓰나?</h4>
+<p>master</p>
+<ul>
+<li>api server, etcd 등 기본적으로 자원을 많이 사용한다.</li>
+</ul>
+<p>서비스가 빡세게 돌면 노드가 많이쓰나?</p>
+<p>쿠버네티스 로그 서비스 추가해서
+노드 하나를 일부러 끄면 로그 잘 남는지 확인하고
+죽은 서버를 살릴 수 있을지 확인</p>
+<p>ram 1기가 서버에 ram 0.5를 쓰는 서비스를 6개를 레플리카하면 동작하나?</p>
+<ul>
+<li>자원 한도 넘어가면 파드를 안 만든다.</li>
+</ul>
+<p>글러스터fs 와 db 레플리케이션을
+쿠버네티스에서 편하게 할 수 있는 방법이 있나?</p>
+<p>클러스터를 한번씩 껐다 켜서 리프레시 했을때 안좋은점이 있을까?
+없다면 접속자 적은 시간을 뽑아서 한 서버씩 재부팅 해줘야겠다
+페일오버 테스트도 되고, os도 리프레시 되지 않을까</p>
+<p>걱정되는 점은 한쪽 노드에 팟들이 몰려있다가 다시 돌아갈 때 과부하 걸리지 않을지</p>
+<h4 id="docker-kubernetes-istio" style="position:relative;"><a href="#docker-kubernetes-istio" aria-label="docker kubernetes istio permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker kubernetes istio</h4>
+<table>
+<thead>
+<tr>
+<th>docker</th>
+<th>kubernetes</th>
+<th>istio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>이식성</td>
+<td>배포 (단일 배포점, 롤링 업데이트)</td>
+<td>서비스 메시</td>
+</tr>
+<tr>
+<td>고립성</td>
+<td>로드 밸런싱</td>
+<td>어플리케이션 api 마다 프록시</td>
+</tr>
+<tr>
+<td>가벼움</td>
+<td>서비스 디스커버리</td>
+<td>서킷 브레이킹</td>
+</tr>
+<tr>
+<td>헬스체크</td>
+<td>스케일링</td>
+<td>카오스 테스트</td>
+</tr>
+<tr>
+<td>페일오버</td>
+<td>고가용성 확보(3 node)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>확장 시 서버 셋팅 자동화</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>롤백, 자원관리, 모니터링, 시크릿 관리</p>
+<h4 id="nginx-vs-istio" style="position:relative;"><a href="#nginx-vs-istio" aria-label="nginx vs istio permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nginx vs istio</h4>
+<ul>
+<li>service -> Ingress</li>
+<li>istio Gateway -> Virtual Service -> Destination Rule</li>
+</ul>
+<p>트래픽을 한 곳에서 다 처리하느냐, 각 서비스마다 분리해서 처리하느냐가 큰 차이
+사이드카가 많아져서 생기는 중복 오버헤드가 많을까, 비대해진 하나의 객체가
+오버헤드가 많을까
+내부에 직접 통신하면서 트래픽을 제어할 수 있는 것은 장점
+api gateway의 상위호환이 되려고 한다</p>
+<p>istio</p>
+<ul>
+<li>트래픽 모니터링 가능</li>
+<li>트래픽을 제어할 수 있다</li>
+<li>각 서비스마다 분리되어 있어서 단일 고장점이 아니다.</li>
+<li>retry 및 timeout 동작</li>
+</ul>
+<p>nginx(api gateway)</p>
+<ul>
+<li>단일 객체</li>
+<li>트래픽 제어</li>
+</ul>
+<h4 id="nginx-canary" style="position:relative;"><a href="#nginx-canary" aria-label="nginx canary permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nginx canary</h4>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/canary: "true"
+    nginx.ingress.kubernetes.io/canary-weight: "20"</code></pre></div>
+<h4 id="kubernetes-supports-cluster" style="position:relative;"><a href="#kubernetes-supports-cluster" aria-label="kubernetes supports cluster permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes supports cluster</h4>
+<ul>
+<li>&#x3C; 5000 nodes</li>
+<li>&#x3C; 150000 pods</li>
+<li>&#x3C; 300000 containers</li>
+<li>&#x3C; 100 pods per node</li>
+</ul>
+<h4 id="kubernetes-access-remote-cluster" style="position:relative;"><a href="#kubernetes-access-remote-cluster" aria-label="kubernetes access remote cluster permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes access remote cluster</h4>
+<p><code class="language-text">scp &lt;user>@&lt;ip>:/home/vagrant/.kube/config ~/.kube/config</code></p>
+<h4 id="kubernetes-dns" style="position:relative;"><a href="#kubernetes-dns" aria-label="kubernetes dns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes dns</h4>
+<p>kube-dns
+coredns 1.12 버전부터 사용, 호환성을 위해 라벨링은 kube-dns로 되있다</p>
+<p><code class="language-text">myapplication.namespace.svc.cluster.local</code> 형식으로 되있다</p>
+<ul>
+<li><a href="https://jonnung.dev/kubernetes/2020/05/11/kubernetes-dns-about-coredns/">https://jonnung.dev/kubernetes/2020/05/11/kubernetes-dns-about-coredns/</a></li>
+</ul>
+<h4 id="test" style="position:relative;"><a href="#test" aria-label="test permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>test</h4>
+<ul>
+<li>how to test account system?
+<ul>
+<li>check send complete</li>
+<li>check response code</li>
+</ul>
+</li>
+<li>stress test per process
+<ul>
+<li><code class="language-text">while true; do curl http://localhost; done</code></li>
+<li>hpa
+<ul>
+<li>when do switching, connection is waiting?</li>
+</ul>
+</li>
+<li>how to destroy one pod</li>
+<li>recovery time in replicaset</li>
+</ul>
+</li>
+<li>image to rollup, rollback</li>
+<li>ci/cd</li>
+</ul>
+<p>Spinnaker - build tool
+Envoy - proxy, c/b, network tool</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> image size is matter for performance?</li>
+</ul>
+<ol>
+<li>build image
+<ul>
+<li><code class="language-text">docker build shdkej/imagename:tag .</code></li>
+<li><code class="language-text">docker login</code></li>
+<li><code class="language-text">docker push shdkej/imagename:tag</code></li>
+</ul>
+</li>
+<li>deployment, service
+<ul>
+<li><code class="language-text">kubectl apply -f file.yml</code></li>
+</ul>
+</li>
+<li>test
+<ul>
+<li><code class="language-text">kubectl run -it curl --image=radial/busyboxplus:curl </code></li>
+<li><code class="language-text">curl http://deploy-name:port</code></li>
+</ul>
+</li>
+<li>port forward
+<ul>
+<li><code class="language-text">kubectl port-forward svc/svc-name 8080:8080</code></li>
+</ul>
+</li>
+<li>client run</li>
+<li>check some signal</li>
+<li>report how many success is</li>
+</ol>
+<p>case 1. normal string output check - 100000 user
+- for 10000 -> 24s
+- for 100000 -> 1m30s
+- goroutine 100000
+- server can't accept
+case 2. stream output check</p>
+<p>파드하나에 접속량을 몰아서 뻣는 경우 테스트
+노드 하나에 몰아서 테스트
+전체에 영향가게 테스트
+api서버가 어떻게 부하를 받는지 확인</p>
+<h4 id="helm-k3s-kubernetes-cluster-unreachable-error" style="position:relative;"><a href="#helm-k3s-kubernetes-cluster-unreachable-error" aria-label="helm k3s kubernetes cluster unreachable error permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>helm k3s Kubernetes cluster unreachable error</h4>
+<p>set <code class="language-text">export KUBECONFIG=/etc/rancher/k3s/k3s.yaml</code>
+<a href="https://github.com/rancher/k3s/issues/1126">https://github.com/rancher/k3s/issues/1126</a></p>
+<h4 id="eks-vs-ec2-autoscale-and-setting-kubernetes-vs-kubernetes-hpa" style="position:relative;"><a href="#eks-vs-ec2-autoscale-and-setting-kubernetes-vs-kubernetes-hpa" aria-label="eks vs ec2 autoscale and setting kubernetes vs kubernetes hpa permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>eks vs ec2 autoscale and setting kubernetes vs kubernetes hpa</h4>
+<h4 id="container-serverless" style="position:relative;"><a href="#container-serverless" aria-label="container serverless permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>container serverless</h4>
+<ul>
+<li>knative, lstio, open-faas</li>
+</ul>
+<h4 id="k3s" style="position:relative;"><a href="#k3s" aria-label="k3s permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>k3s</h4>
+<ul>
+<li>token <code class="language-text">/var/lib/rancher/k3s/server/node-token</code></li>
+<li>join
+<ul>
+<li><code class="language-text">curl -sfL http://get.k3s.io | K3S_URL=https://192.168.0.50:6443 \ K3S_TOKEN=join_token_we_copied_earlier sh -</code></li>
+</ul>
+</li>
+<li>connect remotly
+<ul>
+<li><code class="language-text">scp root@ip:/etc/rancher/k3s/k3s.yaml ~/.kube/config</code></li>
+<li>replace 127.0.0.1 -> remote ip</li>
+</ul>
+</li>
+</ul>
+<h4 id="k3s-monitoring" style="position:relative;"><a href="#k3s-monitoring" aria-label="k3s monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>k3s monitoring</h4>
+<ul>
+<li><code class="language-text">kubectl apply -k github.com/premist/k3s-kube-prometheus/setup</code></li>
+<li><code class="language-text">kubectl apply -k github.com/premist/k3s-kube-prometheus</code></li>
+</ul>
+<h4 id="k3s-helm" style="position:relative;"><a href="#k3s-helm" aria-label="k3s helm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>k3s helm</h4>
+<p>! Kubernetes cluster unreachable</p>
+<ul>
+<li><code class="language-text">export KUBECONFIG=/etc/rancher/k3s/k3s.yaml</code></li>
+<li>or <code class="language-text">kubectl config view --raw >~/.kube/config</code></li>
+</ul>
+<h4 id="k3s-connect-remotely-to-the-cluster" style="position:relative;"><a href="#k3s-connect-remotely-to-the-cluster" aria-label="k3s connect remotely to the cluster permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>k3s connect remotely to the cluster</h4>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mkdir ~/.kube
+scp &lt;user@ip>:/etc/rancher/k3s/k3s.yaml ~/.kube/config
+sed -i '' 's/127\.0\.0\.1/192\.168\.0\.22/g' ~/.kube/config</code></pre></div>
+<h4 id="helm" style="position:relative;"><a href="#helm" aria-label="helm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>helm</h4>
+<p>chart.yml
+value.yml
+templates/
+charts/</p>
+<p>install <code class="language-text">helm install &lt;name> &lt;chart></code>
+상태 보기 <code class="language-text">helm status &lt;name></code>
+업그레이드 <code class="language-text">helm upgrade -f &lt;value.yml> &lt;name> &lt;folder></code>
+지우기 <code class="language-text">helm del &lt;name></code></p>
+<h4 id="helm-install-from-local" style="position:relative;"><a href="#helm-install-from-local" aria-label="helm install from local permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>helm install from local</h4>
+<p><code class="language-text">helm install &lt;name> &lt;directory> --values &lt;values.yaml></code>
+or just setting key
+<code class="language-text">helm install &lt;name> &lt;directory> --set &lt;key=value,key2=value2></code></p>
+<h4 id="turn-on-and-access-to-grafana-in-kubernetes-nodes" style="position:relative;"><a href="#turn-on-and-access-to-grafana-in-kubernetes-nodes" aria-label="turn on and access to grafana in kubernetes nodes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>turn on and access to grafana in kubernetes nodes</h4>
+<ul>
+<li>build kubernetes setup -- vagrant</li>
+<li>access nginx from just node
+<ul>
+<li><code class="language-text">kubectl create deployment --image nginx my-nginx</code></li>
+<li><code class="language-text">kubectl expose deployment my-nginx --port=80 --type=LoadBalancer</code></li>
+</ul>
+</li>
+<li>access from master node</li>
+<li>deploy grafana</li>
+<li>add kubernetes monitoring script</li>
+</ul>
+<h4 id="kubernetes-load-balancer" style="position:relative;"><a href="#kubernetes-load-balancer" aria-label="kubernetes load balancer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes load balancer</h4>
+<p>metallb</p>
+<h4 id="kubernetes-network-service-test" style="position:relative;"><a href="#kubernetes-network-service-test" aria-label="kubernetes network service test permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes network service test</h4>
+<p>istio
+consul
+load balancer</p>
+<h4 id="kubernetes-tool" style="position:relative;"><a href="#kubernetes-tool" aria-label="kubernetes tool permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes tool</h4>
+<p>chaos-mesh
+spinnaker
+knative</p>
+<h4 id="deploy-1" style="position:relative;"><a href="#deploy-1" aria-label="deploy 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deploy</h4>
+<p>deploy spinnaker</p>
+<p>kubernetes는 github에서 돌아가야 한다. 근데 로컬에서도 똑같이 할 수 있어야 한다
+github action에 종속되지 않고 CI를 하려면 스크립트를 호출하는 방식으로 해야하나
+github action server와 비슷한 서버를 만들어서 에러 시 리다이렉트 해야하나
+jenkins는 자체 서버를 돌리니까 이를 이용해야 하나</p>
+<h4 id="인프라-관련-툴과-서비스-관련-툴을-분리하면-좋을-것-같다" style="position:relative;"><a href="#%EC%9D%B8%ED%94%84%EB%9D%BC-%EA%B4%80%EB%A0%A8-%ED%88%B4%EA%B3%BC-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B4%80%EB%A0%A8-%ED%88%B4%EC%9D%84-%EB%B6%84%EB%A6%AC%ED%95%98%EB%A9%B4-%EC%A2%8B%EC%9D%84-%EA%B2%83-%EA%B0%99%EB%8B%A4" aria-label="인프라 관련 툴과 서비스 관련 툴을 분리하면 좋을 것 같다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>인프라 관련 툴과 서비스 관련 툴을 분리하면 좋을 것 같다</h4>
+<ul>
+<li>모니터링, 로깅,</li>
+<li>보안, 리버스 프록시</li>
+<li>실제 로직 구동 앱</li>
+<li>미들웨어(카프카)</li>
+</ul>
+<h4 id="쿠버네티스-네임스페이스를-어떻게-분리할까" style="position:relative;"><a href="#%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EB%84%A4%EC%9E%84%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%A5%BC-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%B6%84%EB%A6%AC%ED%95%A0%EA%B9%8C" aria-label="쿠버네티스 네임스페이스를 어떻게 분리할까 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쿠버네티스 네임스페이스를 어떻게 분리할까</h4>
+<p>지금 istio, argocd, monitoring으로 나눠져있는데
+그러면 monitoring에서 다른 네임스페이스를 참조할 수 있나?</p>
+<p>production 과 development로 나누면 똑같은 파일로 두번 apply하면 되나?</p>
+<h4 id="kubernetes-local-image-사용하기" style="position:relative;"><a href="#kubernetes-local-image-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0" aria-label="kubernetes local image 사용하기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes local image 사용하기</h4>
+<ul>
+<li><code class="language-text">image</code> 밑에 <code class="language-text">imagePullPolicy</code>를 <code class="language-text">Never</code>로 설정한다</li>
+<li>minikube 사용 시 <code class="language-text">eval $(minikube -p minikube docker-env)</code> 입력</li>
+<li>docker image를 새로 빌드해야한다.</li>
+</ul>
+<h4 id="rbac" style="position:relative;"><a href="#rbac" aria-label="rbac permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RBAC</h4>
+<p>role-based access control
+matching user - role</p>
+<ul>
+<li>ServiceAccount</li>
+<li>Role</li>
+<li>RoleBinding</li>
+<li>ClusterRole</li>
+<li>ClusterRoleBinding</li>
+</ul>
+<p>Role과 ClusterRole의 차이</p>
+<ul>
+<li>Role은 네임스페이스 하나에만 할당되고 ClusterRole은 여러개가 되며, 허용범위가
+넓다.</li>
+<li>Cluster라 함은 Master와 Node의 범위다.</li>
+</ul>
+<p>service account 생성</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">kind: ServiceAccount
+metadata:
+  name: developer1
+  namespace: team1</code></pre></div>
+<p>허용할 api와 리소스, 명령어를 지정해준다</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">kind: Role
+metadata:
+  ...
+rules:
+- apiGroups: ['', 'apps']
+  resources: ['pods', 'deployment']
+  verbs: ['get', 'list']</code></pre></div>
+<p>롤 바인딩 파일에서 서비스 어카운트와 롤을 매칭해준다</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">kind: RoleBinding
+metadata:
+  ...
+subjects:
+- kind: ServiceAccount
+  name: developer1
+  apiGroup: ""
+roleRef:
+  kind: Role
+  name: role-dev
+  apiGroup: rbac.authorization.k8s.io</code></pre></div>
+<h4 id="argocd" style="position:relative;"><a href="#argocd" aria-label="argocd permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>argocd</h4>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># kubernetes에 argocd 올리기
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+## port 확인하거나 port-forward 해서 접속 가능
+
+
+# 로그인이나 클라이언트 명령 처리 시 클라이언트 툴 설치
+VERSION=$(curl --silent "https://api.github.com/repos/argoproj/argo-cd/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
+curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/$VERSION/argocd-linux-amd64
+chmod +x /usr/local/bin/argocd
+
+# 로그인 후 비밀번호 변경 (기본값은 파드 이름)
+export ARGOCD_PASSWORD=`kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2`
+argocd login &lt;ARGOCD_SERVER>
+argocd account update-password</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo "test1"
+echo "test2"
+echo "test3"</code></pre></div>
+<p>argocd 에서 helm 이용하기 <code class="language-text">argocd app set &lt;name> --values &lt;value.yml></code></p>
+<h4 id="kubernetes-monitoring" style="position:relative;"><a href="#kubernetes-monitoring" aria-label="kubernetes monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes monitoring</h4>
+<p><a href="https://gruuuuu.github.io/cloud/monitoring-02/#">https://gruuuuu.github.io/cloud/monitoring-02/#</a></p>
+<ol>
+<li>cluster role</li>
+<li>configmap</li>
+<li>prometheus deployment</li>
+<li>node exporter daemonset &#x26; service</li>
+<li>prometheus service</li>
+</ol>
+<p>configmap... 필요한건가</p>
+<h4 id="istio" style="position:relative;"><a href="#istio" aria-label="istio permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>istio</h4>
+<p>하나의 팟 관리를 위해 각 팟마다 관리용 팟을 생성하는 사이드카 패턴을 이용해서 각 서비스를 관리
+관리용 팟이 들어오고 나가는 네트워크를 모두 처리함으로써 로깅, 모니터링,
+디스커버리 모두 가능해진다</p>
+<ul>
+<li>리소스 사용이 2배가 되겠네?
+<ul>
+<li>경량 프록시라서 리소스가 2배는 아니다</li>
+</ul>
+</li>
+<li>envoy를 이용해 프록시를 한다</li>
+<li>파일럿을 통해 디스커버리, 로드밸런싱</li>
+<li>시타델을 이용해 인증서, 키 관리</li>
+</ul>
+<p>서비스 메시가 있으면 서비스는 통신에 신경 쓸 필요가 없나?</p>
+<ul>
+<li>통신은 메시지로 하고, 서비스 통신의 프록시를 해준다</li>
+</ul>
+<p>istio 자체의 gateway를 이용해 라우팅 할 수 있다</p>
+<h4 id="istio-설치" style="position:relative;"><a href="#istio-%EC%84%A4%EC%B9%98" aria-label="istio 설치 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>istio 설치</h4>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">curl -L https://istio.io/downloadIstio | sh -
+cd istio-1.9.0
+export PATH=$PWD/bin:$PATH
+istioctl install --set profile=demo -y</code></pre></div>
+<p>side inject enable</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">kubectl label namespace default istio-injection=enabled
+kubectl label namespace istio-system istio-injection=enabled</code></pre></div>
+<p>apply bookinfo
+apply bookinfo-gateway
+apply grafana, prometheus</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">export INGRESS_HOST=$(minikube ip)
+export INGRESS_PORT=$(kubectl get svc istio-ingressgateway -n istio-system \
+                    -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}')
+export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT</code></pre></div>
+<ul>
+<li>bookinfo 가 과부하를 일으킨다</li>
+</ul>
+<h4 id="istio-routing--tag-tagtag-값-적용시키기" style="position:relative;"><a href="#istio-routing--tag-tagtag-%EA%B0%92-%EC%A0%81%EC%9A%A9%EC%8B%9C%ED%82%A4%EA%B8%B0" aria-label="istio routing  tag tagtag 값 적용시키기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>istio routing /, /tag, /tag/:tag 값 적용시키기</h4>
+<ul>
+<li>httpbin 이라는 서비스로 istio가 예제를 제공해주고 있다.</li>
+<li>이걸로 테스트하니까 match로 지정해주지 않아도 하위 url도 다 전달해준다.</li>
+<li>여기에 ingress를 달아주니까 주소기반으로 라우팅도 된다.
+<ul>
+<li>같은 호스트로 인그레스를 달아주니까 두 서비스를 섞어서 라우팅해준다</li>
+</ul>
+</li>
+<li>ingress에서 path를 /header로 지정해주면 /header로 찾아간다
+<ul>
+<li>주소를 /v2로 해놓았을 때 v2라는 주소가 없으면 루트로 찾아가나?
+<ul>
+<li>/, /aaa가 설정되있으면 /ccc를 넣어도 / 가 있어서 /로 인식한다</li>
+</ul>
+</li>
+<li>whoami 서비스는 이상한 주소로 넣어도 다 받아주고, httpbin은 url
+못찾는다는 에러를 준다.</li>
+<li>ingress에서 지정해주는 주소가 루트로 인식하는 줄 알았는데, 그게 아니라
+매칭을 해주는거였다.
+<ul>
+<li>traefik에서는 원하는 주소를 넣을 수 있어서 헷갈렸던 것 같다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ingress에서 여러 주소를 한 서비스에 넣으려면 콤마(,)로 구분하면 된다</li>
+</ul>
+<h4 id="knative-istio" style="position:relative;"><a href="#knative-istio" aria-label="knative istio permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>knative istio</h4>
+<ul>
+<li>before use knative, install istio first.</li>
+</ul>
+<h4 id="spinnaker" style="position:relative;"><a href="#spinnaker" aria-label="spinnaker permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>spinnaker</h4>
+<p>spinnaker 설치를 halyard를 통해서 해야 한다</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mkdir -p ~/.hal/kube
+cp ~/.kube/config ~/.hal/kube/config
+chmod 755 ~/.hal/kube/config
+
+docker run -p 8084:8084 -p 9000:9000 \
+    --name halyard --rm \
+    -v ~/.hal:/home/spinnaker/.hal \
+    -it \
+    us-docker.pkg.dev/spinnaker-community/docker/halyard:stable
+
+docker exec -it halyard bash
+
+### initial in container
+$ source &lt;(hal --print-bash-completion)
+$ hal config provider kubernetes enable
+$ hal config provider kubernetes account add &lt;my-account> \
+    --context $(kubectl config current-context)
+$ hal config features edit --artifacts true
+$ hal config deploy edit --type distributed --acount-name &lt;my-account></code></pre></div>
+<p>set persistent store</p>
+<ul>
+<li>we will use minio, why?</li>
+</ul>
+<p>install minio</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">helm install minio -n spinnaker \
+    --set accessKey=&lt;access_key> \
+    --set secretKey=&lt;secret_key> \
+    stable/minio</code></pre></div>
+<p>spinnaker deploy</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ hal deploy apply
+! failed check for namespace/spinnaker is null
+> kubectl get pod >> error >> no search file or directory '/home/sh/.minikube/'
+>> cp -r ~/.minikube ~/.hal/
+
+### open access ip
+kubectl edit svc spin-deck -n spinnaker
+# edit ClusterIP to NodePort,
+# add nodePort: 30900
+
+kubectl edit svc spin-gate -n spinnaker
+# edit ClusterIP to NodePort,
+# add nodePort: 30808
+
+$ hal config security ui edit \
+    --override-base-url "http://&lt;HOST_IP>:30900"
+$ hal config security api edit \
+    --override-base-url "http://&lt;HOST_IP>:30808"
+$ hal deploy apply</code></pre></div>
+<p>connect to '&#x3C;HOST_IP>:30900' in browser</p>
+<h4 id="kubernetes를-쓰면서-쉽게-실수하는-10가지" style="position:relative;"><a href="#kubernetes%EB%A5%BC-%EC%93%B0%EB%A9%B4%EC%84%9C-%EC%89%BD%EA%B2%8C-%EC%8B%A4%EC%88%98%ED%95%98%EB%8A%94-10%EA%B0%80%EC%A7%80" aria-label="kubernetes를 쓰면서 쉽게 실수하는 10가지 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes를 쓰면서 쉽게 실수하는 10가지</h4>
+<ol>
+<li>리소스 설정 (cpu, memory)</li>
+<li>헬스 체크(liveness, readiness)의 차이에 따른 사용</li>
+<li>모든 서비스에 로드밸런서 달아버리는 것</li>
+<li>쿠버네티스가 모르는 자동확장(?)</li>
+<li>권한 관리 부재</li>
+<li>Anti Affinity 설정(pod가 node에 분산해서 실행하지 않으므로 명시적 설정 필요)</li>
+<li>PodDisruptionBudget 설정(pod 최소필요량(minAvailable))</li>
+<li>클러스터 공유(네임스페이스는 환경 분리가 안되므로 차라리 클러스터를 나눠라)</li>
+<li><code class="language-text">externalTrafficPolicy: Cluster</code> 설정은 네트워크 지연을 일으킬 수 있다</li>
+<li>클러스터를 애완동물처럼 다루기 + 마스터에 너무 큰 부하주는 것</li>
+<li>+1. latest tag 사용하는 것</li>
+</ol>
+<ul>
+<li><a href="https://coffeewhale.com/kubernetes/mistake/2020/11/29/mistake-10/">https://coffeewhale.com/kubernetes/mistake/2020/11/29/mistake-10/</a></li>
+</ul>
+<h4 id="kubernetes-in-vcnc" style="position:relative;"><a href="#kubernetes-in-vcnc" aria-label="kubernetes in vcnc permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes in VCNC</h4>
+<p>상용 kubernetes를 위한 추가 도구</p>
+<p>ingress - ingress controller</p>
+<ul>
+<li>nginx vs aws nlb</li>
+<li>Class ELB는 동시에 많은 연결을 처리하려면 웜업이 필요하다</li>
+<li>nlb는 gRPC를 지원하지 않는다.</li>
+<li>트래픽 흐름: NLB - NodePort - NGINX ingress controller - service
+<ul>
+<li>외부 로드밸런서를 추가하는 것이 클러스터 오토스케일러를 추가하는 것처럼
+불가피한 것일까</li>
+</ul>
+</li>
+</ul>
+<p>AWS IAM을 사용하기 위해 kube2iam 사용 (19년 03월) -> EKS에서는 지원될 듯</p>
+<p>로그</p>
+<ul>
+<li>fluentd를 daemonset으로 노드마다 실행해서 cloudwatch로 전송</li>
+<li><a href="https://github.com/fluent/fluentd-kubernetes-daemonset">https://github.com/fluent/fluentd-kubernetes-daemonset</a></li>
+</ul>
+<p>모니터링</p>
+<p><a href="https://engineering.vcnc.co.kr/2019/03/kubernetes-on-aws/">https://engineering.vcnc.co.kr/2019/03/kubernetes-on-aws/</a></p>
+<h4 id="eks-참고사항" style="position:relative;"><a href="#eks-%EC%B0%B8%EA%B3%A0%EC%82%AC%ED%95%AD" aria-label="eks 참고사항 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>eks 참고사항</h4>
+<p>쿠버네티스 버전 업 시 전체 노드 새로 올린다?</p>
+<p>EKS의 파드들이 IAM을 인증받는 방법은?</p>
+<ul>
+<li>kube2iam</li>
+</ul>
+<p>EKS에서는 워커 노드 당 Pod 개수 제한이 있다 - flannel을 쓰면 해결되지만 기본은
+제약이 있다.</p>
+<p>ECS, fargate, lambda 차이는?</p>
+<ul>
+<li>Fargate: 서버리스 컨테이너</li>
+</ul>
+<p>AZ, multi region도 지원해주나?</p>
+<p>네트워크 구조</p>
+<ul>
+<li>Region - VPC(논리적) - subnet - AZ - route table - Security groups -</li>
+<li>vpc, subnet, route table 각각 cidr을 설정 가능하다?</li>
+</ul>
+<p>nginx-ingress deprecate 됐고, ingress-nginx를 쓰게 된다.</p>
+<p>eks에서도 kubernetes metrics-server를 통해서 오토스케일링 조절하나?</p>
+<ul>
+<li>cluster autoscaler라는게 있다</li>
+</ul>
+<p>부하 테스트
+<code class="language-text">ab -c 200 -n 200 -t 30 http://$(kubectl get ingress/backend-ingress -o jsonpath='{.status.loadBalancer.ingress[*].hostname}')/contents/aws</code></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> provider "kubernetes"는 뭐지</li>
+</ul>
+<h4 id="배포-후-롤백-테스트" style="position:relative;"><a href="#%EB%B0%B0%ED%8F%AC-%ED%9B%84-%EB%A1%A4%EB%B0%B1-%ED%85%8C%EC%8A%A4%ED%8A%B8" aria-label="배포 후 롤백 테스트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>배포 후 롤백 테스트</h4>
+<p>지금 서버에 버전 두 개 만들어서 올리고 배포 후, 테스트하고 롤백하는 것 10초 컷
+gif로 만들어보기</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">docker build -t &lt;image:tag> .
+docker push &lt;image:tag>
+kubectl set image deployment/&lt;name> &lt;name>=&lt;image:tag> --record
+kubectl rollout history deployment/&lt;name></code></pre></div>
+<p>띄워져 있어야하는 팟 개수 / 현재 개수 확인 바로 할 수 있는 방법은?</p>
+<ul>
+<li><code class="language-text">kubectl get deploy -A</code></li>
+</ul>
+<p>카오스 툴 띄워서 회복 잘 하는지 테스트</p>
+<ul>
+<li>동작안함..ㅠㅠ</li>
+</ul>
+<h4 id="helm을-안쓰고-kubernetes로-가변적인-배포를-쉽게-할-수-없을까" style="position:relative;"><a href="#helm%EC%9D%84-%EC%95%88%EC%93%B0%EA%B3%A0-kubernetes%EB%A1%9C-%EA%B0%80%EB%B3%80%EC%A0%81%EC%9D%B8-%EB%B0%B0%ED%8F%AC%EB%A5%BC-%EC%89%BD%EA%B2%8C-%ED%95%A0-%EC%88%98-%EC%97%86%EC%9D%84%EA%B9%8C" aria-label="helm을 안쓰고 kubernetes로 가변적인 배포를 쉽게 할 수 없을까 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>helm을 안쓰고 kubernetes로 가변적인 배포를 쉽게 할 수 없을까</h4>
+<p>helm에 install --values도 values 파일을 작성해야하는데, 이러면 그냥 kubernetes
+snippet으로 만들어도 큰 차이는 없을 것 같다...
+괜히 helm을 안깔아도 될 것 같은데</p>
+<p>gist에 파일을 올려놓고, 설정파일에 이름을 넣어서 이름 확인해서 어떤 gist를
+가져올지만 정해서 불러와서 실행시키면 되겠다.
+gitkube라는 서비스도 있다. kubernetes 안에다가 리소스를 만들어놓고 감시하는
+컨셉이다</p>
+<p>이제 세부적인 설정이 필요해지면 어떻게 수정하지</p>
+<hr>
+<h2 id="kubernetes-basic" style="position:relative;"><a href="#kubernetes-basic" aria-label="kubernetes basic permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Kubernetes Basic</h2>
+<h4 id="설치" style="position:relative;"><a href="#%EC%84%A4%EC%B9%98" aria-label="설치 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>설치</h4>
+<ul>
+<li><code class="language-text">curl -s https://packages.cloude.google.com/apt/doc/apt-key.gpg | apt-key add -</code></li>
+<li><code class="language-text">/etc/apt/sources.list.d/kubernetes.list</code> 파일에
+<ul>
+<li><code class="language-text">deb https://apt.kubernetes.io/ kubernetes-xenial main</code> 입력</li>
+</ul>
+</li>
+<li><code class="language-text">apt-get update &amp;&amp; apt-get install -y apt-transport-https curl</code></li>
+<li><code class="language-text">apt-get install kubelet kubeadm kubectl</code></li>
+<li><code class="language-text">sudo swapoff -a</code></li>
+<li><code class="language-text">sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' /etc/systemd/system/kubelet.service.d/10-kubeadm.conf</code></li>
+<li><code class="language-text">sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab</code></li>
+</ul>
+<p>초기화</p>
+<ul>
+<li><code class="language-text">kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors Swap</code></li>
+</ul>
+<p>네트워크 설치</p>
+<ul>
+<li>flannel
+<ul>
+<li><code class="language-text">kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel.yml</code></li>
+</ul>
+</li>
+<li>calico
+<ul>
+<li><code class="language-text">kubectl apply -f https://docs.projectcalico.org/v3.10/manifests/calico.yaml</code></li>
+</ul>
+</li>
+<li>weave
+<ul>
+<li><code class="language-text">kubectl apply -f "[https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')](https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n'))"</code></li>
+</ul>
+</li>
+</ul>
+<p>flannel 설치 시 coredns 안붙음.
+calico로 설치
+<a href="https://docs.projectcalico.org/v3.10/getting-started/kubernetes/">https://docs.projectcalico.org/v3.10/getting-started/kubernetes/</a></p>
+<p>Slave node 접속</p>
+<ul>
+<li><code class="language-text">kubeadm join 192.168.0.3:6443 --token 8nt7ze.bm7pa8pi3t1jgr70\ --discovery-token-ca-cert-hash  sha256:4337d62bce67b7ebf55466da74dfa8deb7cda3632ce5054bcc24b1fe3fcf2bff</code></li>
+</ul>
+<p>token 생성 및 확인</p>
+<ul>
+<li><code class="language-text">kubeadm token create</code></li>
+<li><code class="language-text">openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'</code></li>
+</ul>
+<p>Node 제거</p>
+<ul>
+<li><code class="language-text">kubectl delete node &lt;node-name></code></li>
+</ul>
+<p>Master reset</p>
+<ul>
+<li><code class="language-text">kubeadm reset</code></li>
+</ul>
+<p>scale 늘리기</p>
+<ul>
+<li><code class="language-text">kubectl scale deploy &lt;deploy_name> --replicas=10</code></li>
+</ul>
+<h4 id="helm-1" style="position:relative;"><a href="#helm-1" aria-label="helm 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>helm</h4>
+<p>kubernetes package manager</p>
+<p><code class="language-text">curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | cat > /tmp/helm_script.sh \ &amp;&amp; chmod 755 /tmp/helm_script.sh &amp;&amp; /tmp/helm_script.sh --version v2.8.2 helm init --upgrade</code>
+출처: <a href="https://sktelecom-oslab.github.io/Virtualization-Software-Lab/Helm/">https://sktelecom-oslab.github.io/Virtualization-Software-Lab/Helm/</a></p>
+<ul>
+<li><code class="language-text">kubectl create serviceaccount --namespace kube-system tiller</code></li>
+<li><code class="language-text">kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller</code></li>
+<li><code class="language-text">helm init --service-account tiller --upgrade</code></li>
+<li><code class="language-text">helm update repo</code></li>
+<li><code class="language-text">helm install stable/redis --version 3.3.5</code></li>
+</ul>
+<p>repo 추가</p>
+<ul>
+<li><code class="language-text">helm repo add stable https://kubernetes-charts.storage.googleapis.com/</code></li>
+</ul>
+<p>출처: <a href="https://stackoverflow.com/questions/43499971/helm-error-no-available-release-name-found">https://stackoverflow.com/questions/43499971/helm-error-no-available-release-name-found</a></p>
+<p>helm init</p>
+<ul>
+<li>search</li>
+<li>install</li>
+<li>repo update</li>
+<li>list</li>
+<li>delete</li>
+</ul>
+<h4 id="kompose" style="position:relative;"><a href="#kompose" aria-label="kompose permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Kompose</h4>
+<p>docker-compose to kubernetes yaml
+출처: <a href="https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/#build-and-push-docker-images">https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/#build-and-push-docker-images</a></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">curl -L https://github.com/kubernetes/kompose/releases/download/v1.21.0/kompose-linux-amd64 -o kompose
+chmod +x kompose
+sudo mv ./kompose /usr/local/bin/kompose
+kompose up
+kompose convert
+kubectl apply -f &lt;file>
+kompose down</code></pre></div>
+<h4 id="statefulset-pv-sc" style="position:relative;"><a href="#statefulset-pv-sc" aria-label="statefulset pv sc permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Statefulset PV SC</h4>
+<p>Statefulset을 사용하기 위해 pv를 만들어야 하고
+pv를 만들기 위해서 storageclass가 필요</p>
+<p>storageOS 설치
+출처: <a href="https://docs.storageos.com/docs/platforms/kubernetes/install/1.10">https://docs.storageos.com/docs/platforms/kubernetes/install/1.10</a></p>
+<p>SC default 설정</p>
+<ul>
+<li><code class="language-text">kubectl patch storageclass fast -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'</code></li>
+</ul>
+<p>출처: <a href="https://proinlab.com/archives/2308">https://proinlab.com/archives/2308</a></p>
+<p>SC default 해제</p>
+<ul>
+<li><code class="language-text">kubectl patch storageclass &lt;your-class-name> -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'</code></li>
+</ul>
+<p>glusterfs pv pvc 예제</p>
+<ul>
+<li><a href="https://teamsmiley.github.io/2019/06/29/kubernetes-glusterfs/">https://teamsmiley.github.io/2019/06/29/kubernetes-glusterfs/</a></li>
+<li><a href="https://docs.okd.io/latest/install_config/storage_examples/gluster_example.html">https://docs.okd.io/latest/install_config/storage_examples/gluster_example.html</a></li>
+</ul>
+<h4 id="glusterfs-설치" style="position:relative;"><a href="#glusterfs-%EC%84%A4%EC%B9%98" aria-label="glusterfs 설치 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>glusterfs 설치</h4>
+<p>gfs1, gfs2 라는 서버가 있다고 하자.</p>
+<ul>
+<li>양쪽 서버에서 /etc/hosts에 host 이름 둘 다 적어준다</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:gluster/glusterfs-5
+sudo apt-get update
+sudo apt install glusterfs-server
+sudo ufw allow proto any from &lt;상대아이피> to &lt;자신아이피>
+sudo service glusterd start
+
+sudo gluster peer probe gfs2 # gfs1에서는 gfs2를, gfs2에서는 gfs1을 둘 다 입력
+sudo mkdir -p /gluster/fs
+sudo gluster volume create vol replica 2 transport tcp gfs1:/gluster/fs gfs2:/gluster/fs force
+# (루트 파티션에는 볼륨 설정 안하기를 권하고 있으나 강제로 가능)
+
+sudo gluster volume start vol
+sudo mkdir -p /mnt/gluster
+sudo mount -t glusterfs &lt;자신아이피>:/vol &lt;마운트할 폴더> # (양쪽 서버에서 실행)</code></pre></div>
+<ul>
+<li>/gluster/fs/ 는 파일 저장되는 공간</li>
+<li>/mnt/gluster 는 마운트 시켜서 사용하는 공간</li>
+</ul>
+<p>/etc/fstab에 추가</p>
+<ul>
+<li><code class="language-text">gfs1:/vol /mnt/gluster glusterfs defaults,_netdev 0 0</code></li>
+</ul>
+<p>peer 추가 시</p>
+<ul>
+<li><code class="language-text">gluster volume add-brick glus_vol gluster5:/data1/gluster gluster6:/data1/gluster</code></li>
+</ul>
+<p>출처: <a href="http://junhyung2.blogspot.com/2014/12/7-glusterfs.html">http://junhyung2.blogspot.com/2014/12/7-glusterfs.html</a></p>
+<p>volume 삭제</p>
+<ul>
+<li><code class="language-text">gluster volume remove-brick vol_dist vmlnx005:/data</code></li>
+</ul>
+<p>출처: <a href="http://blog.syszone.co.kr/3038">http://blog.syszone.co.kr/3038</a></p>
+<p>Glusterfs 로 data volume 구성.
+볼륨형태</p>
+<ul>
+<li>Replication : 완전 복제</li>
+<li>Distributed : 분산 저장, 파일별로 분산</li>
+<li>Striped     : 완전 분산 저장, 하나의 파일도 분산, I/O 성능 향상, 하나의 서버가 죽으면 파일 유실</li>
+</ul>
+<p>Volume2가 꺼졌다가 켜지면 동기화가 어떻게 되는지?</p>
+<p>목표</p>
+<ul>
+<li>스웜으로 두개를 킨 후 하나의 서버를 종료 시켜도 접속 가능하게</li>
+<li>DB 컨테이너 생성 시 볼륨을 시킨다</li>
+</ul>
+<p></section><div role="link" tabindex="0"><a href="/troubleshooting/#kubernetes">kubernetes</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p></section><hr/></article><nav><div style="max-width:90%"><span><a href="/architecture/">/architecture/</a>,</span><span><a aria-current="page" class="" href="/container/">/container/</a>,</span><span><a href="/developer/">/developer/</a>,</span><span><a href="/devops/">/devops/</a>,</span></div>Tag: <a href="/tags/">deep_knowledge</a><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/talk/">← <!-- -->Communication</a></li><li><a rel="next" href="/blog/life_tracking/">Life Tracking<!-- --> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/container/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

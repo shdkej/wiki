@@ -1,0 +1,860 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="개요 상황 1. 개인 프로젝트로 go web server를 구축하여 원격 서버에 배포 상황 2. 10인 개발팀이 개발은 compose로 진행하고 배포를 argocd로 배포 상황 3. 3명의 개발자가 terraform으로 인프라 관리 및 배포 배포와 릴리즈 분리 전체적인 흐름 개발 Git…"/><meta data-react-helmet="true" property="og:title" content="CI/CD 구성 연습"/><meta data-react-helmet="true" property="og:description" content="개요 상황 1. 개인 프로젝트로 go web server를 구축하여 원격 서버에 배포 상황 2. 10인 개발팀이 개발은 compose로 진행하고 배포를 argocd로 배포 상황 3. 3명의 개발자가 terraform으로 인프라 관리 및 배포 배포와 릴리즈 분리 전체적인 흐름 개발 Git…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">CI/CD 구성 연습 | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>CI/CD 구성 연습</h1><p>정적 소스 체크와 Ansible, Terraform, ArgoCD 를 이용한 배포</p><small style="width:50%">Created: <!-- -->2021, 03 09<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Ci_Cd.md">Updated: <!-- -->2021, 10 23</a></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#%EA%B0%9C%EC%9A%94">개요</a></p>
+</li>
+<li>
+<p><a href="#%EC%A0%84%EC%B2%B4%EC%A0%81%EC%9D%B8-%ED%9D%90%EB%A6%84">전체적인 흐름</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%A0%9C%ED%95%9C">제한</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#ci">CI</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#ci-strategy">CI strategy</a></li>
+<li><a href="#ci-cookbook">CI cookbook</a></li>
+<li><a href="#jenkins">jenkins</a></li>
+<li><a href="#pipeline">pipeline</a></li>
+<li><a href="#%EC%BB%A4%EB%B0%8B-%EC%8B%9C-%EB%8F%99%EC%9E%91-%EA%B0%80%EB%8A%A5%ED%95%9C-%EB%8B%A8%EC%9C%84%EB%A1%9C-%ED%95%9C%EB%8B%A4">커밋 시 동작 가능한 단위로 한다</a></li>
+<li><a href="#%EA%B8%B0%EB%8A%A5%EC%97%90-%EB%AC%B8%EC%A0%9C-%EC%97%86%EB%8A%94-%EA%B2%83%EC%9D%B4-%ED%99%95%EC%9D%B8-%EB%90%9C-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EC%BB%A4%EB%B0%8B%EC%9D%84-%ED%95%98%EA%B3%A0-%EC%8B%B6%EB%8B%A4">기능에 문제 없는 것이 확인 된 단위로 커밋을 하고 싶다</a></li>
+<li><a href="#pr">pr</a></li>
+<li><a href="#meshkorea">meshkorea</a></li>
+<li><a href="#devops">devops</a></li>
+<li><a href="#workflow">workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%A0%95%EC%A0%81-%EC%86%8C%EC%8A%A4-%EB%B6%84%EC%84%9D">정적 소스 분석</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#report">report</a></li>
+<li><a href="#workflow-1">workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#cd">CD</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#imagine-of-erp-cicd">imagine of erp CI/CD</a></li>
+<li><a href="#feedback">Feedback</a></li>
+<li><a href="#code-static-analyze-content">Code static analyze content</a></li>
+<li><a href="#deploy-make-easy">deploy make easy</a></li>
+<li><a href="#%EB%B0%B0%ED%8F%AC">배포</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EB%B0%B0%ED%8F%AC-%EC%9E%90%EB%8F%99%ED%99%94">배포 자동화</a></p>
+<ul>
+<li><a href="#%EC%83%81%ED%99%A9-1">상황 1</a></li>
+<li><a href="#%EC%83%81%ED%99%A9-2">상황 2</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%83%81%ED%99%A9-3">상황 3</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#edge-case">edge case</a></li>
+<li><a href="#reference">reference</a></li>
+<li><a href="#github%EC%9D%B4%EB%82%98-jenkins-travis%EC%97%90%EC%84%9C-cicd-%EB%85%B8%ED%95%98%EC%9A%B0%EB%A5%BC-%EA%B3%B5%EC%9C%A0%ED%95%A0-%EA%B2%83-%EA%B0%99%EC%9D%80%EB%8D%B0">github이나 jenkins, travis에서 ci/cd 노하우를 공유할 것 같은데</a></li>
+<li><a href="#ci-cd-pipeline">ci cd pipeline</a></li>
+<li><a href="#etc">etc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#deploy">Deploy</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#infra%EC%99%80-source%EB%A5%BC-%EB%B6%84%EB%A6%AC">infra와 source를 분리</a></li>
+<li><a href="#deploy-1">deploy</a></li>
+<li><a href="#argocd">argocd</a></li>
+<li><a href="#%EB%B0%B0%ED%8F%AC-1">배포</a></li>
+<li><a href="#canary-release">canary release</a></li>
+<li><a href="#%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%A7%95-%EB%8C%80%EC%8B%A0-%EC%B9%B4%EB%82%98%EB%A6%AC%EB%A1%9C-%EC%A7%81%EC%A0%91-%ED%85%8C%EC%8A%A4%ED%8A%B8">스테이징 대신 카나리로 직접 테스트</a></li>
+<li><a href="#%EB%8B%A4%EB%A5%B8-%EB%B2%84%EC%A0%84%EC%9D%84-%EC%82%AC%EB%9E%8C%EB%93%A4%EC%9D%B4-%EC%93%B0%EB%A9%B4-%EB%AC%B8%EC%A0%9C%EA%B0%80-%EC%83%9D%EA%B8%B4%EB%8B%A4">다른 버전을 사람들이 쓰면 문제가 생긴다</a></li>
+<li><a href="#without-stage-server">without stage server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h2 id="개요" style="position:relative;"><a href="#%EA%B0%9C%EC%9A%94" aria-label="개요 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>개요</h2>
+<p>상황 1. 개인 프로젝트로 go web server를 구축하여 원격 서버에 배포</p>
+<p>상황 2. 10인 개발팀이 개발은 compose로 진행하고 배포를 argocd로 배포</p>
+<p>상황 3. 3명의 개발자가 terraform으로 인프라 관리 및 배포</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 배포와 릴리즈 분리</li>
+</ul>
+<h2 id="전체적인-흐름" style="position:relative;"><a href="#%EC%A0%84%EC%B2%B4%EC%A0%81%EC%9D%B8-%ED%9D%90%EB%A6%84" aria-label="전체적인 흐름 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>전체적인 흐름</h2>
+<p>개발</p>
+<ul>
+<li>Git Commit</li>
+<li>Git Push</li>
+</ul>
+<p>개발자가 해야할 일</p>
+<ul>
+<li>기능 개발</li>
+<li>오류 수정</li>
+<li>새로운 아키텍처 추가</li>
+</ul>
+<p>CI</p>
+<ul>
+<li>정적 분석</li>
+<li>테스트 실행</li>
+<li>패키징</li>
+</ul>
+<p>CD</p>
+<ul>
+<li>배포</li>
+</ul>
+<p>ci/cd 선택요소</p>
+<ul>
+<li>pr or push</li>
+<li>브랜치명</li>
+<li>스킵</li>
+<li>배포 형태</li>
+</ul>
+<p>흐름
+기능 브랜치 해서 푸시하면 ci 실행
+머지하면 cd 실행
+마스터에 푸시 막기</p>
+<h4 id="제한" style="position:relative;"><a href="#%EC%A0%9C%ED%95%9C" aria-label="제한 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>제한</h4>
+<ul>
+<li>커밋 전 체크 1초</li>
+<li>풀 리퀘스트 후 테스트 시간 10분</li>
+<li>머지 후 배포 10초</li>
+</ul>
+<h2 id="ci" style="position:relative;"><a href="#ci" aria-label="ci permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CI</h2>
+<ul>
+<li>coding convention</li>
+<li>test</li>
+<li>code profiling
+<ul>
+<li>lint, coding convention check - static code analyse
+<ul>
+<li>security check(synk)</li>
+<li>codefactor</li>
+<li>codecov</li>
+<li>도커 이미지 보안 스캔하는 서비스 - docker bench for security</li>
+<li>Find bugs or perform static analysis tool - pychecker, pylint</li>
+<li><a href="https://semgrep.dev/">semgrep</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/andresz1/size-limit-action">size limit check</a></li>
+<li>check test. check coverage</li>
+</ul>
+</li>
+<li>pull request with report</li>
+<li>pull request and code review</li>
+<li>build</li>
+<li>[version marking](Team_management#Conventional commits)</li>
+</ul>
+<h4 id="ci-strategy" style="position:relative;"><a href="#ci-strategy" aria-label="ci strategy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CI strategy</h4>
+<p>실패를 먼저 확인한다</p>
+<ul>
+<li>pull request를 보내고 테스트가 실패하는 것을 먼저 달게 하는 템플릿을 만든다</li>
+</ul>
+<p>진행 결과를 코멘트해준다</p>
+<ul>
+<li>test</li>
+<li>릴리즈 태그</li>
+<li>변경된 파일(?)</li>
+<li>배포 결과</li>
+</ul>
+<h4 id="ci-cookbook" style="position:relative;"><a href="#ci-cookbook" aria-label="ci cookbook permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CI cookbook</h4>
+<ul>
+<li>
+<p>실패 시 메시지</p>
+<ul>
+<li><code class="language-text">if: failure()</code></li>
+</ul>
+</li>
+<li>
+<p>스킵</p>
+<ul>
+<li>commit이나 pr에 [ci skip] 또는 [skip ci]를 하면 자동 스킵</li>
+</ul>
+</li>
+<li>
+<p>풀리퀘스트에 코멘트 달기</p>
+<ul>
+<li><code class="language-text">uses: actions/github-script@0.3.0</code></li>
+<li><code class="language-text">script: github.issues.createComment()</code></li>
+</ul>
+</li>
+<li>
+<p>테스트 결과 코멘트 달기</p>
+<ul>
+<li>coveralls 이용. coveralls bot을 레포에 초대해야한다. 잘 안붙는다</li>
+<li>codecov 도 있다</li>
+<li><code class="language-text">uses: romeovs/lcov-reporter-action@v0.2.16</code>  심플 커버리지 확인</li>
+</ul>
+</li>
+<li>
+<p>pull request, push 상황 체크</p>
+<ul>
+<li><code class="language-text">on: ["push", "pull request"]</code></li>
+</ul>
+</li>
+<li>
+<p>pull request 생성</p>
+<ul>
+<li><code class="language-text">uses: repo-sync/pull-request@v2</code></li>
+<li>destination_branch, pr_title, pr_body 등 설정</li>
+</ul>
+</li>
+<li>
+<p>변수 여러줄 저장하기</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">go test -cover -v > output.txt
+body=$(cat output.txt)
+
+body="${body//'%'/'%25'}"
+body="${body//$'\n'/'%0A'}"
+body="${body//$'\r'/'%0D'}"
+
+echo "::set-output name=body::$body"</code></pre></div>
+<ul>
+<li>파일에서 읽으려면 예약된 문자들을 입력해줘야 여러 줄로 인식이 됨</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo ::set-output name=stdout::`go test -cover -v`</code></pre></div>
+<ul>
+<li>stdout을 바로 받으려면 이렇게만 해도 된다</li>
+</ul>
+</li>
+<li>
+<p>cache</p>
+<ul>
+<li>actions/cache 이용</li>
+<li><code class="language-text">if: steps.cache.outputs.cache-hit != 'true'</code> 로 체크</li>
+</ul>
+</li>
+<li>
+<p>terraform 구동</p>
+<ul>
+<li><code class="language-text">uses: hashicorp/setup-terraform@v1</code></li>
+<li>terraform cloud 토큰 생성 후 이용 가능</li>
+</ul>
+</li>
+<li>
+<p>docker repository</p>
+<ul>
+<li>github repository</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+docker push docker.pkg.github.com/${{ github.repository }}:$VERSION</code></pre></div>
+<ul>
+<li>dockerhub repository</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">uses: docker/login-action@v1
+with:
+    username:
+    password:</code></pre></div>
+</li>
+<li>
+<p><a href="https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context">github default context</a></p>
+</li>
+<li>
+<p><a href="https://github.com/sdras/awesome-actions">awesome-actions</a></p>
+</li>
+</ul>
+<h4 id="jenkins" style="position:relative;"><a href="#jenkins" aria-label="jenkins permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>jenkins</h4>
+<p>수동 배포도 되는 것이 장점</p>
+<p>코드 분리 가능 (github action, circle ci는 불가)</p>
+<p>선언형과 groovy같은 스크립티드 문법 중 선택해서 쓸 수 있는데, 선언형으로 안되는
+것들이 있어서 스크립티드를 써야하는 경우가 있다고 한다.</p>
+<p>Configuration as code 플러그인을 설치하면 코드로 설정 관리 가능</p>
+<ul>
+<li><a href="https://tech.kakao.com/2021/07/16/devops-for-msa/">https://tech.kakao.com/2021/07/16/devops-for-msa/</a></li>
+</ul>
+<h4 id="pipeline" style="position:relative;"><a href="#pipeline" aria-label="pipeline permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pipeline</h4>
+<p>백엔드는 깃 폴더 내에서 작업하고
+푸시하면 이미지가 만들어지고 파이프라인에 들어간다
+디비나 다른 프로그램 사용이 필요할 때 바로바로 사용할 수 있어야 하고, 연결과 내부 확인이 바로 되어야 한다
+개발과 테스트가 자유자재로 되어야 한다
+개발을 하다가 테스트가 필요하면 바로 할 수 있어야 한다</p>
+<p>프론트엔드도 깃 폴더 내에서 작업하고
+백엔드의 데이터를 마음대로 가져올 수 있어야 한다
+라이브러리 관리가 되어야 한다</p>
+<p>커밋 전 확인할 것</p>
+<ul>
+<li>커밋 시에 사전체크가 오래 걸리면 업무가 지연된다</li>
+</ul>
+<p>커밋 후 확인할 것</p>
+<p>직접 관리할 서버와 서비스를 이용하는 것은 어떻게 나눠야할까
+젠킨스, 깃헙 액션</p>
+<p>메인서버의 데이터를 바로 테스트용으로 카피할 수 있으면 좋겠다
+그러려면 메인서버의 데이터 자체가 너무 비대해지면 안되겠다</p>
+<p>세부설정을 할 수 있게 하되, 기본값은 실제 서버값으로 하면 테스트하기 좋지 않을까?
+기본값으로 초기값을 하면 정확한 테스트가 안될 것 같다</p>
+<p>테스트 서버의 자원을 로컬에서 할지 공용 풀에서 할지 선택하면 좋겠다</p>
+<p>관리페이지 접속 -> 서비스 신청 -> 주소 할당</p>
+<h4 id="커밋-시-동작-가능한-단위로-한다" style="position:relative;"><a href="#%EC%BB%A4%EB%B0%8B-%EC%8B%9C-%EB%8F%99%EC%9E%91-%EA%B0%80%EB%8A%A5%ED%95%9C-%EB%8B%A8%EC%9C%84%EB%A1%9C-%ED%95%9C%EB%8B%A4" aria-label="커밋 시 동작 가능한 단위로 한다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>커밋 시 동작 가능한 단위로 한다</h4>
+<p>한 동작마다? 한 단위마다?
+처음 틀 만들 때는 빠른 개발을 위해 되는대로 작성해놓고 커밋만 따로 쪼개서 하고
+싶은데 가능한가?</p>
+<h4 id="기능에-문제-없는-것이-확인-된-단위로-커밋을-하고-싶다" style="position:relative;"><a href="#%EA%B8%B0%EB%8A%A5%EC%97%90-%EB%AC%B8%EC%A0%9C-%EC%97%86%EB%8A%94-%EA%B2%83%EC%9D%B4-%ED%99%95%EC%9D%B8-%EB%90%9C-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EC%BB%A4%EB%B0%8B%EC%9D%84-%ED%95%98%EA%B3%A0-%EC%8B%B6%EB%8B%A4" aria-label="기능에 문제 없는 것이 확인 된 단위로 커밋을 하고 싶다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>기능에 문제 없는 것이 확인 된 단위로 커밋을 하고 싶다</h4>
+<p>기능에 문제가 있는지 없는지는 어떻게 확인할까
+검사하기 좋은 아키텍처를 가지는 것도 중요하겠다</p>
+<ul>
+<li>정적 테스트가 완료되면 문제 없다고 할 수 있게끔 해야겠다</li>
+</ul>
+<p>CI를 커밋할 때 하는 것보다 PR을 할 때 하면 PR에 결과 표시해주면 한 곳에서 확인할 수 있어서 좋겠다</p>
+<p>커밋할 때는 짧게 확인 가능한 위주로 테스트하고, PR에서 좀 더 진행하면 좋겠다</p>
+<p>개발자들이 실제 작업하는 환경을 수시로 확인하는 작업이 필요하다</p>
+<h4 id="pr" style="position:relative;"><a href="#pr" aria-label="pr permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pr</h4>
+<p>pr마다 버전을 넣으면 금방 100을 넘을 것 같은데?
+컨테이너 이미지 만들 때 버저닝 같이 하게 된다</p>
+<h4 id="meshkorea" style="position:relative;"><a href="#meshkorea" aria-label="meshkorea permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>meshkorea</h4>
+<p>젠킨스파일을 각 레파지토리에 추가해서 파일 하나로 CI/CD 작업을 연결한다
+tag 기반으로 젠킨스에 훅을 보낸다
+메뉴얼로 바로 배포하는 옵션도 있다
+kubernetes 레포와 소스코드 레포를 분리했다
+helm 의 values만 수정해서 관리할 수 있게 했다</p>
+<h4 id="devops" style="position:relative;"><a href="#devops" aria-label="devops permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>devops</h4>
+<p>개발자로서 데브옵스라면 팀의 소스를 모두 풀링해서 서버에 올리는 것에 신경 쓸
+것이고
+문화로서 데브옵스라면 각 개발자가 서버에 쉽게 올릴 수 있도록 신경 쓸 것이다</p>
+<p>동작은 어차피 서버에서 자동으로 하겠지만,
+개발자가 서버에 어떻게 올릴지 설정을 하게 할지, 아니면 운영자가 설정을 할지의
+선택요소가 남아있다</p>
+<p>개발자가 피드백을 받으려면 개발자가 직접 설정해서 받는쪽이 나을 것 같다
+프로덕션에서 테스트도 해봐야할 것이고,</p>
+<p>개발자가 설정하되, 파일 하나로 할 수 있고 쉽게 할 수 있도록 해야겠다</p>
+<h4 id="workflow" style="position:relative;"><a href="#workflow" aria-label="workflow permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>workflow</h4>
+<p>운영쪽에서 개발코드를 지정할 수도 있고
+개발코드쪽에서 운영쪽으로 푸시할 수도 있고</p>
+<p>그러고보니 argocd를 실행하는 코드는 개발소스 레파지토리에 등록해서 써야하겠다</p>
+<ul>
+<li>운영용 레파지토리에서 개발용쪽을 트리거 받는 방법도 있긴 하네</li>
+</ul>
+<p>젠킨스파일처럼 파일 하나만 폴더에 추가해서
+pr요청하면 그 파일이 서버에 훅을 보내서 특정 작업들을 실행하도록 한다</p>
+<p>파일에는 세부 설정도 가능하지만 기능 on/off 정도만 해도 되도록 하면 좋지 않을까
+argocd라고 적어놓으면 배포자동화가 되도록</p>
+<p>코드 푸시하는 곳에서 이슈 리스트를 확인하고 코드를 내려받고, 푸시하면 리포트를
+받아보게 되는 올인원 툴이 있으면 좋겠다
+github action 추적도 되고</p>
+<p>관리 쪽에서 개발소스를 컨텍해서 올리는게 더 안전성이 높지 않을까</p>
+<h2 id="정적-소스-분석" style="position:relative;"><a href="#%EC%A0%95%EC%A0%81-%EC%86%8C%EC%8A%A4-%EB%B6%84%EC%84%9D" aria-label="정적 소스 분석 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>정적 소스 분석</h2>
+<p>lint check
+test
+secure check
+size check</p>
+<p>상황 처리</p>
+<ul>
+<li>push, pull request, 특정 branche만 받기</li>
+</ul>
+<p>테스트 결과 이슈에 남기기</p>
+<p>현업에서 필요한 복잡한 CI/CD 구성을 알고 싶다
+aws에서 복잡한 구조를 지원하는 것을 어필하기 위해 소개하는 문서가 있을 것 같은데</p>
+<p>터미널에서 푸시를 하면 깃헙 사이트에 들어가야 진행 상황을 알 수 있다
+그래서 슬랙을 써서 하는 회사들이 있는데
+터미널에서 바로 인터랙티브하게 할 수 없을까</p>
+<ul>
+<li>actions-cli</li>
+</ul>
+<h4 id="report" style="position:relative;"><a href="#report" aria-label="report permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>report</h4>
+<ul>
+<li>소스 코드 정보
+<ul>
+<li>신규로 추가한 라인 수, 변경된 라인 수, 소스 코드 파일 개수, 커밋 개수 등</li>
+</ul>
+</li>
+<li>소스 코드 정적 분석 데이터</li>
+<li>소스 코드 빌드 데이터
+<ul>
+<li>작업별 빌드/테스트 시간</li>
+<li>빌드 성공/실패율, 빌드 로그</li>
+<li>빌드 테스트 리포트, 패키지(APK) 정보, 버전 정보</li>
+<li>빌드 옵션, 메모리 덤프 데이터</li>
+<li>빌드 태스크 의존성 정보</li>
+</ul>
+</li>
+<li>빌드 시스템 정보
+<ul>
+<li>사용자 시스템 정보(CPU, 메모리)</li>
+<li>CPU 사용량, 메모리 사용량, 디스크 사용량</li>
+<li>빌드 대기 시간, 빌드 장비 활용 시간</li>
+</ul>
+</li>
+<li>패키지 크기</li>
+<li><a href="https://engineering.linecorp.com/ko/blog/build-a-continuous-cicd-environment-based-on-data/">https://engineering.linecorp.com/ko/blog/build-a-continuous-cicd-environment-based-on-data/</a></li>
+</ul>
+<h4 id="workflow-1" style="position:relative;"><a href="#workflow-1" aria-label="workflow 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>workflow</h4>
+<p>개발 전 - 개발 중 - 개발 후 관리</p>
+<ul>
+<li>개발 전
+처음 프로젝트 시작 시 필요한 파일
+깃헙 워크플로우
+도커 컴포즈 파일
+깃 훅
+<ul>
+<li>workflows, pre-commit, PULL-REQUEST 파일 불러오기</li>
+<li>synk 등 github third party 허가 등록</li>
+<li>특정 언어 템플릿이나 미들웨어 서버 필요 시 불러오기?</li>
+<li>security 정보 등록</li>
+</ul>
+</li>
+<li>개발 중
+<ul>
+<li>git-cz 등 개발편의용 도구</li>
+<li>workflows 실행으로 테스트 자동</li>
+</ul>
+</li>
+</ul>
+<p>처음에는 infra repo에서 가져와서 서비스를 배포하는데
+서비스별로 별도의 infra가 필요해지면 쉽게 변경 가능해야할까? 아니면 굳이
+안바꾸는 것을 권장해야할까?</p>
+<p>스테이지 서버에서 테스트 후 프로덕션 서버로 카나리 배포, 롤링 업데이트를 하게
+될텐데 이 설정들은 infra repo에 고정적으로 있으면 되나?</p>
+<p>ci/cd에서 하는 것이 배포 위치 지정(dev, prod 지정),</p>
+<hr>
+<h2 id="cd" style="position:relative;"><a href="#cd" aria-label="cd permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CD</h2>
+<ul>
+<li>hotfix</li>
+<li>integration each other</li>
+<li>how to test connection with each other services</li>
+<li>스테이지 서버</li>
+<li>rolling deploy -- kubernetes support</li>
+</ul>
+<h4 id="imagine-of-erp-cicd" style="position:relative;"><a href="#imagine-of-erp-cicd" aria-label="imagine of erp cicd permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>imagine of erp CI/CD</h4>
+<p>local docker test
+commit -> push -> deploy -> docker image update</p>
+<ul>
+<li>what if production has error?</li>
+<li>how to make fast hot-fix?
+<ul>
+<li>fixing with a test case</li>
+</ul>
+</li>
+</ul>
+<h4 id="feedback" style="position:relative;"><a href="#feedback" aria-label="feedback permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Feedback</h4>
+<ul>
+<li>Measure Code, server(package), user experience to github issue</li>
+<li>Code static is reported in CI cycle.</li>
+<li>package is reported in CD cycle</li>
+<li>Error time, count, environment,</li>
+</ul>
+<h4 id="code-static-analyze-content" style="position:relative;"><a href="#code-static-analyze-content" aria-label="code static analyze content permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code static analyze content</h4>
+<ul>
+<li>Dead branch check (long time)</li>
+<li>Lint check</li>
+<li>Security check</li>
+<li>Dependency check</li>
+<li>Execute time check</li>
+</ul>
+<h4 id="deploy-make-easy" style="position:relative;"><a href="#deploy-make-easy" aria-label="deploy make easy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deploy make easy</h4>
+<ul>
+<li>one directory to push</li>
+<li>many program related</li>
+<li>update to be small</li>
+<li>test to be all</li>
+<li>quick rollback</li>
+</ul>
+<h4 id="배포" style="position:relative;"><a href="#%EB%B0%B0%ED%8F%AC" aria-label="배포 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>배포</h4>
+<p>argocd에서 쿠버네티스 템플릿을 가지고 있고,
+코드 레포지토리에서는 이미지만 빌드하도록 하면 좋을까</p>
+<h2 id="배포-자동화" style="position:relative;"><a href="#%EB%B0%B0%ED%8F%AC-%EC%9E%90%EB%8F%99%ED%99%94" aria-label="배포 자동화 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>배포 자동화</h2>
+<ul>
+<li>
+<p>docker package</p>
+</li>
+<li>
+<p>maven package</p>
+</li>
+<li>
+<p>exe 파일로 package</p>
+</li>
+<li>
+<p>ansible로 로컬 배포</p>
+</li>
+<li>
+<p>terraform으로 클라우드 배포</p>
+</li>
+<li>
+<p>docker 패키징</p>
+</li>
+<li>
+<p>argocd</p>
+</li>
+</ul>
+<p>CD 로 로컬 서버에 배포하는 작업 보안 확인</p>
+<hr>
+<h3 id="상황-1" style="position:relative;"><a href="#%EC%83%81%ED%99%A9-1" aria-label="상황 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>상황 1</h3>
+<p>개인 프로젝트로 go web server를 구축하여 원격 서버에 배포</p>
+<p>브랜치별 개발 - 푸시 - 정적 테스트 - 배포 - 릴리즈</p>
+<p>릴리즈 된 것이 개발에 바로 피드백을 줘야 한다</p>
+<p>테스트 실패</p>
+<p>배포 실패</p>
+<p>릴리즈 실패</p>
+<p>릴리즈 시 특정 동작 문제 발생</p>
+<p>이슈 보고</p>
+<p>에러가 생각나서 긴급 수정</p>
+<p>리소스 부족</p>
+<p>외부 라이브러리 문제 발생</p>
+<h3 id="상황-2" style="position:relative;"><a href="#%EC%83%81%ED%99%A9-2" aria-label="상황 2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>상황 2</h3>
+<p>10인 개발팀이 개발은 compose로 진행하고 배포를 argocd로 배포</p>
+<p>권한 관리 (개발팀이 경영팀에 마음대로 들여다 볼 필요 없음)</p>
+<p>휴먼 에러 방지</p>
+<h2 id="상황-3" style="position:relative;"><a href="#%EC%83%81%ED%99%A9-3" aria-label="상황 3 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>상황 3</h2>
+<p>3개의 실제서버를 구성해놓고
+오토 스케일링 하도록 한다
+업데이트시 롤링 업데이트를 기반으로 하는데
+하나를 카나리로 설정한 다음 서버별 접속 링크를 제공해서 접속현황과 실제 테스트를 진행할 수 있게 한다</p>
+<p>개발서버 - 실제서버
+단계로 바로 갈 수 있게 하고
+개발서버에서 각 파트가 다른파트에 영향을 최대한 안주도록 한다</p>
+<p>깃 푸시하면 도커로 테스트하고 풀리퀘스트 머지를 하면 바로 실제서버로 가게하거나 배포 시기를 정해놓는다면 배포큐에 쌓아놓는다</p>
+<h4 id="edge-case" style="position:relative;"><a href="#edge-case" aria-label="edge case permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>edge case</h4>
+<p>로그 폭발
+권한 남용
+시스템 다운
+네트워크 혼잡</p>
+<h4 id="reference" style="position:relative;"><a href="#reference" aria-label="reference permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reference</h4>
+<ul>
+<li><a href="https://blogs.oracle.com/developers/adventures-in-cicd-3-running-tests-publishing-test-reports">https://blogs.oracle.com/developers/adventures-in-cicd-3-running-tests-publishing-test-reports</a>
+<ul>
+<li>test, failure check,</li>
+</ul>
+</li>
+<li><a href="https://www.aaron-powell.com/posts/2020-03-23-approval-workflows-with-github-actions/">https://www.aaron-powell.com/posts/2020-03-23-approval-workflows-with-github-actions/</a>
+<ul>
+<li>set version, create version file, approval workflows</li>
+</ul>
+</li>
+<li><a href="https://johnny-mh.github.io/post/standard-version-%EA%B8%B0%EB%B0%98-%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%B0%B0%ED%8F%AC%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4">https://johnny-mh.github.io/post/standard-version-기반-서비스-배포프로세스</a>
+<ul>
+<li>commitizen, standard-version, ci pr check, cdn 업로드(?)</li>
+<li>frontend는 index.html만 배포하면 되겠다. 컨테이너보다 훨씬 가볍다</li>
+</ul>
+</li>
+<li><a href="https://shivanshs9.me/medium/do-github-acti">https://shivanshs9.me/medium/do-github-acti</a> on-like-a-pro-594bcb813b22</li>
+<li><a href="https://ahnheejong.name/articles/web-developers-flutter-cicd-using-travis-ci/">https://ahnheejong.name/articles/web-developers-flutter-cicd-using-travis-ci/</a></li>
+<li><a href="https://woowabros.github.io/experience/2018/06/26/bros-cicd.html">https://woowabros.github.io/experience/2018/06/26/bros-cicd.html</a>
+<ul>
+<li>slack bot으로 배포 알림, 릴리즈 확인</li>
+</ul>
+</li>
+<li><a href="https://www.theteams.kr/teams/7242/post/70736">https://www.theteams.kr/teams/7242/post/70736</a>
+<ul>
+<li>development, qa, deployment로 프로세스 구분</li>
+</ul>
+</li>
+<li><a href="https://www.slideshare.net/awskorea/cicd-aws-aws-aws-summit-seoul-2019">https://www.slideshare.net/awskorea/cicd-aws-aws-aws-summit-seoul-2019</a>
+<ul>
+<li>소스 빌드 테스트 프로덕션으로 프로세스 구분</li>
+</ul>
+</li>
+<li><a href="https://roseline.oopy.io/dev/github-action-cahce">https://roseline.oopy.io/dev/github-action-cahce</a>
+<ul>
+<li>size-limit-check 해주는 js용 action이 있다</li>
+</ul>
+</li>
+<li><a href="https://velog.io/@hax0r/Node-%ED%94%84%EB%A1%9C%EB%8D%95%ED%8A%B8-%ED%80%84%EB%A6%AC%ED%8B%B0%EB%A5%BC-%EB%86%92%EC%9D%B4%EB%8A%94-%ED%98%91%EC%97%85-%EB%B0%A9%EB%B2%95-q29zo12w">https://velog.io/@hax0r/Node-프로덕트-퀄리티를-높이는-협업-방법-q29zo12w</a>
+<ul>
+<li>commitlint, semantic release, husky 사용하자</li>
+</ul>
+</li>
+<li><a href="https://engineering.linecorp.com/ko/blog/line-ads-devops-culture/">Line</a>
+<ul>
+<li>기획, 코드, 빌드, 테스트, 릴리스, 배포, 운영, 모니터링</li>
+<li>기획 - confluence로 관리, kanban에 이슈 매칭, jira로 이슈 트래킹</li>
+<li>코드 - git-flow를 간소화해서 develop에 featrue를 붙여 개발 후 master에 병합
+<ul>
+<li>코드리뷰 - 이슈트래커 번호, 1명의 승인 필요</li>
+</ul>
+</li>
+<li>빌드, 테스트 - 언어별 기본 test, 요청 응답 테스트, 두 장비가 요청을 보내
+같은 결과를 보내는지 비교(api comparator)
+<ul>
+<li>PR 생성, 변경 시 단위 테스트</li>
+<li>상위 브런치에 머지했을 때 API 테스트</li>
+<li>특정 주기마다 테스트 반복
+<ul>
+<li>단위 테스트 실패 시 머지 불가 조건</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>릴리즈, 배포 - 위에서 검증 완료되었는지 한번 더 확인
+<ul>
+<li>kanban에서 confirm상태가 됐는지 확인하고 deploy로 상태 변경</li>
+<li>배포 전에 변경 공지를 등록하고 어떤 변경사항인지 관리자와 공유(메신저)</li>
+<li>배포 시작되면 전체 공유</li>
+<li>카나리로 배포, 1대에 배포 후 모니터링 되면 3분의 1부터 배포
+<ul>
+<li>장애 발생 시 이전 상태로 재배포. PR revert, Tag 제거</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://blog.banksalad.com/tech/become-an-organization-that-deploys-1000-times-a-day/">banksalad</a>
+<ul>
+<li>pr 횟수를 모니터링, slack의 대화내용에서 파싱</li>
+<li>git-flow를 간소화</li>
+<li>gomplate</li>
+<li>build - lint, test, docker image build</li>
+<li>deploy용 bot을 만들어 사용
+<ul>
+<li>status, deploy, history 기능 지원</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="github이나-jenkins-travis에서-cicd-노하우를-공유할-것-같은데" style="position:relative;"><a href="#github%EC%9D%B4%EB%82%98-jenkins-travis%EC%97%90%EC%84%9C-cicd-%EB%85%B8%ED%95%98%EC%9A%B0%EB%A5%BC-%EA%B3%B5%EC%9C%A0%ED%95%A0-%EA%B2%83-%EA%B0%99%EC%9D%80%EB%8D%B0" aria-label="github이나 jenkins travis에서 cicd 노하우를 공유할 것 같은데 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>github이나 jenkins, travis에서 ci/cd 노하우를 공유할 것 같은데</h4>
+<p>찾아보자</p>
+<ul>
+<li><a href="https://blog.travis-ci.com/">travis ci blog</a></li>
+</ul>
+<h4 id="ci-cd-pipeline" style="position:relative;"><a href="#ci-cd-pipeline" aria-label="ci cd pipeline permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ci cd pipeline</h4>
+<p>그러면 이번 장에서는 이런 현대의 서버 개발 환경이 어떻게 구성되는지를 살펴보기로 한다.
+다음과 같은 시나리오를 생각해보자.
+"개발자가 아침에 출근해서 책상 앞에 앉아서 노트북을 켜고 로그인을 한다. IDE 도구인
+이클립스를 실행하면 이슈 트랙킹 도구와 연결되어 오늘 해야 할 일들이 자동으로 리스
+트 업 된다. 개발자는 그중에서 하나의 태스크를 가져와서 내용을 확인한다. 해당 태스크
+의 상태를 진행 중(In Progress) 상태로 바꾸고, 소스 코드 관리 시스템에서 최신 소스 코
+드를 내려받는다. 로직을 구현하고, 코드를 검증하기 위해서 단위 테스트 코드를 작성하여
+테스트까지 수행한 후 정상적으로 작동하는 것을 확인한 후에 다시 소스 코드 관리 시스템
+에 코드를 반영 요청을 한다.
+반영 요청을 즉시, 자신의 선배 개발자에게 통보가 되고 선배 개발자는 해당 개발자가 변
+경한 코드의 내용을 형상관리 시스템에서 확인하고 시스템을 통해서 코드에 대한 피드백
+을 적어 놓는다. 코드 상에 문제가 없으면 코드 반영을 허가하고 변경 부분은 전체 소스 관
+리 시스템에 반영된다.
+코드가 반영되면 중앙화된 자동 빌드 시스템에서 코드를 내려받아서 컴파일 및 테스트 서
+버에 자동으로 배포하고, 이미 정의된 테스트를 수행한다. 테스트가 끝나면 전체 소스 코
+드 줄 수 중에 어느 줄이 테스트가 되었는지, 전체 코드 중 테스트 된 줄 수의 비율 등을
+자동으로 측정해서 리포트를 생성해 준다. 또한, 자동화된 규칙에 따라서 코드 상에 에러
+처리가 안 된 부분이나 명명 규칙(Naming Rule)이 틀린 부분을 자동 검출하여 팀원에게
+알려준다.
+모든 빌드와 테스트가 끝나면 해당 코드는 스테이징 (Staging) 환경으로 자동 배포가 되
+고, 변경 부분은 QA 팀에 의해서 테스트를 거친 후에, 매일 밤에 운영 시스템에 반영된다.</p>
+<ul>
+<li>(책) 조대협</li>
+</ul>
+<h4 id="etc" style="position:relative;"><a href="#etc" aria-label="etc permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>etc</h4>
+<p>웹에서는 리액트를 쓰든, wasm를 쓰든 결국 최종 출력물은 HTML이다. + js,css</p>
+<p>script 보다 workflows를 활용?</p>
+<p>jenkins, github action, travis에 상관없이 ci를 실행하게 하려면 스크립트로
+단계를 만드는게 좋을까? 근데 스크립트를 안쓰려고 ci툴을 쓰는건데...</p>
+<p>workflow 실패 시 에러 메시지와 함께 피드백 주는 방법 확인</p>
+<p>시맨틱 버저닝에서 버그 픽스와 피쳐 추가가 같이 있으면 버그 픽스 태그 따로, 피쳐
+추가 태그 따로 올리는게 맞지 않나?</p>
+<h2 id="deploy" style="position:relative;"><a href="#deploy" aria-label="deploy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy</h2>
+<h4 id="infra와-source를-분리" style="position:relative;"><a href="#infra%EC%99%80-source%EB%A5%BC-%EB%B6%84%EB%A6%AC" aria-label="infra와 source를 분리 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>infra와 source를 분리</h4>
+<p>쿠버네티스 테스트 레포지토리와 myspace 레포지토리를 분리하고
+Myspace의 폴더가 곧 프로젝트 목록이 되도록 구성</p>
+<ol>
+<li>Basic 폴더를 만들어서 이를 복사해서 쓰도록한다</li>
+<li>Argocd에서 폴더를 등록한다</li>
+<li>배포 완료</li>
+</ol>
+<p>인프라 코드도 개발자가 관리하도록 하기 위함.
+개발 코드는 컨테이너 이미지 배포하기까지 자동</p>
+<p>Prefix로 infra 서비스와 비즈니스 서비스 구분</p>
+<p>argocd를 github action에서 실행한다면
+소스코드와 인프라코드가 분리되있는데
+소스코드 변경을 인프라가 어떻게 알아차릴 수 있지?</p>
+<p>소스코드 변경 후 인프라를 다시 건드리면 안된다
+인프라는 인프라대로 관리되고, 소프트웨어 업데이트는 소스코드에서 따로 처리되야 한다</p>
+<p>인프라 변경 시 변경될 것은 쿠버네티스 셋팅, 서버 셋팅
+소스 변경 시 변경될 것은 소프트웨어 버전, 세부 설정</p>
+<p>둘 다 쿠버네티스 어플라이를 해야되는 건 같다.</p>
+<p>인프라 생성 시 argocd 등록 되도록 하고, 그게 소스코드를 보도록 하면 될까?</p>
+<ol>
+<li>레포지토리 생성</li>
+<li>도커 빌드</li>
+<li>인프라 레포에서 폴더 생성</li>
+<li>argocd 싱크 등록을 1 레포지토리로 등록</li>
+<li>레포지토리 업데이트</li>
+<li>argocd 동작</li>
+</ol>
+<h4 id="deploy-1" style="position:relative;"><a href="#deploy-1" aria-label="deploy 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deploy</h4>
+<p>서버의 kube config를 가져온다 - private key를 github secret에 등록시키고 scp를
+이용한다
+변경된 파일을 인식해서 apply 한다</p>
+<ol>
+<li>인프라에서 추가를 하면 서비스에 설정파일을 주입한다.</li>
+<li>서비스에서 간단한 파일이라도 추가해서 신호를 준다</li>
+</ol>
+<ul>
+<li>관건은 서비스를 업데이트 했을 때 따로 설정 없이 인프라가 알아챌 수 있는지인데</li>
+<li>cron을 계속 한다? 무리...
+<ul>
+<li>argocd도 근데 레포지토리를 cron하는 방식 아닌가?</li>
+</ul>
+</li>
+<li>argocd로 배포를 하면 처음 등록만 수동으로 해주면 된다.</li>
+<li>kubernetes를 워크플로우에서 동작하면 argocd 필요 없다</li>
+<li>argocd가 소스코드 변경을 보는게 아니라 yaml 파일을 보는거라...</li>
+</ul>
+<p>지금은 일단 elasticsearch에 dockerfile 빌드할 때 synonym 파일을 집어넣었다
+이러면 github과 연동이 안되어서 버전 업데이트 할 때 날아간다.
+대응 방법을 생각해야 한다
+쿠버네티스 로컬에서 볼륨을 만들어서 연결해도 github에 업데이트는 못한다
+cron으로 파일을 파싱해야 할까. 매일 한번씩 카피해서 올려도 될듯</p>
+<p>kubernetes 같은 네임스페이스에서 연결하는 방법은?
+서비스로 클러스터 ip는 오픈
+서비스 이름으로 인식은 한다.
+그러면 서버에서 호스트 명을 서비스명과 맞춰줘야 한다.</p>
+<h4 id="argocd" style="position:relative;"><a href="#argocd" aria-label="argocd permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>argocd</h4>
+<p>terraform 으로 master ip 얻어서 argocd 마스터로 전달
+인프라 레포에서는 생성만 하고, 싱크는 argocd가 github을 보면서 할 수 있나?</p>
+<p>서비스 레포에서 푸시 -> 도커 이미지 변경 -> 인프라 레포에서 변경 인식
+-> argocd sync</p>
+<ul>
+<li>소스 레파지토리에서 인프라 레파지토리의 버전값을 변경하고 푸시하는 방식으로</li>
+</ul>
+<p>사용하더라</p>
+<ul>
+<li>argocd에서 kubernetes.local로 접속하는게 어디?</li>
+</ul>
+<h4 id="배포-1" style="position:relative;"><a href="#%EB%B0%B0%ED%8F%AC-1" aria-label="배포 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>배포</h4>
+<p>스테이징 서버 없이 카나리로 테스트
+실제환경에서 카나리 테스트</p>
+<p>데이터에 문제 생길 것에 대비해서 업데이트 시 스냅샷을 찍어놓고 찍은 후 생긴
+데이터를 따로 더할 수 있게한다
+문제가 생기면 스냅샷으로 롤백하고 추가된 데이터를 더한다</p>
+<p>스냅샷과 데이터복구가 잘 되는지 검증한다</p>
+<h4 id="canary-release" style="position:relative;"><a href="#canary-release" aria-label="canary release permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>canary release</h4>
+<p>카나리 배포를 할 때 프로덕션에 할 게 아니라 내부 서버로 카나리를 해놓으면
+검사하기 더 수월할까?
+프로덕션에서 테스트하는 것이 내부에서 보는 것과 차이가 없을까?
+프로덕션에서의 환경을 봐야하기 때문에 프로덕션을 봐야할까?</p>
+<h4 id="스테이징-대신-카나리로-직접-테스트" style="position:relative;"><a href="#%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%A7%95-%EB%8C%80%EC%8B%A0-%EC%B9%B4%EB%82%98%EB%A6%AC%EB%A1%9C-%EC%A7%81%EC%A0%91-%ED%85%8C%EC%8A%A4%ED%8A%B8" aria-label="스테이징 대신 카나리로 직접 테스트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>스테이징 대신 카나리로 직접 테스트</h4>
+<p>그러면 카나리 하다가 전체가 문제가 생기면 어떻게 하냐는 걱정 생긴다</p>
+<p>격리를 잘 하고, 고가용성을 챙기고
+데이터 변경으로 인한 영향이 없도록 해야한다</p>
+<p>먼저 쿠버네티스, 깃헙을 이용해 개발하다가
+팀이 따로 분리되어 전문화 되면 비로소 자체 시스템이 필요하지 않을까</p>
+<p>처음에는 여러 역할이 한 팀에 있고, 이 팀들을 관리하는 팀이 있는 구조에서
+팀을 관리하는 팀을 관리하는 팀이 필요해지는 시점 정도부터 세부적인 팀의 분리를 하던가, 상위팀이 하위 팀을 위한 툴을 개발하는 팀으로 역할을 하던가 하면 되지 않을까</p>
+<h4 id="다른-버전을-사람들이-쓰면-문제가-생긴다" style="position:relative;"><a href="#%EB%8B%A4%EB%A5%B8-%EB%B2%84%EC%A0%84%EC%9D%84-%EC%82%AC%EB%9E%8C%EB%93%A4%EC%9D%B4-%EC%93%B0%EB%A9%B4-%EB%AC%B8%EC%A0%9C%EA%B0%80-%EC%83%9D%EA%B8%B4%EB%8B%A4" aria-label="다른 버전을 사람들이 쓰면 문제가 생긴다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>다른 버전을 사람들이 쓰면 문제가 생긴다</h4>
+<p>특히 db 처리에서 차이가 있으면 그렇겠다
+롤링업데이트는 괜찮은게 맞나?</p>
+<ul>
+<li>어댑터 패턴이라는 것이 있다
+점진적 업데이트 시 이전 버전의 데이터를 갖고 있다가 출력을 바꿔주는 식</li>
+</ul>
+<p>카나리를 먼저 하고 롤링 업데이트를 하면 되지 않을까?
+db 같은 업데이트는 카나리로 하는게 좋겠다</p>
+<h4 id="without-stage-server" style="position:relative;"><a href="#without-stage-server" aria-label="without stage server permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>without stage server</h4>
+<p>I want to make only 2 stages environment
+development &#x26; production</p>
+<p>what is problem</p>
+<ul>
+<li>staging server need exist?</li>
+<li>production safe</li>
+<li>production server has problem</li>
+<li>managing critical data</li>
+<li>real world simulation</li>
+</ul>
+<p>if in kubernetes. staging server is not problem. just one more pods?</p>
+<p>is it over-resource?
+CD pipeline can replace staging server?</p>
+<ul>
+<li>gitflow</li>
+<li>master, dev, release, stage, hotfix -- too much</li>
+<li>dev, test, stage, prod -- too much</li>
+<li>multi stage is require?</li>
+</ul>
+<p>can parsing data from every node?</p></section><hr/></article><nav><div style="max-width:90%"></div>Tag: <a href="/tags/">deep_knowledge</a><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blog/100k_concurrent_server/">← <!-- -->10만 유저 동시 접속 가능하게 하기</a></li><li><a rel="next" href="/web/">WEB<!-- --> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/ci_cd/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

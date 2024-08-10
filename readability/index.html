@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="Navigator [[Coding#code communication이 되도록 보기 좋은 코드 (Readability with code communication)]]
+[[Journal#Writing technique]]
+[[Balance#simple vs neat]]
+[[Decision…"/><meta data-react-helmet="true" property="og:title" content="Readability"/><meta data-react-helmet="true" property="og:description" content="Navigator [[Coding#code communication이 되도록 보기 좋은 코드 (Readability with code communication)]]
+[[Journal#Writing technique]]
+[[Balance#simple vs neat]]
+[[Decision…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">Readability | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>Readability</h1><p>simple, minimal, portable, universal, limit, module, light-weight</p><small style="width:50%">Created: <!-- -->2020, 11 14<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Readability.md">Updated: <!-- -->2021, 07 13</a></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#navigator">Navigator</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EA%B0%80%EB%8F%85%EC%84%B1">가독성</a></li>
+<li><a href="#%EA%B0%80%EB%8F%85%EC%84%B1%EC%9D%80-%EB%8F%85%EC%9E%90%EC%97%90-%EB%94%B0%EB%A5%B8-%EC%83%81%EB%8C%80%EC%A0%81-%EA%B0%9C%EB%85%90">가독성은 독자에 따른 상대적 개념</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#word-language">word, language</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#word-meaning">word meaning</a></li>
+<li><a href="#%EB%8B%A8%EC%96%B4%EB%A5%BC-%EC%89%BD%EA%B2%8C-%ED%92%80%EC%96%B4%EB%82%B4%EB%8A%94-%EA%B2%83-%EA%B8%B0%EC%A1%B4%EC%9D%98-%EB%8B%A8%EC%96%B4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EA%B2%83">단어를 쉽게 풀어내는 것, 기존의 단어를 사용하는 것</a></li>
+<li><a href="#%EC%89%AC%EC%9A%B4-%EB%AC%B8%EC%9E%A5%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80">쉬운 문장은 무엇인가</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%89%BD%EA%B2%8C-%ED%92%80%EC%96%B4-%EC%93%B0%EB%8A%94-%EA%B2%83%EA%B3%BC-%EC%95%84%EC%9D%B4%EA%B0%80-%EB%A7%90%ED%95%98%EB%8A%94-%EB%93%AF%ED%95%9C-%EB%8B%A8%EC%88%9C%ED%95%9C-%EB%A7%90%EC%9D%98-%EC%B0%A8%EC%9D%B4">쉽게 풀어 쓰는 것과 아이가 말하는 듯한 단순한 말의 차이</a></p>
+</li>
+<li>
+<p><a href="#%EC%89%BD%EA%B2%8C-%EC%9D%B5%ED%9E%88%EA%B8%B0%EC%9D%98-%EC%98%A4%ED%95%B4">쉽게 익히기의 오해</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%82%AC%EB%9E%8C%EC%9D%98-%EC%9E%AC%ED%95%B4%EC%84%9D%EC%9D%98-%ED%95%9C%EA%B3%84">사람의 재해석의 한계</a></li>
+<li><a href="#%EB%B0%95%EB%AC%B8%EC%84%B1-%EC%84%A4%EB%AF%BC%EC%84%9D%EC%9D%B4-%EC%A0%84%EB%AC%B8%EC%84%B1%EC%9D%B4-%EB%96%A8%EC%96%B4%EC%A7%84%EB%8B%A4%EB%8A%94-%EC%96%98%EA%B8%B0%EA%B0%80-%EB%A7%8E%EC%9D%B4-%EB%82%98%EC%98%A8%EB%8B%A4">박문성, 설민석이 전문성이 떨어진다는 얘기가 많이 나온다</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%95%84%EB%8A%94-%EB%A7%8C%ED%81%BC-%EB%B3%B4%EC%9D%B8%EB%8B%A4-%EB%9D%BC%EB%8A%94-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%A7%90%EB%A1%9C-%EC%9A%94%EC%95%BD%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%A7%90%EC%9D%B4%EC%A7%80%EB%A7%8C">아는 만큼 보인다 라는 간단한 말로 요약할 수 있는 말이지만</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EC%89%BD%EA%B2%8C-%ED%92%80%EC%96%B4-%EC%93%B4-%EA%B8%80">쉽게 풀어 쓴 글</a></li>
+<li><a href="#%EC%89%AC%EC%9A%B4-%EA%B2%83%EB%A7%8C-%ED%95%98%EB%A0%A4%EA%B3%A0-%ED%95%98%EB%A9%B4-%EC%95%88%EB%90%98%EA%B3%A0-%EC%89%AC%EC%9A%B4-%EA%B8%B8%EC%9D%84-%EC%B0%BE%EC%95%84%EC%95%BC-%ED%95%9C%EB%8B%A4">쉬운 것만 하려고 하면 안되고, 쉬운 길을 찾아야 한다.</a></li>
+<li><a href="#%EC%96%B4%EB%A0%A4%EC%9A%B4-%EB%AC%B8%EC%A0%9C%EB%A5%BC-%EC%89%BD%EA%B2%8C-%EB%A7%8C%EB%93%A4-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C">어려운 문제를 쉽게 만들 수 있을까</a></li>
+<li><a href="#%EC%89%AC%EC%9A%B4-%EA%B8%80">쉬운 글</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h2 id="navigator" style="position:relative;"><a href="#navigator" aria-label="navigator permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Navigator</h2>
+<p></section><div role="link" tabindex="0"><a href="/coding/#code-communication이-되도록-보기-좋은-코드-(readability-with-code-communication)">code communication이 되도록 보기 좋은 코드 (readability with code communication)</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/journal/#writing-technique">writing technique</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/balance/#simple-vs-neat">simple vs neat</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/decision/#minimal">minimal</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/decision/#portable">portable</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/decision/#범용의-한계-universal">범용의 한계 universal</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/about_development/#module">module</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/
+/">
+</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><div role="link" tabindex="0"><a href="/think/#why-money-is-worth">why money is worth</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p>
+<h4 id="가독성" style="position:relative;"><a href="#%EA%B0%80%EB%8F%85%EC%84%B1" aria-label="가독성 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>가독성</h4>
+<p>읽기 편한것?
+직관적인 것?
+철학서적은 가독성이 떨어진다고 할 수 있나?
+전공서적도?</p>
+<p>쉽게 읽히는 것?
+시는 가독성이 떨어지나?</p>
+<p>가독성이 필요한 경우가 있지만 절대적 가치는 아닌가</p>
+<p>코드는 서로 수정을 하고 파악을 해야하기에 가독성이 필요하다</p>
+<p>그러면 코드에서 가독성은 쉽고 직관적이고 읽기 편한 것을 말하는 것이 맞는 것 같다</p>
+<h4 id="가독성은-독자에-따른-상대적-개념" style="position:relative;"><a href="#%EA%B0%80%EB%8F%85%EC%84%B1%EC%9D%80-%EB%8F%85%EC%9E%90%EC%97%90-%EB%94%B0%EB%A5%B8-%EC%83%81%EB%8C%80%EC%A0%81-%EA%B0%9C%EB%85%90" aria-label="가독성은 독자에 따른 상대적 개념 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>가독성은 독자에 따른 상대적 개념</h4>
+<blockquote>
+<p>함께자라기 - 김창준</p>
+</blockquote>
+<h2 id="word-language" style="position:relative;"><a href="#word-language" aria-label="word language permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>word, language</h2>
+<h4 id="word-meaning" style="position:relative;"><a href="#word-meaning" aria-label="word meaning permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>word meaning</h4>
+<p>글자가 적혀있는데
+읽을 수 없고 뜻도 모르게 되는 한자
+읽을 수는 있지만 뜻을 모르는 한글
+뜻을 모르면 읽는 것이 의미가 있는가
+읽을 수 있으면 말할 수 있고 말할 수 있으면 전달이 가능해진다
+전달되는 것이 좋은가
+안되야하는 것이 맞는가
+뜻을 포함한 글자는 문자 안에 소리와 뜻이 같이 들어있다</p>
+<ul>
+<li>한자는 한 글자 안에 여러 의미를 담을 수 있어 효과적이다고 생각했는데</li>
+</ul>
+<p>이는 처음 보았을 때 바로 알아차리기 힘들다는 의미고
+같은 단어도 다르게 해석할 수 있다는 의미가 될 수도 있다</p>
+<h4 id="단어를-쉽게-풀어내는-것-기존의-단어를-사용하는-것" style="position:relative;"><a href="#%EB%8B%A8%EC%96%B4%EB%A5%BC-%EC%89%BD%EA%B2%8C-%ED%92%80%EC%96%B4%EB%82%B4%EB%8A%94-%EA%B2%83-%EA%B8%B0%EC%A1%B4%EC%9D%98-%EB%8B%A8%EC%96%B4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EA%B2%83" aria-label="단어를 쉽게 풀어내는 것 기존의 단어를 사용하는 것 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>단어를 쉽게 풀어내는 것, 기존의 단어를 사용하는 것</h4>
+<ul>
+<li>전문적인 분야에서는 특정한 것을 설명하기 위해 새로운 단어를 만들기 마련인데 그</li>
+</ul>
+<p>단어들은 관련없는 분야에서는 굉장히 낮설게 들리고 관련 분야라고 하더라도
+헷갈리게 사용될 수 있다. 어려운 내용도 쉽게 설명할 수가 있는데, 이 때 단어
+자체를 쉽게 풀어서 설명하는 것이 좋을까? 기존 단어를 사용하는 것이 좋을까?</p>
+<h4 id="쉬운-문장은-무엇인가" style="position:relative;"><a href="#%EC%89%AC%EC%9A%B4-%EB%AC%B8%EC%9E%A5%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80" aria-label="쉬운 문장은 무엇인가 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쉬운 문장은 무엇인가</h4>
+<p>가독성이 안좋은 글
+어려운 글</p>
+<ul>
+<li>신문에서 2-3 줄 정도가 사람이 문맥을 파악하기 좋다고 한다. A4에서는 한 줄 정도.</li>
+</ul>
+<p>전문서적을 읽다보면 글이 길고 어려운데 그것을 가독성이 좋지 않다고 하지는 않는다
+근데 교양서적을 보면 쉽게 풀어서 설명한 글을 보기도 한다</p>
+<p>쉽다는 것도 모두 기준이 다르다
+그럼에도 잘 읽히는 문장과 그렇지 않은 문장은 분명히 있다
+어떤 차이가 있을까</p>
+<p>짧은 문장
+직관적으로 그림이 그려지는 단어
+자주 사용되는 어휘</p>
+<p>조사와 같은 글자로 끝나는 말은 조사인지 명사인지 혼동되기 쉽다
+‘행복도도 척도가 된다’ 라고 조사를 같이 쓰는 게 좋을까
+아니면 아예 그 문단에서는 ‘도’ 조사를 아예 안쓰는게 좋을까
+처음에 조사와 함께 용어제시를 하더라도 다음 문장에서 헷갈릴 수도 있다</p>
+<p>만화책에서도 교육용 만화책은 재미가 없다</p>
+<h2 id="쉽게-풀어-쓰는-것과-아이가-말하는-듯한-단순한-말의-차이" style="position:relative;"><a href="#%EC%89%BD%EA%B2%8C-%ED%92%80%EC%96%B4-%EC%93%B0%EB%8A%94-%EA%B2%83%EA%B3%BC-%EC%95%84%EC%9D%B4%EA%B0%80-%EB%A7%90%ED%95%98%EB%8A%94-%EB%93%AF%ED%95%9C-%EB%8B%A8%EC%88%9C%ED%95%9C-%EB%A7%90%EC%9D%98-%EC%B0%A8%EC%9D%B4" aria-label="쉽게 풀어 쓰는 것과 아이가 말하는 듯한 단순한 말의 차이 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쉽게 풀어 쓰는 것과 아이가 말하는 듯한 단순한 말의 차이</h2>
+<p>영어를 배우다보니 아주 단순한 문장만 말할 수 있는데
+이 단순한 문장으로 글을 쓰면 쉽긴 하지만 읽는 맛이 안 날 것 같다
+소설처럼 맛있는 문장은 아니더라도
+너무 단순하면 뭔가 부족하게 느껴지지 않을까? 모르겠다.
+단순함과 쉽게 풀어 쓰는 것이 같을 수 있을까?</p>
+<h2 id="쉽게-익히기의-오해" style="position:relative;"><a href="#%EC%89%BD%EA%B2%8C-%EC%9D%B5%ED%9E%88%EA%B8%B0%EC%9D%98-%EC%98%A4%ED%95%B4" aria-label="쉽게 익히기의 오해 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쉽게 익히기의 오해</h2>
+<p>같은 정보라도 쉽게 이해할 수도 있고 어렵게 이해할 수도 있는데
+쉽게 설명해주는 영상들과 글들을 보고 쉬운 것으로 공부하면 좋겠다고 생각했는데
+그래서 나도 글 쓸때는 쉽게 이해되도록 쓰려고 했는데</p>
+<p>그것이 이상하게 적용되어 쉬운 일만 하려고 하는 정신상태가 되었다
+쉬운 것만 하려고 하면 안되고, 쉬운 길을 찾아야 한다.</p>
+<h4 id="사람의-재해석의-한계" style="position:relative;"><a href="#%EC%82%AC%EB%9E%8C%EC%9D%98-%EC%9E%AC%ED%95%B4%EC%84%9D%EC%9D%98-%ED%95%9C%EA%B3%84" aria-label="사람의 재해석의 한계 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>사람의 재해석의 한계</h4>
+<p>쉽게, 간단히 풀어 쓴 글은 원본의 정보에 작성자의 의견이 더해지거나 원본의 내용이
+빠질 수 있다.
+공식 문서나 히스토리를 알아야 그것에 대해 정말로 알게 되는 경우도 있다</p>
+<h4 id="박문성-설민석이-전문성이-떨어진다는-얘기가-많이-나온다" style="position:relative;"><a href="#%EB%B0%95%EB%AC%B8%EC%84%B1-%EC%84%A4%EB%AF%BC%EC%84%9D%EC%9D%B4-%EC%A0%84%EB%AC%B8%EC%84%B1%EC%9D%B4-%EB%96%A8%EC%96%B4%EC%A7%84%EB%8B%A4%EB%8A%94-%EC%96%98%EA%B8%B0%EA%B0%80-%EB%A7%8E%EC%9D%B4-%EB%82%98%EC%98%A8%EB%8B%A4" aria-label="박문성 설민석이 전문성이 떨어진다는 얘기가 많이 나온다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>박문성, 설민석이 전문성이 떨어진다는 얘기가 많이 나온다</h4>
+<p>대중성이 높고 재밌게 정보를 전달해주는 것에 강점을 보이는데
+그 분야에 잘 모르는 사람은 저 사람들을 통해 입문하기에는 도움이 되는데 전문가들에게는 안좋게 보이나보다
+재밌게 정보를 전달해주는 사람들이 좋았는데 잘못된 정보를 가려 받을 식견을 가지고 나도 잘못된 정보를 안주도록 주의해야겠다</p>
+<h2 id="아는-만큼-보인다-라는-간단한-말로-요약할-수-있는-말이지만" style="position:relative;"><a href="#%EC%95%84%EB%8A%94-%EB%A7%8C%ED%81%BC-%EB%B3%B4%EC%9D%B8%EB%8B%A4-%EB%9D%BC%EB%8A%94-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%A7%90%EB%A1%9C-%EC%9A%94%EC%95%BD%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%A7%90%EC%9D%B4%EC%A7%80%EB%A7%8C" aria-label="아는 만큼 보인다 라는 간단한 말로 요약할 수 있는 말이지만 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>아는 만큼 보인다 라는 간단한 말로 요약할 수 있는 말이지만</h2>
+<p>같은 이야기를 감정을 넣고 와닿게 표현하는 것이 더 오래 남고 기억도 잘 된다
+잘 정제된 글이 단순히 한 줄로 요약하는 말이 아니다</p>
+<blockquote>
+<p>공부란 '머리속에 지식을 쑤셔넣는 행위' 가 아니라</p>
+</blockquote>
+<p>'세상의 해상도를 올리는 행위' 라고 생각한다.
+뉴스의 배경음악에 불과했던 닛케이 평균 주가가 의미를 지닌 숫자가 되거나
+외국인 관광객의 대화를 알아들을 수 있게 되거나
+단순한 가로수가 '개화 시기를 맞이한 배롱나무'가 되기도 한다.</p>
+<h4 id="쉽게-풀어-쓴-글" style="position:relative;"><a href="#%EC%89%BD%EA%B2%8C-%ED%92%80%EC%96%B4-%EC%93%B4-%EA%B8%80" aria-label="쉽게 풀어 쓴 글 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쉽게 풀어 쓴 글</h4>
+<p>청소년을 위한 고전문학은 읽기 쉽게 적혀있다. 근데 아무래도 문학적 맛이나 내용이
+생략되었을 것 같다. 쉽게 풀어쓰더라도 원래의 맛과 내용을 잃지 않도록 해야겠다.</p>
+<h4 id="쉬운-것만-하려고-하면-안되고-쉬운-길을-찾아야-한다" style="position:relative;"><a href="#%EC%89%AC%EC%9A%B4-%EA%B2%83%EB%A7%8C-%ED%95%98%EB%A0%A4%EA%B3%A0-%ED%95%98%EB%A9%B4-%EC%95%88%EB%90%98%EA%B3%A0-%EC%89%AC%EC%9A%B4-%EA%B8%B8%EC%9D%84-%EC%B0%BE%EC%95%84%EC%95%BC-%ED%95%9C%EB%8B%A4" aria-label="쉬운 것만 하려고 하면 안되고 쉬운 길을 찾아야 한다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쉬운 것만 하려고 하면 안되고, 쉬운 길을 찾아야 한다.</h4>
+<p>같은 정보라도 쉽게 이해할 수도 있고 어렵게 이해할 수도 있는데
+쉽게 설명해주는 영상들과 글들을 보고 쉬운 것으로 공부하면 좋겠다고 생각했는데
+그래서 나도 글 쓸때는 쉽게 이해되도록 쓰려고 했는데</p>
+<p>그것이 이상하게 적용되어 쉬운 일만 하려고 하는 정신상태가 되었다</p>
+<p></section><div role="link" tabindex="0"><a href="/reality/#현실적인-문제는-무엇인가">현실적인 문제는 무엇인가</a><div role="link" tabindex="0" style="background:#343a40;position:absolute;z-index:1;margin-left:100px;width:50%"></div></div><section></p>
+<h4 id="어려운-문제를-쉽게-만들-수-있을까" style="position:relative;"><a href="#%EC%96%B4%EB%A0%A4%EC%9A%B4-%EB%AC%B8%EC%A0%9C%EB%A5%BC-%EC%89%BD%EA%B2%8C-%EB%A7%8C%EB%93%A4-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C" aria-label="어려운 문제를 쉽게 만들 수 있을까 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>어려운 문제를 쉽게 만들 수 있을까</h4>
+<p>레거시 코드 파악도 정리하듯이 하면 될까
+알고리즘 풀이 같은 직관적이지 않고 고민이 필요한 것은?
+어려운 수학문제
+여러 사람의 이해관계가 얽힌 사건?
+전공서적</p>
+<p>안다고 다 해결할 수 없고 대화로 모든 문제가 해결되지 않는다
+말과 행동이 따른다고 일이 잘 풀리지 않는다
+어렵다</p>
+<p>자료를 모으고 정리하는게 공부하는데는 적절하지만
+모든 일이 자료를 모을 시간을 기다려주지 않는다</p>
+<p>변화에 맞추는게 필요하고 변화에 잘 맞추는 것이 역경을 이겨내는 방법이다</p>
+<p>난이도가 높은 것은 그냥 정리한다고 익힐 수 없다</p>
+<p>어려운 문제도 쉬운 것부터 풀어나가야 한다
+근데 알고리즘 문제를 풀려고 하니 풀기가 어렵다
+하기 싫은 것도 해야 살아나갈 수 있다는 것을 아이들에게 말하지만 나는 하기 싫은
+것을 안하고 있었다
+쉬운 것만 찾고 있었는데 삶은 어려운 것이 항상 있다</p>
+<p>의존성, 종속성을 없애야 한다고 생각했는데 세상의 모든 것은 연결되있지 않은게
+없다
+종속성이 나쁜 가치인게 아니라, 종속성을 어떻게 다루느냐를 생각해야 한다
+개별적인게 없는 세상인데 소프트웨어라고 연결을 없앨 수 없다
+종속성을 없애면서 고가용성을 얻는다는 게 말이 안되는 것 같다
+서버를 두 개 만드려면 그 두 서버간에도 종속성이 생긴다</p>
+<p>변화하는 세상 위에서 원하는 것을 이루기 위해서는 변화를 잘 받아들여야 한다
+준비를 어디까지 하는지에 대해 목적이 아니라 과정을 준비해야 한다고 생각해놓고
+볼펜에 대해 생각하던것을 대입했더니 전혀 적용되지 않았다
+볼펜이 없어졌을 때를 대비하면 볼펜 하나가 추가로 필요한 것이지 볼펜 살 돈을
+준비한다고 대비할 수 있는게 아니었다
+볼펜을 안 잃어버리도록 대비를 하는 것은 더 힘들다</p>
+<p>난이도가 높은 것도 그 분야를 잘 아는 사람이 쉽게 설명해주는 경우도 있다
+쉽게 설명을 듣고 다시 어려운 것을 보면 훨씬 받아들이기 편해진다
+어려운 것을 쉽게 설명하는 것을 해야겠다</p>
+<h4 id="쉬운-글" style="position:relative;"><a href="#%EC%89%AC%EC%9A%B4-%EA%B8%80" aria-label="쉬운 글 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쉬운 글</h4>
+<p>청소년을 위한 고전을 읽고 다시 고전을 읽는 것보다
+바로 고전을 읽는 것이 동작 자체는 더 간소화되있지만,
+실제 머리 들어가는 것은 전자가 많으므로 전자가 더 효율적이다고 할 수 있겠다.</p>
+<p>이건 두 가지 물건 대신 하나를 쓰는 것과는 기준이 다르다.
+입문용을 쓰고 고급 제품을 쓰는 것이 고급 제품을 바로 쓰는 것보다 만족도가 더
+높을 수 있다.</p>
+<hr></section><hr/></article><nav><div style="max-width:90%"><span><a href="/journal/">/journal/</a>,</span><span><a aria-current="page" class="" href="/readability/">/readability/</a>,</span><span><a href="/blog/decision_monitor_size/">/blog/decision_monitor_size/</a>,</span><span><a href="/en/coding/">/en/coding/</a>,</span><span><a href="/reading/">/reading/</a>,</span></div>Tag: <a href="/tags/">develop</a><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blog/digital_content/">← <!-- -->디지털 컨텐츠 소장은 어떻게 해야 할까</a></li><li><a rel="next" href="/history/">History<!-- --> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/readability/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

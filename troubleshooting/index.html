@@ -1,0 +1,881 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="Disclaimer This page has a lot of different area&#x27;s problem.  You should search your specific trouble with…"/><meta data-react-helmet="true" property="og:title" content="Trouble Shooting"/><meta data-react-helmet="true" property="og:description" content="Disclaimer This page has a lot of different area&#x27;s problem.  You should search your specific trouble with…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">Trouble Shooting | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>Trouble Shooting</h1><p></p><small style="width:50%">Created: <!-- -->2020, 06 23<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Troubleshooting.md">Updated: <!-- -->2022, 08 13</a></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#disclaimer">Disclaimer</a></p>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<p><a href="#%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0%EB%B2%95">문제해결법</a></p>
+<ul>
+<li><a href="#%EC%A1%B0%EA%B1%B4%EC%9D%84-%EB%8B%A8%EC%88%9C%ED%95%98%EA%B3%A0-%EB%AA%85%ED%99%95%ED%95%98%EA%B2%8C-%EC%A0%95%EB%A6%AC">조건을 단순하고 명확하게 정리</a></li>
+<li><a href="#%EC%A1%B0%EA%B1%B4%EA%B3%BC-%EA%B4%80%EB%A0%A8%EB%90%9C-%EC%A0%95%EB%B3%B4%EB%A5%BC-%EC%B0%BE%EC%95%84-%EC%97%B0%EA%B2%B0">조건과 관련된 정보를 찾아 연결</a></li>
+<li><a href="#%EA%B7%BC%EA%B1%B0%EC%97%86%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B4-%EA%B0%9C%EC%9E%85%EB%90%98%EC%A7%80-%EC%95%8A%EC%95%84%EC%95%BC-%ED%95%A8">근거없는 무엇이 개입되지 않아야 함</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#jupyter-notebook">jupyter notebook</a></p>
+</li>
+<li>
+<p><a href="#linux-wifi-hard-blocked-after-suspendlid-off">linux wifi hard blocked after suspend(lid off)</a></p>
+</li>
+<li>
+<p><a href="#raspberry-pi-network-todo">raspberry pi network TODO</a></p>
+</li>
+<li>
+<p><a href="#vagrant-coreos">vagrant coreos</a></p>
+</li>
+<li>
+<p><a href="#github-officially-support-https">Github officially support https</a></p>
+</li>
+<li>
+<p><a href="#vagrant">vagrant</a></p>
+</li>
+<li>
+<p><a href="#sdcard-cant-recognized-problem">!sdcard cant recognized problem</a></p>
+</li>
+<li>
+<p><a href="#terraform-init">terraform init</a></p>
+</li>
+<li>
+<p><a href="#-kibana-error">! Kibana error</a></p>
+</li>
+<li>
+<p><a href="#ansible">ansible</a></p>
+</li>
+<li>
+<p><a href="#ubuntu-bluetooth-multiple-device-connect-problem-todo">ubuntu bluetooth multiple device connect problem TODO</a></p>
+</li>
+<li>
+<p><a href="#my-server-terraform-gcp-aws">my server terraform GCP AWS</a></p>
+</li>
+<li>
+<p><a href="#jenkins">Jenkins</a></p>
+</li>
+<li>
+<p><a href="#aws-api">AWS API</a></p>
+</li>
+<li>
+<p><a href="#grafana-prometheus">grafana prometheus</a></p>
+</li>
+<li>
+<p><a href="#gatsby-troubleshooting">gatsby troubleshooting</a></p>
+</li>
+<li>
+<p><a href="#wsl-react">WSL REACT</a></p>
+</li>
+<li>
+<p><a href="#%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4">이클립스</a></p>
+</li>
+<li>
+<p><a href="#python-lambda-korean-broken">python lambda korean broken</a></p>
+</li>
+<li>
+<p><a href="#-wasm-rack">! wasm rack</a></p>
+</li>
+<li>
+<p><a href="#vimwiki">vimwiki</a></p>
+</li>
+<li>
+<p><a href="#-docker-%EC%8B%A4%ED%96%89-%EC%95%88%EB%90%A0-%EC%8B%9C-hypervisor-%EB%81%84%EA%B8%B0">! docker 실행 안될 시 hypervisor 끄기</a></p>
+</li>
+<li>
+<p><a href="#-docker-wsl---window-%ED%86%B5%EC%8B%A0-%ED%95%98%EB%A0%A4%EB%A9%B4-%EC%B6%94%EA%B0%80-%ED%95%84%EC%9A%94">! Docker wsl &#x3C;-> window 통신 하려면 추가 필요</a></p>
+</li>
+<li>
+<p><a href="#-github-pages-is-temporarily-down-for-maintenance">! GitHub Pages is temporarily down for maintenance.</a></p>
+</li>
+<li>
+<p><a href="#-docker-8080-cannot-access">! docker 8080 cannot access</a></p>
+</li>
+<li>
+<p><a href="#-golang-test-not-working">! golang test not working</a></p>
+</li>
+<li>
+<p><a href="#-chsh--s-not-working">! chsh -s not working</a></p>
+</li>
+<li>
+<p><a href="#-git---error-ref-does-not-point-to-a-valid-object">! git - error: ref does not point to a valid object</a></p>
+</li>
+<li>
+<p><a href="#go">go</a></p>
+</li>
+<li>
+<p><a href="#keyboard-setting-was-initialized-in-zshrc-sometimes">keyboard setting was initialized in zshrc sometimes</a></p>
+</li>
+<li>
+<p><a href="#npm-global-permission-denied">npm global permission denied</a></p>
+</li>
+<li>
+<p><a href="#docker%EB%A1%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8">docker로 클라이언트 테스트</a></p>
+</li>
+<li>
+<p><a href="#go-grpc">go grpc</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#kubernetes">kubernetes</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#kubernetes-ingress-todo">kubernetes ingress TODO</a></li>
+<li><a href="#kubernetes-helm">kubernetes helm</a></li>
+<li><a href="#kubernetes-execute-tty">kubernetes execute tty</a></li>
+<li><a href="#trouble-shooting">Trouble Shooting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#-inactive-registered-oauth-uris-for-your-project">! Inactive registered OAuth URIs for your project</a></p>
+<ul>
+<li><a href="#-golang-fatal">! golang fatal</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#k3s">k3s</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#ubuntu-22-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%9B%84-%EB%AC%B8%EC%A0%9C%EC%A0%90">ubuntu 22 업데이트 후 문제점</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#etc">ETC</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#github-idpassword-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EB%A7%89%ED%9E%8C-%EB%AC%B8%EC%A0%9C">github id/password 로그인 막힌 문제</a></li>
+<li><a href="#docker-react-404s-will-fallback-to-">docker react 404s will fallback to /</a></li>
+<li><a href="#golang-server-todo">golang server TODO</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h1 id="disclaimer" style="position:relative;"><a href="#disclaimer" aria-label="disclaimer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Disclaimer</h1>
+<p>This page has a lot of different area's problem. <br>
+You should search your specific trouble with <code class="language-text">Ctrl+F</code>.</p>
+<h4 id="문제해결법" style="position:relative;"><a href="#%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0%EB%B2%95" aria-label="문제해결법 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>문제해결법</h4>
+<h5 id="조건을-단순하고-명확하게-정리" style="position:relative;"><a href="#%EC%A1%B0%EA%B1%B4%EC%9D%84-%EB%8B%A8%EC%88%9C%ED%95%98%EA%B3%A0-%EB%AA%85%ED%99%95%ED%95%98%EA%B2%8C-%EC%A0%95%EB%A6%AC" aria-label="조건을 단순하고 명확하게 정리 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>조건을 단순하고 명확하게 정리</h5>
+<h5 id="조건과-관련된-정보를-찾아-연결" style="position:relative;"><a href="#%EC%A1%B0%EA%B1%B4%EA%B3%BC-%EA%B4%80%EB%A0%A8%EB%90%9C-%EC%A0%95%EB%B3%B4%EB%A5%BC-%EC%B0%BE%EC%95%84-%EC%97%B0%EA%B2%B0" aria-label="조건과 관련된 정보를 찾아 연결 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>조건과 관련된 정보를 찾아 연결</h5>
+<h5 id="근거없는-무엇이-개입되지-않아야-함" style="position:relative;"><a href="#%EA%B7%BC%EA%B1%B0%EC%97%86%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B4-%EA%B0%9C%EC%9E%85%EB%90%98%EC%A7%80-%EC%95%8A%EC%95%84%EC%95%BC-%ED%95%A8" aria-label="근거없는 무엇이 개입되지 않아야 함 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>근거없는 무엇이 개입되지 않아야 함</h5>
+<h4 id="jupyter-notebook" style="position:relative;"><a href="#jupyter-notebook" aria-label="jupyter notebook permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>jupyter notebook</h4>
+<ul>
+<li>install not working</li>
+<li><code class="language-text">pip3 install jupyter</code> -> jupyter notebook not working</li>
+<li><code class="language-text">sudo apt-get install jupyter-notebook</code> done</li>
+<li>! tensorflow numpy version</li>
+<li>pip install "nump&#x3C;&#x3C;1.17"</li>
+<li><a href="https://github.com/tensorflow/tensorflow/issues/30427">https://github.com/tensorflow/tensorflow/issues/30427</a></li>
+</ul>
+<h4 id="linux-wifi-hard-blocked-after-suspendlid-off" style="position:relative;"><a href="#linux-wifi-hard-blocked-after-suspendlid-off" aria-label="linux wifi hard blocked after suspendlid off permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>linux wifi hard blocked after suspend(lid off)</h4>
+<ul>
+<li><code class="language-text">/etc/default/grub</code>
+<ul>
+<li><code class="language-text">GRUB_CMDLINE_LINUX_DEFAULT="acpi_osi=! acpi_osi='Windows 2009' quiet splash"</code></li>
+</ul>
+</li>
+<li><code class="language-text">sudo grub-mkconfig -o /boot/grub/grub.cfg</code></li>
+<li><a href="https://www.reddit.com/r/MSILaptops/comments/8vk878/ubuntu_wifi_hardware_disabled_after_suspend/e2t1f67/">https://www.reddit.com/r/MSILaptops/comments/8vk878/ubuntu_wifi_hardware_disabled_after_suspend/e2t1f67/</a></li>
+</ul>
+<h4 id="raspberry-pi-network-todo" style="position:relative;"><a href="#raspberry-pi-network-todo" aria-label="raspberry pi network todo permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>raspberry pi network TODO</h4>
+<ul>
+<li>can't connect wifi</li>
+<li>seem to be a hardware problem, when I used to a raspbian occurred the same problem.</li>
+</ul>
+<p>cannot access wifi before connecting ethernet</p>
+<h4 id="vagrant-coreos" style="position:relative;"><a href="#vagrant-coreos" aria-label="vagrant coreos permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>vagrant coreos</h4>
+<ul>
+<li>clone</li>
+<li>assign etcd url</li>
+<li>user-data setting</li>
+<li>config setting</li>
+<li><a href="http://pyrasis.com/book/DockerForTheReallyImpatient/Chapter15/02">http://pyrasis.com/book/DockerForTheReallyImpatient/Chapter15/02</a></li>
+<li>! vagrant-iginition version with fog-core</li>
+<li><code class="language-text">wget -c https://releases.hashicorp.com/vagrant/2.0.3/vagrant_2.0.3_x86_64.deb</code></li>
+<li><code class="language-text">sudo dpkg -i vagrant_2.0.3_x86_64.deb</code></li>
+<li>conflicting dependencies fog-core (~> 1.43.0) and fog-core (= 1.45.0)</li>
+<li><a href="https://github.com/dotless-de/vagrant-vbguest/issues/292">https://github.com/dotless-de/vagrant-vbguest/issues/292</a></li>
+</ul>
+<h4 id="github-officially-support-https" style="position:relative;"><a href="#github-officially-support-https" aria-label="github officially support https permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Github officially support https</h4>
+<ul>
+<li>! Unavailable for your site because your domain is not properly configured to support HTTPS</li>
+<li>change dns</li>
+<li>185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153</li>
+<li>or recreate CNAME file</li>
+<li><a href="https://github.community/t5/GitHub-Pages/The-quot-Enforce-HTTPS-quot-Button-Isn-t-Working/td-p/11050">https://github.community/t5/GitHub-Pages/The-quot-Enforce-HTTPS-quot-Button-Isn-t-Working/td-p/11050</a></li>
+</ul>
+<h4 id="vagrant" style="position:relative;"><a href="#vagrant" aria-label="vagrant permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>vagrant</h4>
+<ul>
+<li>
+<p>! uid not match</p>
+</li>
+<li>
+<p><code class="language-text">rm -r .vagrant</code></p>
+</li>
+<li>
+<p>If want access each other. Set private network</p>
+</li>
+</ul>
+<h4 id="sdcard-cant-recognized-problem" style="position:relative;"><a href="#sdcard-cant-recognized-problem" aria-label="sdcard cant recognized problem permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>!sdcard cant recognized problem</h4>
+<ul>
+<li><code class="language-text">diskpart</code></li>
+<li><code class="language-text">select disk &lt;disk number></code></li>
+<li><code class="language-text">clean</code></li>
+<li>Using SDFormatter, format</li>
+</ul>
+<h4 id="terraform-init" style="position:relative;"><a href="#terraform-init" aria-label="terraform init permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>terraform init</h4>
+<ul>
+<li>! if storage exist. but occurred error bucket doesn't exist</li>
+<li><code class="language-text">terraform init -reconfigure</code></li>
+<li><a href="https://stackoverflow.com/questions/59053993/failed-to-get-existing-workspaces-querying-cloud-storage-failed-storage-bucke">https://stackoverflow.com/questions/59053993/failed-to-get-existing-workspaces-querying-cloud-storage-failed-storage-bucke</a></li>
+</ul>
+<h4 id="-kibana-error" style="position:relative;"><a href="#-kibana-error" aria-label=" kibana error permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! Kibana error</h4>
+<ul>
+<li>default host cannot found</li>
+<li>Need elasticsearch environment docker. setting</li>
+<li>elasticsearch read only problem</li>
+<li>maybe hdd space not enough then lock.</li>
+<li>cannot install sample</li>
+</ul>
+<h4 id="ansible" style="position:relative;"><a href="#ansible" aria-label="ansible permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ansible</h4>
+<ul>
+<li>
+<p>how to prevent to try kubectl init twice</p>
+</li>
+<li>
+<p>! Failed to get information on remote file (./join-command): sudo: a password is required</p>
+<ul>
+<li><code class="language-text">become: false</code></li>
+</ul>
+</li>
+<li>
+<p>! E:Malformed entry 1 in list file /etc/apt/sources.list.d/kubernetes.list.list (Component), E:The list of sources could not be read</p>
+</li>
+<li>
+<p>repo: deb <a href="https://apt.kubernetes.io/">https://apt.kubernetes.io/</a> kubernetes-xenial main</p>
+</li>
+<li>
+<p>space bar check...</p>
+</li>
+<li>
+<p>! Vagrant access</p>
+<ul>
+<li>/etc/ansible/hosts</li>
+</ul>
+<p><code class="language-text">&lt;ip> ansible_user &lt;> ansible_pass &lt;password></code></p>
+<ul>
+<li>apt install sshpass</li>
+</ul>
+</li>
+<li>
+<p>! Install denied</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># Ansible_book.yml
+become: true
+become_method: sudo</code></pre></div>
+</li>
+<li>
+<p>Install docker</p>
+</li>
+</ul>
+<h4 id="ubuntu-bluetooth-multiple-device-connect-problem-todo" style="position:relative;"><a href="#ubuntu-bluetooth-multiple-device-connect-problem-todo" aria-label="ubuntu bluetooth multiple device connect problem todo permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ubuntu bluetooth multiple device connect problem TODO</h4>
+<ul>
+<li><a href="https://www.martinrosselle.com/bluetooth-connectivity-issues-on-ubuntu-and-how-to-fix/">https://www.martinrosselle.com/bluetooth-connectivity-issues-on-ubuntu-and-how-to-fix/</a></li>
+<li>fail</li>
+</ul>
+<h4 id="my-server-terraform-gcp-aws" style="position:relative;"><a href="#my-server-terraform-gcp-aws" aria-label="my server terraform gcp aws permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>my server terraform GCP AWS</h4>
+<ul>
+<li>
+<p>Letsencrypt need IP test, it means I need to change DNS before server change</p>
+</li>
+<li>
+<p>Letsencrypt</p>
+</li>
+<li>
+<p>! failed authorization procedure</p>
+</li>
+<li>
+<p>my mistake. my DNS to set to Cloudflare</p>
+</li>
+<li>
+<p>! Github page build failed</p>
+</li>
+<li>
+<p>site directory some problem -- nono</p>
+</li>
+<li>
+<p>tags file don't allow -- delete tags file (ctags file by gutentags)</p>
+</li>
+</ul>
+<h4 id="jenkins" style="position:relative;"><a href="#jenkins" aria-label="jenkins permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Jenkins</h4>
+<ul>
+<li>! when plugin install occurred ioexception error</li>
+<li>image <code class="language-text">jenkins</code> -> <code class="language-text">jenkins/jenkins</code></li>
+<li><a href="https://github.com/jenkinsci/docker/issues/785">https://github.com/jenkinsci/docker/issues/785</a></li>
+<li>make easy pipeline</li>
+<li>github -> jenkins -> docker</li>
+<li>use http? and ssh?</li>
+</ul>
+<h4 id="aws-api" style="position:relative;"><a href="#aws-api" aria-label="aws api permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AWS API</h4>
+<ul>
+<li>
+<p>Error: Error creating API Gateway Integration: BadRequestException: Invalid HTTP endpoint specified for URI</p>
+</li>
+<li>
+<p><code class="language-text">""</code> delete</p>
+</li>
+<li>
+<p>Error: Error creating API Gateway Method: ConflictException: Method already exists for this resource</p>
+</li>
+<li>
+<p><a href="https://learn.hashicorp.com/terraform/aws/lambda-api-gateway">https://learn.hashicorp.com/terraform/aws/lambda-api-gateway</a></p>
+</li>
+<li>
+<p>{"message":"Missing Authentication Token"}</p>
+</li>
+<li>
+<p>need aws signature</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-use-postman-to-call-api.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-use-postman-to-call-api.html</a></p>
+</li>
+<li>
+<p>! API cannot access</p>
+</li>
+<li>
+<p>using <code class="language-text">{proxy+}</code> all access</p>
+</li>
+<li>
+<p>but root access need more method, integration</p>
+</li>
+<li>
+<p>! lambda update</p>
+</li>
+<li>
+<p>need s3 to recreate</p>
+</li>
+<li>
+<p>! s3 notification access fail</p>
+</li>
+<li>
+<p>SNS topic policy name. I had change s3 bucket name, need to change policy</p>
+</li>
+</ul>
+<h4 id="grafana-prometheus" style="position:relative;"><a href="#grafana-prometheus" aria-label="grafana prometheus permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>grafana prometheus</h4>
+<ul>
+<li>prometheus not working</li>
+<li>! err="opening storage failed: found unsequential head chunk files 194 and 257"</li>
+<li>prometheus docker-compose cannot volume folder, need each file</li>
+</ul>
+<h4 id="gatsby-troubleshooting" style="position:relative;"><a href="#gatsby-troubleshooting" aria-label="gatsby troubleshooting permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gatsby troubleshooting</h4>
+<ul>
+<li>! WebpackError: Minified React error #130; visit <a href="https://reactjs.org/docs/error-decoder.html?invariant=1">https://reactjs.org/docs/error-decoder.html?invariant=1</a> 30&#x26;args[]=object&#x26;args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.</li>
+<li>gatsby-ssr.js problem</li>
+</ul>
+<h4 id="wsl-react" style="position:relative;"><a href="#wsl-react" aria-label="wsl react permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WSL REACT</h4>
+<p>docker compose volume 안되는 현상
+ln -s /mnt/c /c
+cp -R myproject /c/Users/myproject
+permission deny
+/etc/wsl.conf
+<code class="language-text">enabled = true \ options = 'metadata,umask=22,fmask=11'</code>
+<a href="https://github.com/docker/for-win/issues/2151">https://github.com/docker/for-win/issues/2151</a>
+server nodemon error
+Dockerfile에 막아뒀던 copy를 안풀었음3000 포트로 접속 안됨
+vm에서 포트포워딩 해줘야 함
+또는 docker ip로 접속 (192.168.99.100)
+server로 접속 시 에러
+버튼 누르면 동작</p>
+<h4 id="이클립스" style="position:relative;"><a href="#%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4" aria-label="이클립스 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>이클립스</h4>
+<p>점 찍어서 자동으로 안뜨면
+Window-preferences-java-editor-content assist-advanced-java proposals 활성화</p>
+<h4 id="python-lambda-korean-broken" style="position:relative;"><a href="#python-lambda-korean-broken" aria-label="python lambda korean broken permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>python lambda korean broken</h4>
+<ul>
+<li>sns -> lambda -> sqs -> lambda2</li>
+<li>sns -> lambda ok</li>
+<li>lambda ok</li>
+<li>lambda -> sqs (?)</li>
+<li>lambda log in cloudwatch</li>
+<li>yes, this send unicode.</li>
+<li>when it sends sqs. ascii broken</li>
+<li>problem in receive list -> convert string</li>
+<li>receive body is string, so I've tried string split, but it need json dump</li>
+<li>sqs -> lambda2 ok (send message test ok)</li>
+<li>lambda2 ok (korean input test ok)</li>
+</ul>
+<h4 id="-wasm-rack" style="position:relative;"><a href="#-wasm-rack" aria-label=" wasm rack permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! wasm rack</h4>
+<ul>
+<li>if i want to add package (ex. grpc, aws-cli), go wasm not working. cpu over</li>
+</ul>
+<p>usage and freezing.</p>
+<h4 id="vimwiki" style="position:relative;"><a href="#vimwiki" aria-label="vimwiki permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>vimwiki</h4>
+<ul>
+<li>tag</li>
+<li>! <code class="language-text">[[ ctrl+x ctrl+o</code> enter not working, instead using <code class="language-text">ctrl+o,n</code></li>
+<li>wiki autocomplete enter not working</li>
+<li>shift+enter working</li>
+<li>previous link get</li>
+<li><code class="language-text">nnoremap &lt;leader>l i&lt;c-r>="[" . expand("#") . "]" . "(./" . expand("#") . ")"&lt;cr>&lt;esc></code></li>
+<li><a href="https://www.reddit.com/r/vim/comments/f5gi2g/vim_notetaking_automatic_link_creation_between/">https://www.reddit.com/r/vim/comments/f5gi2g/vim_notetaking_automatic_link_creation_between/</a></li>
+<li>omnicomplete(autocomplete) enter not working</li>
+<li>instead using <code class="language-text">&lt;S-CR></code></li>
+<li>Down arrow select content</li>
+<li><code class="language-text">:inoremap &lt;Down> &lt;C-R>=pumvisible() ? "\&lt;lt>C-N>" : "\&lt;lt>Down>"&lt;CR></code></li>
+</ul>
+<h4 id="-docker-실행-안될-시-hypervisor-끄기" style="position:relative;"><a href="#-docker-%EC%8B%A4%ED%96%89-%EC%95%88%EB%90%A0-%EC%8B%9C-hypervisor-%EB%81%84%EA%B8%B0" aria-label=" docker 실행 안될 시 hypervisor 끄기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! docker 실행 안될 시 hypervisor 끄기</h4>
+<ul>
+<li><code class="language-text">bcdedit /set hypervisorlaunchtype off</code></li>
+<li>파워셀에서 명령어를 실행해야 하고 관리자 모드여야 한다</li>
+</ul>
+<h4 id="-docker-wsl---window-통신-하려면-추가-필요" style="position:relative;"><a href="#-docker-wsl---window-%ED%86%B5%EC%8B%A0-%ED%95%98%EB%A0%A4%EB%A9%B4-%EC%B6%94%EA%B0%80-%ED%95%84%EC%9A%94" aria-label=" docker wsl   window 통신 하려면 추가 필요 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! Docker wsl &#x3C;-> window 통신 하려면 추가 필요</h4>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">export DOCKER_HOST=tcp://192.168.99.100:2376
+export DOCKER_TLS_VERIFY=1
+export DOCKER_CERT_PATH="/mnt/c/Users/shdke/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
+export COMPOSE_CONVERT_WINDOWS_PATHS="true"</code></pre></div>
+<h4 id="-github-pages-is-temporarily-down-for-maintenance" style="position:relative;"><a href="#-github-pages-is-temporarily-down-for-maintenance" aria-label=" github pages is temporarily down for maintenance permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! GitHub Pages is temporarily down for maintenance.</h4>
+<p>it's really just temporarily down</p>
+<h4 id="-docker-8080-cannot-access" style="position:relative;"><a href="#-docker-8080-cannot-access" aria-label=" docker 8080 cannot access permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! docker 8080 cannot access</h4>
+<ul>
+<li>docker-compose command go run server.go --> run is ok. but can't connect</li>
+<li>different command and run server.go in docker --> run and connect ok</li>
+</ul>
+<h4 id="-golang-test-not-working" style="position:relative;"><a href="#-golang-test-not-working" aria-label=" golang test not working permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! golang test not working</h4>
+<p>package name
+folder
+go env
+gopath</p>
+<ul>
+<li><code class="language-text">import . "."</code> problem</li>
+</ul>
+<h4 id="-chsh--s-not-working" style="position:relative;"><a href="#-chsh--s-not-working" aria-label=" chsh  s not working permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! chsh -s not working</h4>
+<ul>
+<li>don't need sudo. but need password.</li>
+</ul>
+<h4 id="-git---error-ref-does-not-point-to-a-valid-object" style="position:relative;"><a href="#-git---error-ref-does-not-point-to-a-valid-object" aria-label=" git   error ref does not point to a valid object permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! git - error: ref does not point to a valid object</h4>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">git for-each-ref --format="%(refname)" | while read ref; do
+    git show-ref --quiet --verify $ref 2>/dev/null || git update-ref -d $ref
+done</code></pre></div>
+<p>from <a href="https://stackoverflow.com/questions/6265502/getting-rid-of-does-not-point-to-a-valid-object-for-an-old-git-branch">https://stackoverflow.com/questions/6265502/getting-rid-of-does-not-point-to-a-valid-object-for-an-old-git-branch</a></p>
+<h4 id="go" style="position:relative;"><a href="#go" aria-label="go permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>go</h4>
+<ul>
+<li>! vim-go binary install failed, could not find 'golangci-lint'
+<ul>
+<li>golangci not support go get</li>
+</ul>
+</li>
+<li>disable lint check</li>
+<li>! could not find gopls -> reinstall gopls</li>
+<li>wasm function not defined
+<ul>
+<li>cache clear</li>
+</ul>
+</li>
+</ul>
+<h4 id="keyboard-setting-was-initialized-in-zshrc-sometimes" style="position:relative;"><a href="#keyboard-setting-was-initialized-in-zshrc-sometimes" aria-label="keyboard setting was initialized in zshrc sometimes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>keyboard setting was initialized in zshrc sometimes</h4>
+<p>is it sudo's problem? no
+when timeshift run, it's initialized</p>
+<h4 id="npm-global-permission-denied" style="position:relative;"><a href="#npm-global-permission-denied" aria-label="npm global permission denied permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>npm global permission denied</h4>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'</code></pre></div>
+<h4 id="docker로-클라이언트-테스트" style="position:relative;"><a href="#docker%EB%A1%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8" aria-label="docker로 클라이언트 테스트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker로 클라이언트 테스트</h4>
+<p>172.17.0.1로 통신하면 로컬호스트로 되는데 포트 통신이 안된다.</p>
+<ul>
+<li><code class="language-text">--net="host"</code> 옵션을 run 시에 넣어준다</li>
+<li><code class="language-text">docker run --net="host" alpine sh</code></li>
+<li><a href="https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container">https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container</a></li>
+</ul>
+<p>! alpine에 go binary 실행 안되는 문제</p>
+<ul>
+<li><code class="language-text">CGO_ENABLED=0 go build client.go</code></li>
+<li>또는 <code class="language-text">-tags static netgo</code> 를 넣어준다</li>
+</ul>
+<h4 id="go-grpc" style="position:relative;"><a href="#go-grpc" aria-label="go grpc permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>go grpc</h4>
+<p><code class="language-text">protoc --go_out=. *.proto</code> 기본 proto 파일을 이용해 grpc 코드를 생성하는 방법
+근데 이렇게만 하면 에러가 난다
+proto 파일에 <code class="language-text">option go_package = "&lt;grpc package 경로>"</code> 입력해주고,
+명령어에 <code class="language-text">--go_opt=paths=source_relative</code> 붙여줘야 한다.
+opt 안붙이면 경로를 현재 폴더 기준에서 새로 생성해버린다</p>
+<h2 id="kubernetes" style="position:relative;"><a href="#kubernetes" aria-label="kubernetes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes</h2>
+<p>! kubernetes 접근이 안된다. api 서버가 나간건지, 서버 자체가 문제가
+있는건지 확인해야겠다. ssh 접속이 안된다.</p>
+<ul class="contains-task-list">
+<li>do 관리창에 서버 cpu, memory 상태는 계속 잘 출력되고 있다.</li>
+<li>관리창에서 콘솔로 접근하니 outofmemory 에러가 떠있다.
+<ul>
+<li>로그를 추가로 확인하는 방법을 찾아봐야겠다.</li>
+<li>aws, gcp에서는 cloudwatch, stack driver가 에러를 보여준다</li>
+<li>digital ocean도 모니터링 서비스가 있다.</li>
+</ul>
+</li>
+<li><strong>outofmemory에 대해</strong>
+<ul>
+<li>out of memory가 발생하면 메모리 확보를 위해 프로세스를 killing하는데,
+이 작업은 프로세스 생성시간, 메모리 사용량, 우선순위를 확인해서
+제거한다
+<ul>
+<li><a href="https://medium.com/@EJSohn/out-of-memory-killer-%ED%9A%8C%ED%94%BC%ED%95%98%EA%B8%B0-9efc65f88c92">https://medium.com/@EJSohn/out-of-memory-killer-%ED%9A%8C%ED%94%BC%ED%95%98%EA%B8%B0-9efc65f88c92</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>linux 시스템 log 확인 방법</strong>
+<ul>
+<li>어떤 자원이 메모리를 많이 먹었는지 확인</li>
+<li>/var/log/syslog</li>
+<li>dmesg - 부팅하는 동안의 메시지</li>
+</ul>
+</li>
+<li>일단 쿠버네티스 자원들을 제거해야겠는데, api server가 접속이 안되는데
+어떻게 정지시킬 수 있지?
+<ul>
+<li>쿠버네티스 자체를 정지하는 방법. (정지 후 빨리 접속해서 다 딜리트 시킨다)</li>
+<li>마스터를 껐다 켜서 api server를 다시 돌게 할 수 있다</li>
+</ul>
+</li>
+<li>k3s 서버를 찾아야하고, k3s 를 꺼도 다시 켜진다...
+<ul>
+<li>k3s kill all script가 k3s 설치 시 깔린다. <code class="language-text">/usr/local/bin/k3s-killall.sh</code></li>
+</ul>
+</li>
+<li>kubernetes가 메모리를 많이 차지하는 것은 맞는데, 그러면 어떻게 해야하나</li>
+<li>어떤 리소스가 많이 썼는지를 확인해야 한다.
+<ul>
+<li><code class="language-text">kubectl top pod --all-namespaces</code></li>
+</ul>
+</li>
+<li>istio monitoring을 위해 모니터링 서비스를 너무 많이 킨게 문제였던 것으로
+보인다. promethus가 메모리를 많이 사용한다.
+<ul>
+<li>argocd를 삭제해서 여유가 생긴 것도 있어서 argocd가 사용한 양이 얼만지
+확인해봐야겠다.
+<ul>
+<li>메모리를 사용한 로그가 있나?
+<ul>
+<li>메모리 자원 같은 로그를 남기려면 트래킹하는 서비스를 이용해야한다.</li>
+</ul>
+</li>
+<li>describe로 확인하려면 없애지 말았어야 한다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> node-1 이 unknown 상태다. 확인 필요
+<ul>
+<li>describe node 로 확인</li>
+<li>cpu 사용량이 과도했다. 리부팅을 하면 되나? 리부팅 하지 않아도 살릴
+방법을 찾아야 한다.
+<ul>
+<li><code class="language-text">systemctl daemon-reload</code>, <code class="language-text">systemctl restart kubelet</code> 실행할 수 있다</li>
+</ul>
+</li>
+<li>kubelet 의 로그를 확인해 볼 수 있다
+<ul>
+<li><code class="language-text">journalctl -u kubelet</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="kubernetes-ingress-todo" style="position:relative;"><a href="#kubernetes-ingress-todo" aria-label="kubernetes ingress todo permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes ingress TODO</h4>
+<ul>
+<li>! <code class="language-text">external-ip &lt;pending> lock</code></li>
+</ul>
+<h4 id="kubernetes-helm" style="position:relative;"><a href="#kubernetes-helm" aria-label="kubernetes helm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes helm</h4>
+<ul>
+<li>cannot connect traefik dashboard in vagrant</li>
+<li>! Error: unknown flag: --service-account</li>
+<li>tiller was removed helm version 3</li>
+</ul>
+<h4 id="kubernetes-execute-tty" style="position:relative;"><a href="#kubernetes-execute-tty" aria-label="kubernetes execute tty permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>kubernetes execute tty</h4>
+<ul>
+<li>! Error from server: no preferred addresses found; known addresses: []</li>
+</ul>
+<h4 id="trouble-shooting" style="position:relative;"><a href="#trouble-shooting" aria-label="trouble shooting permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trouble Shooting</h4>
+<p>재설치</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">kubeadm reset
+systemctl stop kubelet
+systemctl stop docker
+rm -rf /var/lib/cni/
+rm -rf /var/lib/kubelet/*
+rm -rf /etc/cni/
+ifconfig cni0 down
+ifconfig flannel.1 down
+ifconfig docker0 down
+ip link delete cni0
+ip link delete flannel.1</code></pre></div>
+<p>마스터 IP 변경되어 재설정</p>
+<ul>
+<li><code class="language-text">/etc/kubernetes</code> 및 관련 디렉토리 삭제</li>
+<li><code class="language-text">kubeadm reset</code></li>
+</ul>
+<p>마스터 IP 변경 시 삭제 후 실행했는데 IP 못 찾는 경우 발생</p>
+<ul>
+<li><code class="language-text">mkdir -p $HOME/.kube</code></li>
+<li><code class="language-text">sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</code></li>
+<li><code class="language-text">sudo chown $(id -u):$(id -g) $HOME/.kube/config</code></li>
+</ul>
+<p>출처: <a href="https://github.com/kubernetes/kubernetes/issues/50295">https://github.com/kubernetes/kubernetes/issues/50295</a></p>
+<p>kubectl get 시 connection refuse</p>
+<ul>
+<li>init 시 connection refuse</li>
+</ul>
+<p>미니큐브 삭제</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">minikube stop
+minikube delete
+docker stop (docker ps -aq)
+rm -r ~/.kube ~/.minikube
+sudo rm /usr/local/bin/localkube /usr/local/bin/minikube
+systemctl stop 'kubelet.mount'
+sudo rm -rf /etc/kubernetes/
+docker system prune -af --volumes</code></pre></div>
+<p>출처: <a href="https://github.com/kubernetes/minikube/issues/1043">https://github.com/kubernetes/minikube/issues/1043</a></p>
+<p>connection refuse 8080</p>
+<ul>
+<li><code class="language-text">sudo cp /etc/kubernetes/admin.conf $HOME/</code></li>
+<li><code class="language-text">sudo chown $(id -u):$(id -g) $HOME/admin.conf</code></li>
+<li><code class="language-text">export KUBECONFIG=$HOME/admin.conf</code></li>
+</ul>
+<p>출처: <a href="https://github.com/kubernetes/kubernetes/issues/44665">https://github.com/kubernetes/kubernetes/issues/44665</a></p>
+<p>connection refuse 6443</p>
+<ul>
+<li><code class="language-text">sudo -i</code></li>
+<li><code class="language-text">swapoff -a</code></li>
+<li>exit</li>
+<li><code class="language-text">strace -eopenat kubectl version</code></li>
+</ul>
+<p>켜지는 시간 걸린 거였음
+출처: <a href="https://discuss.kubernetes.io/t/the-connection-to-the-server-host-6443-was-refused-did-you-specify-the-right-host-or-port/552/4">https://discuss.kubernetes.io/t/the-connection-to-the-server-host-6443-was-refused-did-you-specify-the-right-host-or-port/552/4</a></p>
+<p>connection refuse 10248</p>
+<ul>
+<li><code class="language-text">kubeadm reset</code></li>
+<li>add <code class="language-text">Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"</code> to
+<code class="language-text">/etc/systemd/system/kubelet.service.d/10-kubeadm.conf</code></li>
+<li><code class="language-text">systemctl daemon-reload</code></li>
+<li><code class="language-text">systemctl restart kubelet</code></li>
+<li><code class="language-text">kubeadm init</code></li>
+</ul>
+<p>출처: <a href="https://github.com/kubernetes/kubernetes/issues/53333">https://github.com/kubernetes/kubernetes/issues/53333</a></p>
+<p>[WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at [<a href="https://kubernetes.io/docs/setup/cri/%5D(">https://kubernetes.io/docs/setup/cri/](</a><a href="https://kubernetes.io/docs/setup/cri/">https://kubernetes.io/docs/setup/cri/</a>"</p>
+<p>port 10250 in use</p>
+<ul>
+<li>node에서도 kubeadm reset 을 해줘야 한다</li>
+</ul>
+<p>mount fail 발생</p>
+<ul>
+<li>path를 맞게 안해줬다</li>
+</ul>
+<p>apply 해줘야 새로 할당된 자원을 잡음</p>
+<p>pod 이름 검색 쉽게하는법</p>
+<p>실시간으로 올라가는거 확인</p>
+<ul>
+<li><code class="language-text">watch kubectl get pods --all-namespaces</code></li>
+</ul>
+<p>출처: <a href="https://docs.projectcalico.org/v3.10/getting-started/kubernetes/">https://docs.projectcalico.org/v3.10/getting-started/kubernetes/</a></p>
+<p>네트워크 연결이 이상함
+flannel과 weave가 겹친것 때문인지..
+reset 해본다</p>
+<p>coredns 연결 안됨</p>
+<ul>
+<li>flannel 에서 안됨 > 재설치 후 weave 사용</li>
+</ul>
+<p>db 생성이 안됨</p>
+<ul>
+<li>3서버에 glusterfs 설치</li>
+</ul>
+<p>kubernetes에서 deployment로 만든 pod 에서 image가 이상한 곳에서 불러짐
+이미지를 삭제하고 다시 만들었더니 이미지를 다른 곳에서 불러옴</p>
+<p>웹 연결 안되는 현상</p>
+<ul>
+<li>일단 오픈된 서버에서 앱으로는 들어가진다</li>
+<li>web과 db가 연결이 안된다
+<ul>
+<li>label 추가</li>
+<li><code class="language-text">app.kubernetes.io/part-of:&lt;name></code> 를 전체에 추가</li>
+</ul>
+</li>
+</ul>
+<p>db 레플리카를 두개로 하면 데이터는 어떻게 되는가
+replica 2로 하고 접속 시 db와 연결 안됨</p>
+<p>web db 연결 안됨</p>
+<ul>
+<li>selector 설정함</li>
+<li>selector , template.metadata.lables.app 이 같아야 함</li>
+</ul>
+<p>노드 NotReady
+노드 리셋했다</p>
+<p>web 접속 시 the database system is starting up
+db 데이터 손상 재설치..</p>
+<p>노드 추가 후 기존 노드에 있는 POD 옮기기</p>
+<ul>
+<li><code class="language-text">kubectl cordon     &lt;node-name></code></li>
+</ul>
+<p>노드에 포드 할당 안하도록 설정</p>
+<ul>
+<li>kubectl drain</li>
+<li>안됨.. 기존 노드 삭제 했음</li>
+</ul>
+<p>docker pull 안될 시</p>
+<ul>
+<li>고정 ip 설정 시 dns 설정 안한 것이 원인 <code class="language-text">dns-nameservers 8.8.8.8</code></li>
+</ul>
+<p>한번에 한 서버에만 들어가야 하는데 두 서버에 분산해서 신호가 들어간다
+블루-그린 배포를 하면 해결은 되겠지만 롤링 업데이트를 테스트 해봐야 한다</p>
+<p>내용 편집 중에 업데이트가 실행되어 서버가 옮겨지면 불안정하지 않은가?</p>
+<p>블루-그린 배포시 배포하는 위치를 신경써야 하나?</p>
+<p>filestore 도 공유가 되어야 한다</p>
+<ul>
+<li>볼륨 되는 방식 확인</li>
+</ul>
+<p>postgresql/data - kubernetes/postgres</p>
+<p>새로 만들 때는 포드 안의 데이터가 밖으로 나오는 것인가
+새로 만들 때도 기존 데이터가 포드안에 들어가는 것인가
+새로운 포드를 만들면 기존 데이터가 붙는 것인가
+새로운 포드에서 데이터를 지우면 기존의 데이터가 없어지는 것인가
+상위 폴더 하위 폴더 영향이 있는가</p>
+<ul>
+<li>
+<p>odoo/filestore, odoo/session 이 필요하면 odoo만 가져오면 되는가 두개를 다 명시해 줘야 하는가</p>
+</li>
+<li>
+<p>권한 설정 해줘야 한다</p>
+</li>
+</ul>
+<p>root로 실행하거나 <code class="language-text">runAsUser: 0</code>
+파일을 odoo 에게 권한을 주거나 <code class="language-text">chown odoo:odoo</code></p>
+<p>2 서버가 다운되면 1서버로 들어가져야 한다</p>
+<p>재부팅 후 node 가 NotReady 상태가 됨
+swapoff -a 하니까 됨</p>
+<h2 id="-inactive-registered-oauth-uris-for-your-project" style="position:relative;"><a href="#-inactive-registered-oauth-uris-for-your-project" aria-label=" inactive registered oauth uris for your project permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! Inactive registered OAuth URIs for your project</h2>
+<p>api oauth 창에서 redirect로 설정해놓은 주소들이 만료되었나보다.
+현재 안쓰는 주소들이었고, 제거해줬다.</p>
+<h3 id="-golang-fatal" style="position:relative;"><a href="#-golang-fatal" aria-label=" golang fatal permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>! golang fatal</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> elasticsearch가 처음 시작이 오래걸려서 서버가 커넥션을 못한다</li>
+</ul>
+<p>커넥션을 못하면 서버가 중지되고 docker에 의해서 재시작 되었으면 좋겠는데
+log.Fatal이 있어도 로그만 남기고 그냥 가만히 있는다</p>
+<ul>
+<li>Fatal은 되는데 docker가 정지하지 않는다
+<ul>
+<li>go run 으로 하면 도커가 꺼지지 않고, build해서 실행파일을 실행시키면 꺼진다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="k3s" style="position:relative;"><a href="#k3s" aria-label="k3s permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>k3s</h2>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">- cgroup memory 에러 발생
+    - sudo vi /boot/firmware/cmdline.txt
+      Add cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1 into end of the file.
+    - https://github.com/k3s-io/k3s/issues/2067</code></pre></div>
+<h4 id="ubuntu-22-업데이트-후-문제점" style="position:relative;"><a href="#ubuntu-22-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%9B%84-%EB%AC%B8%EC%A0%9C%EC%A0%90" aria-label="ubuntu 22 업데이트 후 문제점 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ubuntu 22 업데이트 후 문제점</h4>
+<p>한 영 할 때 팝업이 뜸</p>
+<ul>
+<li>gnome extension 에서 이를 막아주는 게 있음</li>
+<li><a href="https://extensions.gnome.org/extension/4559/quick-lang-switch/">https://extensions.gnome.org/extension/4559/quick-lang-switch/</a></li>
+</ul>
+<p>caps lock 을 ctrl로 바꾼 설정이 동작 안함</p>
+<p>side terminal 동작 안함 deprecate 됨. 새로 찾아야 함</p>
+<h2 id="etc" style="position:relative;"><a href="#etc" aria-label="etc permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ETC</h2>
+<h4 id="github-idpassword-로그인-막힌-문제" style="position:relative;"><a href="#github-idpassword-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EB%A7%89%ED%9E%8C-%EB%AC%B8%EC%A0%9C" aria-label="github idpassword 로그인 막힌 문제 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>github id/password 로그인 막힌 문제</h4>
+<p>https 로 받은 패키지들 ssh로 받아야 ssh로 인증됨</p>
+<h4 id="docker-react-404s-will-fallback-to-" style="position:relative;"><a href="#docker-react-404s-will-fallback-to-" aria-label="docker react 404s will fallback to  permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>docker react 404s will fallback to /</h4>
+<p>일단 <code class="language-text">docker-compose.yml</code> 에 <code class="language-text">stdin_open: true</code> 넣어주면 되긴 된다</p>
+<h4 id="golang-server-todo" style="position:relative;"><a href="#golang-server-todo" aria-label="golang server todo permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>golang server TODO</h4>
+<p>버그가 있다.</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 새로 고침 하다보면 결과값을 못 받아올 때가 있다.</li>
+<li class="task-list-item"><input type="checkbox" disabled> es 서버는 패닉이 자꾸 뜬다</li>
+<li>git 폴더 onedrive에 있는 거 로컬이랑 똑같은지 확인
+<ul>
+<li>다르다... 어떡하지</li>
+</ul>
+</li>
+</ul></section><hr/></article><nav><div style="max-width:90%"><span><a aria-current="page" class="" href="/troubleshooting/">/troubleshooting/</a>,</span><span><a href="/en/deploy_erp_server_story/">/en/deploy_erp_server_story/</a>,</span></div>Tag: <a href="/tags/">develop</a><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/information/">← <!-- -->Information</a></li><li><a rel="next" href="/logical_thinking/">Logical<!-- --> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/troubleshooting/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

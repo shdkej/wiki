@@ -1,0 +1,368 @@
+<!DOCTYPE html><html lang="kr"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "446ekw0kl6");
+            </script><script data-ad-client="ca-pub-8002857692825455" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="naver-site-verification" content="0738293103ffff9ea9eb43b3c9621e5fb353f97b"/><meta name="generator" content="Gatsby 5.13.7"/><meta data-react-helmet="true" name="description" content="Terraform 을 이용해서 EKS 익히기 쿠버네티스 관리를 클라우드에 맡기고 쿠버네티스의 기능만 쓰게 해주는 EKS를 알아봅시다. Terraform으로 EKS를 올리면서 구성요소는 어떤 것이 있는지 확인해보려고 해요. 미리 셋팅 돼야하는 것들 aws 계정과 credential…"/><meta data-react-helmet="true" property="og:title" content="EKS 맛보기"/><meta data-react-helmet="true" property="og:description" content="Terraform 을 이용해서 EKS 익히기 쿠버네티스 관리를 클라우드에 맡기고 쿠버네티스의 기능만 쓰게 해주는 EKS를 알아봅시다. Terraform으로 EKS를 올리면서 구성요소는 어떤 것이 있는지 확인해보려고 해요. 미리 셋팅 돼야하는 것들 aws 계정과 credential…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.45d15e33f48c6c9c8d0d.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8292a2}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}:root{--main-color:#000;--second-color:#f5f5f7;--heading-color:#ff8c00}[data-theme=dark]{--main-color:silver;--second-color:#000;--heading-color:salmon}body{background-color:var(--main-color,var(--second-color));color:var(--second-color);font-family:sans-serif;font-size:19px;margin:1rem auto;max-width:900px;padding:1rem}h1{color:var(--heading-color)}h2:before{content:"# "}h2,h4{margin-left:-15px;margin-top:50px}h4:before{content:"## "}p{color:var(--second-color,var(--main-color));margin-bottom:0}ul{margin-top:0;padding-inline-start:20px}ul p{margin:0}a{color:#40a0bd;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:top}a:visited{color:#40a0ba}pre{background:#161b22;padding:15px}code{color:salmon;display:block;overflow:auto}blockquote{font-style:italic}header h3{margin:2em 0 0}:target:before{content:"";display:block;height:50px;margin-top:-50px}@media (min-width:1200px){.content-toc{display:block;max-height:60vh;overflow-x:hidden;overflow-y:auto;padding:0 20px;position:fixed;right:0;top:300px;width:20%}.toc-header{top:280px}}@media (max-width:1200px){.content-toc{margin-top:50px}}@media (max-width:600px){.square{grid-column:1/4}.square-center{display:none!important}}.square-field{grid-gap:10px;display:grid;font-weight:700;grid-template-areas:". . ." ". center ." ". . .";grid-template-columns:repeat(3,1fr)}.square{border:1px solid #fff;border-radius:5px;overflow:hidden;padding:10px;text-overflow:ellipsis}.square-center{align-items:center;background:linear-gradient(90deg,#6a11cb 0,#2575fc);border-radius:5px;color:#fff;display:flex;grid-area:center;justify-content:center}.rel{display:inline-block;opacity:.8;padding:5px}:not(pre)>code[class*=language-]{background:none;color:salmon;display:inline}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">EKS 맛보기 | SH</title><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPKPTMNVF5"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-GPKPTMNVF5'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-GPKPTMNVF5', options);
+  </script></head><body class=""><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><header><nav><a href="/">SH</a> | <a href="/tags/">INDEX</a> | <a href="/about/">ABOUT</a></nav></header><br/>---<main><article><header><h1>EKS 맛보기</h1><p>근데 이제 Terraform을 곁들인</p><small style="width:50%">Created: <!-- -->2021, 08 15<!-- --> &gt;<a href="https://github.com/shdkej/shdkej.github.io/blame/master/content/Blog/eks_With_Terraform.md">Updated: <!-- -->2021, 08 17</a><p>parent: <a href="/Blogging/">Blogging</a></p></small></header><nav class="content-toc"><strong>Table of Contents</strong><div><ul>
+<li>
+<p><a href="#terraform-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C-eks-%EC%9D%B5%ED%9E%88%EA%B8%B0">Terraform 을 이용해서 EKS 익히기</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EB%AF%B8%EB%A6%AC-%EC%85%8B%ED%8C%85-%EB%8F%BC%EC%95%BC%ED%95%98%EB%8A%94-%EA%B2%83%EB%93%A4">미리 셋팅 돼야하는 것들</a></li>
+<li><a href="#eks%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EB%A6%AC%EC%86%8C%EC%8A%A4">EKS의 기본 리소스</a></li>
+<li><a href="#%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%83%9D%EC%84%B1">클러스터 생성</a></li>
+<li><a href="#%EA%B7%B8%EB%9F%BC-%EC%9D%B4%EC%A0%9C-%EB%BC%88%EB%8C%80%EB%A5%BC-%EC%98%AC%EB%A0%A4%EB%B3%B4%EB%8F%84%EB%A1%9D-%ED%95%98%EA%B2%A0%EC%8A%B5%EB%8B%88%EB%8B%A4">그럼 이제 뼈대를 올려보도록 하겠습니다.</a></li>
+<li><a href="#%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EB%8F%99%EC%9E%91-%ED%99%95%EC%9D%B8">쿠버네티스 동작 확인</a></li>
+<li><a href="#%EC%98%A4%ED%86%A0%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81%EC%9D%84-%ED%86%B5%ED%95%B4-%ED%8A%B8%EB%9E%98%ED%94%BD-%EB%8C%80%EC%9D%91-%ED%99%95%EC%9D%B8">오토스케일링을 통해 트래픽 대응 확인</a></li>
+<li><a href="#%EC%9D%B4%EC%A0%9C-ca%EB%A5%BC-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%B4%EB%B3%B4%EA%B2%A0%EC%8A%B5%EB%8B%88%EB%8B%A4">이제 CA를 테스트해보겠습니다.</a></li>
+<li><a href="#%EC%B6%94%EA%B0%80%EB%A1%9C-%ED%95%B4%EC%95%BC-%ED%95%A0-%EA%B2%83%EB%93%A4">추가로 해야 할 것들</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%A0%95%EB%A6%AC">정리</a></p>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#eks-%EC%84%A0%EC%96%B8-%EC%95%88%ED%96%88%EB%8A%94%EB%8D%B0%EC%9E%90%EB%8F%99%EC%83%9D%EC%84%B1%EB%90%9C%EA%B1%B0-%ED%99%95%EC%9D%B8">eks 선언 안했는데자동생성된거 확인</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EA%B7%B8-%EC%99%B8-%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C">그 외 참고자료</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></nav><div style="border-top:1px solid;align:center"></div><section><h2 id="terraform-을-이용해서-eks-익히기" style="position:relative;"><a href="#terraform-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C-eks-%EC%9D%B5%ED%9E%88%EA%B8%B0" aria-label="terraform 을 이용해서 eks 익히기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Terraform 을 이용해서 EKS 익히기</h2>
+<p>쿠버네티스 관리를 클라우드에 맡기고 쿠버네티스의 기능만 쓰게 해주는 EKS를 알아봅시다.</p>
+<p>Terraform으로 EKS를 올리면서 구성요소는 어떤 것이 있는지 확인해보려고 해요.</p>
+<h4 id="미리-셋팅-돼야하는-것들" style="position:relative;"><a href="#%EB%AF%B8%EB%A6%AC-%EC%85%8B%ED%8C%85-%EB%8F%BC%EC%95%BC%ED%95%98%EB%8A%94-%EA%B2%83%EB%93%A4" aria-label="미리 셋팅 돼야하는 것들 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>미리 셋팅 돼야하는 것들</h4>
+<ul>
+<li>aws 계정과 credential (~/.aws/credentials)</li>
+<li>terraform 설치</li>
+<li>kubectl</li>
+</ul>
+<h4 id="eks의-기본-리소스" style="position:relative;"><a href="#eks%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EB%A6%AC%EC%86%8C%EC%8A%A4" aria-label="eks의 기본 리소스 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>EKS의 기본 리소스</h4>
+<ul>
+<li>eks-cluster</li>
+<li>eks-worker-nodes</li>
+<li>vpc</li>
+<li>iam</li>
+</ul>
+<h4 id="클러스터-생성" style="position:relative;"><a href="#%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%83%9D%EC%84%B1" aria-label="클러스터 생성 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>클러스터 생성</h4>
+<p>모듈을 사용하는 것보다 하나씩 리소스를 선언해보는게 기본 구조를 파악하기 위해
+좋을 것 같아요.</p>
+<ul>
+<li><a href="https://github.com/hashicorp/terraform-provider-aws/tree/main/examples/eks-getting-started">terraform-provider</a> 에서는 테라폼이 제공해주는 소스로, 모듈 없이 뼈대를 알아볼
+수 있습니다.</li>
+<li><a href="https://github.com/terraform-aws-modules/terraform-aws-eks/tree/master/examples/basic">terraform-aws-modules</a> 에서는 모듈로 eks를 제공해주고 있습니다.</li>
+<li><a href="https://learn.hashicorp.com/tutorials/terraform/eks">terraform 공식 가이드</a></li>
+<li><a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster">terraform eks 리소스 document</a></li>
+</ul>
+<p>첫번째 예제(terraform-provider)를 참조해서 알아보도록 하겠습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">git clone https://github.com/terraform-providers/terraform-provider-aws.git
+cd terraform-provider-aws/example/eks-getting-started</code></pre></div>
+<p>먼저 aws로 provider 설정이 돼있구요.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># providers.tf
+terraform {
+  required_version = ">= 0.12"
+}
+
+provider "aws" {
+  region = var.aws_region
+}</code></pre></div>
+<p>eks cluster라는 리소스가 있습니다.
+필수 옵션으로 <code class="language-text">name</code>, <code class="language-text">role_arn</code>, <code class="language-text">vpc_config</code> 가 있습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># eks-cluster.tf
+resource "aws_eks_cluster" "demo" {
+  name = var.cluter-name
+  role_arn = aws_iam_role.demo-cluster.arn
+  vpc_config {
+    subnet_ids = aws_subnet.demo[*].id
+  }
+}</code></pre></div>
+<p><code class="language-text">vpc_config</code> 안의 항목이 예제 소스에는 <code class="language-text">security_group</code>도 있지만 <code class="language-text">subnet_ids</code>만 필수입니다.</p>
+<p>eks cluster에서 role과 vpc의 subnet을 필수로 요구했으니 따라가보도록 하겠습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># eks-cluster.tf
+resource "aws_iam_role" "demo-cluster" {
+  name = "terraform-eks-demo-cluster"
+  assume_role_policy = &lt;&lt;POLICY
+  ...
+POLICY
+}
+
+# vpc.tf
+resource "aws_vpc" "demo" {
+  cidr_block = "10.0.0.0/16"
+
+  tags = {
+    Name = "terraform-eks-demo-node",
+    "kubernetes.io/cluster/${var.cluster-name}" = "shared",
+  }
+}
+
+resource "aws_subnet" {
+  count = 2
+
+  cidr_block = "10.0.${count.index}.0/24"
+  vpc_id = aws_vpc.demo.id
+
+  # optional
+  # availability_zone = data.aws_availability_zones.available.names[count.index]
+  # map_public_ip_on_launch = true
+}</code></pre></div>
+<p>여기에 iam role policy attachment와 az 설정, route table, gateway가 추가로
+있지만 일단 뼈대만 확인하기 위해 없이 해보도록 하겠습니다.</p>
+<p>하지만 worker node 는 왠지 있어야 할 것 같아 추가해보겠습니다</p>
+<ul>
+<li>예제 소스에서 worker node가 따로있는 것을 통해 node를 따로 선언해야한다는 것을
+유추해 볼 수 있는데, document 만으로는 따로 만들어야 한다는 정보를 얻을 수
+없었습니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># eks-worker-nodes.tf
+resource "aws_eks_node_group" "demo" {
+  cluster_name = aws_eks_cluster.demo.name
+  node_role_arn = aws_iam_role.demo-node.arn
+  subnet_ids = aws_subnet.demo[*].id
+  node_group_name = "demo" #optional
+
+  scaling_config {
+    desired_size = 1
+    max_size = 1
+    min_size = 1
+  }
+}</code></pre></div>
+<p>어떤 인스턴스를 쓰는지는 옵셔널이네요. 기본 인스턴스는 amazon linux로 eks용
+이미지를 aws에서 제공해주는게 있다고 합니다.</p>
+<p>마지막으로 가이드를 보다보니 kubeconfig를 output으로 빼서 로컬에서 커맨드를 날릴
+수 있게 하는게 유용한 것 같아 output을 추가하겠습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># output.tf
+locals {
+  kubeconfig = &lt;&lt;KUBECONFIG
+
+apiVersion: v1
+clusters:
+- cluster:
+    server: ${aws_eks_cluster.demo.endpoint}
+    certificate-authority-data: ${aws_eks_cluster.demo.certificate_authority[0].data}
+  name: kubernetes
+contexts:
+- context:
+    cluster: kubernetes
+    user: aws
+  name: aws
+current-context: aws
+kind: Config
+preferences: {}
+users:
+- name: aws
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      command: aws-iam-authenticator
+      args:
+        - "token"
+        - "-i"
+        - "${var.cluster-name}"
+KUBECONFIG
+}
+
+output "kubeconfig" {
+  value = local.kubeconfig
+}</code></pre></div>
+<p>여길 보니 <code class="language-text">aws_eks_cluster</code>의 <code class="language-text">endpoint</code>, <code class="language-text">certificate_authority</code>,
+<code class="language-text">var.cluster-name</code>를 변수로 가져오는군요.</p>
+<h4 id="그럼-이제-뼈대를-올려보도록-하겠습니다" style="position:relative;"><a href="#%EA%B7%B8%EB%9F%BC-%EC%9D%B4%EC%A0%9C-%EB%BC%88%EB%8C%80%EB%A5%BC-%EC%98%AC%EB%A0%A4%EB%B3%B4%EB%8F%84%EB%A1%9D-%ED%95%98%EA%B2%A0%EC%8A%B5%EB%8B%88%EB%8B%A4" aria-label="그럼 이제 뼈대를 올려보도록 하겠습니다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>그럼 이제 뼈대를 올려보도록 하겠습니다.</h4>
+<p>! 시간당 $0.2 정도 든다고 합니다. 1시간 안에 끝내도록 해보겠습니다.</p>
+<ul>
+<li>클러스터 관리에 시간당 $0.1,  EC2를 이용하기에 인스턴스 요금이 추가로 듭니다.</li>
+</ul>
+<p><code class="language-text">terraform init, plan, apply</code></p>
+<p>생성이 오래걸려서 콘솔을 한 번 확인해봤습니다.</p>
+<ul>
+<li>콘솔창에서 생성하는 구성을 보니 네트워크에서 엔드포인트를 설정하고, CNI,
+CoreDNS, kube-proxy 버전을 고르도록 돼있는 반면, terraform에서는 이 설정을
+안하게 되네요.</li>
+</ul>
+<p>클러스터에 리소스를 만드는데 시간이 많이 걸립니다.</p>
+<p>! 노드 그룹 생성 중 Ec2SubnetInvalidConfiguration 에러가 발생했습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">node group demo does not automatically assign public IP addresses to instances
+launched into it. If you want your instances to be assigned a public IP address,
+then you need to enable auto-assign public IP address for the subnet. See IP
+addressing in VPC guide:
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html#subnet-public-ip</code></pre></div>
+<ul>
+<li>서브넷에서 public IP assing을 할 수 있도록 하라는 것 같습니다. 마침 아까 vpc
+subnet에서 주석처리한 <code class="language-text">map_public_ip_on_launch</code> 값이 있었습니다. 이 값을 다시
+설정해주니 노드그룹이 생성되었습니다.</li>
+</ul>
+<p>이렇게 eks cluster와 vpc, subnet, iam만 설정하면 eks는 생성되는 것을 볼 수
+있었습니다.</p>
+<p>하지만 이것만으로는 아무 기능이 없고 실제 일을 하는 노드도 생성해야함을 알 수
+있었습니다. 마찬가지로 실제 사용을 위해서는 추가적인 리소스가 더 필요할 것으로
+보입니다. 그건 차차 사용하면서 필요할 때 추가해보도록 하겠습니다.</p>
+<h4 id="쿠버네티스-동작-확인" style="position:relative;"><a href="#%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EB%8F%99%EC%9E%91-%ED%99%95%EC%9D%B8" aria-label="쿠버네티스 동작 확인 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>쿠버네티스 동작 확인</h4>
+<p>다음 작업은 만들어진 클러스터를 이용해서 kubernetes에 pod를 생성해보도록
+하겠습니다.</p>
+<p><a href="https://aws.amazon.com/ko/blogs/startups/from-zero-to-eks-with-terraform-and-helm/">aws 문서</a>를
+<a href="http://dveamer.github.io/backend/TerrafromAwsEks.html">번역한 글</a>을 참고해서 진행해보도록 하겠습니다.</p>
+<p><code class="language-text">terraform output kubeconfig > ~/.kube/config</code></p>
+<p><code class="language-text">kubectl get node</code>로 확인</p>
+<ul>
+<li>실패</li>
+<li>Unable to connec to the server, executable aws-iam-authenticator not found</li>
+<li><a href="https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/install-aws-iam-authenticator.html">aws-iam-authenticator</a>를 설치해봅시다.
+<ul>
+<li>네, 설치하고 환경변수 등록했더니 됩니다.</li>
+</ul>
+</li>
+</ul>
+<h4 id="오토스케일링을-통해-트래픽-대응-확인" style="position:relative;"><a href="#%EC%98%A4%ED%86%A0%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81%EC%9D%84-%ED%86%B5%ED%95%B4-%ED%8A%B8%EB%9E%98%ED%94%BD-%EB%8C%80%EC%9D%91-%ED%99%95%EC%9D%B8" aria-label="오토스케일링을 통해 트래픽 대응 확인 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>오토스케일링을 통해 트래픽 대응 확인</h4>
+<p>서비스를 하나 띄워두고 HPA를 만들고 트래픽을 받아서 오토스케일링을 잘
+하는지 확인해보도록 하겠습니다.</p>
+<p>오토스케일링은 쿠버네티스 HPA 또는 EKS Cluster Autoscaler를 이용할 수 있습니다.</p>
+<p>스케일링을 위해 metrics-server를 설치해야합니다.</p>
+<ul>
+<li>metrics-server 설치
+<code class="language-text">kubectl apply -f  https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml</code></li>
+</ul>
+<p><a href="https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/">간단한 hpa 테스트 방법</a>을 참고해서
+metric-server를 설치한 후 테스트해봅시다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># 디플로이먼트 생성
+kubectl apply -f https://k8s.io/examples/application/php-apache.yaml
+
+# 오토스케일 설정
+kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+
+# 부하 주기
+kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
+</code></pre></div>
+<p><img src="hpa.png" alt="hpa"></p>
+<p>간단하게 확인 작업은 됐습니다.</p>
+<h4 id="이제-ca를-테스트해보겠습니다" style="position:relative;"><a href="#%EC%9D%B4%EC%A0%9C-ca%EB%A5%BC-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%B4%EB%B3%B4%EA%B2%A0%EC%8A%B5%EB%8B%88%EB%8B%A4" aria-label="이제 ca를 테스트해보겠습니다 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>이제 CA를 테스트해보겠습니다.</h4>
+<p>EKS Cluster Autoscaler는 설치가 필요합니다.</p>
+<p>Cluster autoscaler를 따로 설치해야하는줄 알았는데, worker-node를 설치할 때
+scaling config에 넣어준 옵션이 auto scaler를 위한 설정이었고, 자동 생성
+되었습니다.</p>
+<p><a href="https://aws-eks-web-application.workshop.aws/ko/100-scaling/200-cluster-scaling.html">이 예제</a>
+를 참고해서 테스트해보겠습니다.
+먼저 테라폼 eks-worker-node에서 max size를 늘려줍니다. 저는 10으로 했습니다.
+그리고 파드를 100개 생성하고
+kubectl create deployment autoscaler-demo --image=nginx
+kubectl scale deployment autoscaler-demo --replicas=100</p>
+<p>지켜봅니다.</p>
+<p><code class="language-text">k get nodes -w</code>
+<code class="language-text">k get deploy autoscaler-demo -w</code></p>
+<p>! 저 예제 속에 있는 autoscaler discover가 안올라옵니다.</p>
+<ul>
+<li>terraform에서 수동으로 desired size를 2로 올리니 7개만 만들어진 파드가 23개로</li>
+</ul>
+<p>올라갔습니다.</p>
+<ul>
+<li>CA는 좀 더 확인해봐야 할 것 같습니다. (진행중)</li>
+</ul>
+<h4 id="추가로-해야-할-것들" style="position:relative;"><a href="#%EC%B6%94%EA%B0%80%EB%A1%9C-%ED%95%B4%EC%95%BC-%ED%95%A0-%EA%B2%83%EB%93%A4" aria-label="추가로 해야 할 것들 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>추가로 해야 할 것들</h4>
+<p>ELB, NLB 등 로드밸런서 연결</p>
+<ul>
+<li><a href="https://learnk8s.io/terraform-eks">https://learnk8s.io/terraform-eks</a></li>
+</ul>
+<h2 id="정리" style="position:relative;"><a href="#%EC%A0%95%EB%A6%AC" aria-label="정리 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>정리</h2>
+<p>terraform destory를 해도 그 리전에 처음 네트워크를 만들게 되면 기본 네트워크로
+설정되어 삭제가 안됩니다
+비용은 따로 나오지 않으니 다음에 삭제해도 되고, 콘솔에서 직접 삭제해도 됩니다.</p>
+<h5 id="eks-선언-안했는데자동생성된거-확인" style="position:relative;"><a href="#eks-%EC%84%A0%EC%96%B8-%EC%95%88%ED%96%88%EB%8A%94%EB%8D%B0%EC%9E%90%EB%8F%99%EC%83%9D%EC%84%B1%EB%90%9C%EA%B1%B0-%ED%99%95%EC%9D%B8" aria-label="eks 선언 안했는데자동생성된거 확인 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>eks 선언 안했는데자동생성된거 확인</h5>
+<ul>
+<li>로드 밸런스</li>
+<li>시큐리티그룹</li>
+<li>라우팅 테이블</li>
+</ul>
+<p>지금까지 EKS를 terraform 으로 빌드하고 EKS의 Cluster Autoscaler 기능을
+테스트해봤습니다.</p>
+<p>EKS가 어떤 리소스로 구성되어있고, CA는 어떻게 동작하는지 맛을 살짝 보았는데요.
+관리를 클라우드에 맡기는게 얼마나 메리트가 있는지 확인을 좀 해봐야겠습니다.</p>
+<h4 id="그-외-참고자료" style="position:relative;"><a href="#%EA%B7%B8-%EC%99%B8-%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C" aria-label="그 외 참고자료 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>그 외 참고자료</h4>
+<ul>
+<li><a href="https://engineering.vcnc.co.kr/2019/02/eks-migration/">https://engineering.vcnc.co.kr/2019/02/eks-migration/</a></li>
+<li><a href="https://suhwan.dev/2021/01/14/kubernetes-ops-components/">https://suhwan.dev/2021/01/14/kubernetes-ops-components/</a></li>
+<li><a href="https://www.slideshare.net/ssuser833a99/aws-ecs-eks-principle-enterprise-evangelist">https://www.slideshare.net/ssuser833a99/aws-ecs-eks-principle-enterprise-evangelist</a></li>
+</ul></section><hr/></article><nav><div style="max-width:90%"></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blog/note_management/">← <!-- -->노트를 어떻게 관리해야 할까</a></li><li><a rel="next" href="/blog/spring_testcode/"> →</a></li></ul></nav><div></div></main><footer><small>© 2020, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>, Inspired by<!-- --> <a href="https://johngrib.github.io/">john grib</a> and<!-- --> <a href="https://devroom.io">Ariejan de Vroom</a></small></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/eks_with_terraform/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-f50fb1b581656fc6a4f4.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c1f01ef78ea3e2021cf7.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-2b56c919f1406d5412e6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-38c2415016a6feaad484.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-f6ee6af672741aaf4e86.js\"],\"component---src-pages-wiki-js\":[\"/component---src-pages-wiki-js-2edb01785227042b2449.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-2a7ca791b2c5ec08d1c1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="89593b0406919a8ef594";</script><script src="/webpack-runtime-d910ecff3fb8d45b44cc.js" async></script><script src="/framework-4a0f90577491d89bee07.js" async></script><script src="/app-f50fb1b581656fc6a4f4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
