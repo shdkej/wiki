@@ -1,4 +1,4 @@
-FROM node:lts-buster-slim as builder
+FROM node:16.15.0-slim as builder
 WORKDIR /srv
 ADD package*.json /srv/
 RUN npm i -qy
